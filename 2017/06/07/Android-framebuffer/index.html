@@ -1,0 +1,1143 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,Framebuffer," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Android技术特工队" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 FrameBuffer 介绍FrameBuffer中文译名为帧缓冲驱动，它是出现在2.2.xx内核中的一种驱动程序接口。主设备号为29，次设备号递增。Linux抽象出FrameBuffer这个设备来供用户态进程实现直接写屏。FrameBuffer机制模仿显卡的功能，将显卡硬件结构抽象掉，可以通过FrameBuffer的读写直接对显存进行操作">
+<meta name="keywords" content="Android,Framebuffer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Framebuffer介绍及使用">
+<meta property="og:url" content="http://www.wxtlife.com/2017/06/07/Android-framebuffer/index.html">
+<meta property="og:site_name" content="Android技术特工队">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 FrameBuffer 介绍FrameBuffer中文译名为帧缓冲驱动，它是出现在2.2.xx内核中的一种驱动程序接口。主设备号为29，次设备号递增。Linux抽象出FrameBuffer这个设备来供用户态进程实现直接写屏。FrameBuffer机制模仿显卡的功能，将显卡硬件结构抽象掉，可以通过FrameBuffer的读写直接对显存进行操作">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/417887/201605/417887-20160512000159046-1661072189.jpg">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201107/14/0_1310644759mil1.gif">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201107/14/0_1310644815JN51.gif">
+<meta property="og:updated_time" content="2018-03-16T15:49:44.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Framebuffer介绍及使用">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 FrameBuffer 介绍FrameBuffer中文译名为帧缓冲驱动，它是出现在2.2.xx内核中的一种驱动程序接口。主设备号为29，次设备号递增。Linux抽象出FrameBuffer这个设备来供用户态进程实现直接写屏。FrameBuffer机制模仿显卡的功能，将显卡硬件结构抽象掉，可以通过FrameBuffer的读写直接对显存进行操作">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/417887/201605/417887-20160512000159046-1661072189.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wxtlife.com/2017/06/07/Android-framebuffer/"/>
+
+
+
+
+
+  <title> Android Framebuffer介绍及使用 | Android技术特工队 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72326106-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1257153943&web_id=1257153943" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Android技术特工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人因梦想而伟大，因坚持而可贵</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/06/07/Android-framebuffer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Android技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android Framebuffer介绍及使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T22:57:35+08:00">
+                2017-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/07/Android-framebuffer/" class="leancloud_visitors" data-flag-title="Android Framebuffer介绍及使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  2,890
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  12 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
+<h2 id="FrameBuffer-介绍"><a href="#FrameBuffer-介绍" class="headerlink" title="FrameBuffer 介绍"></a>FrameBuffer 介绍</h2><p>FrameBuffer中文译名为帧缓冲驱动，它是出现在2.2.xx内核中的一种驱动程序接口。主设备号为29，次设备号递增。<br>Linux抽象出FrameBuffer这个设备来供用户态进程实现直接写屏。<code>FrameBuffer机制模仿显卡的功能，将显卡硬件结构抽象掉，可以通过FrameBuffer的读写直接对显存进行操作。用户可以将FrameBuffer看成是显示内存的一个映像，将其映射到进程地址空间之后，就可以直接进行读写操作，而写操作可以立即反应在屏幕上。</code>这种操作是抽象的，统一的。用户不必关心物理显存的位置、换页机制等等具体细节，这些都是由FrameBuffer设备驱动来完成的。<br>FrameBuffer实际上就是嵌入式系统中专门为GPU所保留的一块连续的物理内存，LCD通过专门的总线从framebuffer读取数据，显示到屏幕上。<br>FrameBuffer本质上是一块显示缓存，往显示缓存中写入特定格式的数据就意味着向屏幕输出内容。所以说FrameBuffer就是一块白板。</p>
+<p><strong>屏幕位置从上到下，从左至右与内存地址是顺序的线性关系</strong><br><a id="more"></a></p>
+<h2 id="FrameBuffer-使用"><a href="#FrameBuffer-使用" class="headerlink" title="FrameBuffer 使用"></a>FrameBuffer 使用</h2><p>framebuffer的设备文件在Linux下一般是 <code>/dev/fb0</code>、<code>/dev/fb1</code> 等，但在Android下面一般为<code>/dev/graphics/fb0</code>,<code>/dev/graphics/fb1</code>等<br><strong>注意：</strong> 系统中至少要存在一个显示屏，因此，名称为“fb0”的设备是肯定会存在的，否则的话，就是出错了。</p>
+<h3 id="操作framebuffer的主要步骤"><a href="#操作framebuffer的主要步骤" class="headerlink" title="操作framebuffer的主要步骤"></a>操作framebuffer的主要步骤</h3><h4 id="1、打开可用的FrameBuffer设备；"><a href="#1、打开可用的FrameBuffer设备；" class="headerlink" title="1、打开可用的FrameBuffer设备；"></a>1、打开可用的FrameBuffer设备；</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fbfd = open(&quot;/dev/graphics/fb0&quot;, O_RDWR);</span><br></pre></td></tr></table></figure>
+<p><code>O_RDWR</code>是已可读写的方式打开文件  </p>
+<h4 id="2、计算映射大小"><a href="#2、计算映射大小" class="headerlink" title="2、计算映射大小"></a>2、计算映射大小</h4><p>用ioctrl操作取得当前显示屏幕的参数，如屏幕分辨率，每个像素点的比特数。根据屏幕参数可计算屏幕缓冲区的大小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ioctl(fbfd, FBIOGET_FSCREENINFO, &amp;finfo); // fb_fix_screeninfo 通过fbfd获取屏幕固定的相关信息</span><br><span class="line">ioctl(fbfd, FBIOGET_VSCREENINFO, &amp;vinfo); // fb_var_screeninfo 通过fbfd获取可变的信息，可以调用参数为`FBIOPUT_VSCREENINFO`的重新进行设置</span><br></pre></td></tr></table></figure></p>
+<p>从fb_var_screeninfo中可以获取xoffset ,yoffset的偏移量，以及屏幕可见行列像素点（xres，yres）,以及一个像素所占用的位数bits_per_pixel。<br>从fb_fix_screeninfo 中可以获取到framebuffer的内存空间大小finfo.smem_len，每行占用的字节数line_length等。</p>
+<p>这些信息都是对我们下一步来计算需要映射多大的内存空间有很大的帮助，size 可以直接等于 finfo.smem_len, 或者 xres <em> yres </em> bits_per_pixel &gt;&gt; 3 </p>
+<h4 id="3、通过mmap映射地址空间"><a href="#3、通过mmap映射地址空间" class="headerlink" title="3、通过mmap映射地址空间"></a>3、通过mmap映射地址空间</h4><p>通过mmap函数把显卡的物理内存空间映射到用户空间地址上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *fbp = (char *)mmap(start, size, PROT_READ | PROT_WRITE, MAP_SHARED,fbfd, offsize);</span><br></pre></td></tr></table></figure></p>
+<p>各个参数的含义如下： </p>
+<ul>
+<li>start 指向欲映射的内存起始地址，通常设为 NULL，代表让系统自动选定地址，映射成功后返回该地址。  </li>
+<li>size 代表将文件中多大的部分映射到内存。</li>
+<li>PROT_READ | PROT_WRITE 为可读可写模式</li>
+<li>MAP_SHARED 对映射区域的写入数据会复制回文件内，而且允许其他映射该文件的进程共享。   </li>
+<li>fbfd 要映射到内存中的文件描述符,也就是open文件后的描述符。</li>
+<li>offsize 文件映射的偏移量</li>
+</ul>
+<p>关于open、mmap的相关信息可以参考博客：<a href="http://www.wxtlife.com/2016/01/17/Android-memory-map/">http://www.wxtlife.com/2016/01/17/Android-memory-map/</a></p>
+<h4 id="4、更改内存空间里的像素数据并显示；"><a href="#4、更改内存空间里的像素数据并显示；" class="headerlink" title="4、更改内存空间里的像素数据并显示；"></a>4、更改内存空间里的像素数据并显示；</h4><p>fbp则是映射framebuffer后的内存首地址，整个framebuffer的地址是线性的，与整个屏幕大小从左到右，从上到下映射的。所以操作framebuffer是按照每个像素去操作的，每个像素都需要计算他的偏移量也就是每个像素的内存地址空间.<br>例如在（x，y）位置写入颜色 pixel值。  </p>
+<h5 id="4-1-首先先计算偏移量"><a href="#4-1-首先先计算偏移量" class="headerlink" title="4.1 首先先计算偏移量"></a>4.1 首先先计算偏移量</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">offset = (x + y * screen_width) * 4; // (4个字节)</span><br></pre></td></tr></table></figure>
+<p><strong>上面未考虑多buffer切换的地址空间的情况</strong></p>
+<h5 id="4-2-给偏移量的内存地址赋值"><a href="#4-2-给偏移量的内存地址赋值" class="headerlink" title="4.2 给偏移量的内存地址赋值"></a>4.2 给偏移量的内存地址赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*((uint32_t *)(fbp + offset)) = pixel;</span><br></pre></td></tr></table></figure>
+<h4 id="5、退出时关闭framebuffer设备。"><a href="#5、退出时关闭framebuffer设备。" class="headerlink" title="5、退出时关闭framebuffer设备。"></a>5、退出时关闭framebuffer设备。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">munmap(fbp, size);  </span><br><span class="line">close(fbfd);</span><br></pre></td></tr></table></figure>
+<p><strong>size需要与mmap时一样，会导致内存泄露问题。</strong><br>查看一个完整的示例demo ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">int main() &#123;</span><br><span class="line">	int fbfd = 0;</span><br><span class="line">	struct fb_var_screeninfo vinfo;</span><br><span class="line">	struct fb_fix_screeninfo finfo;</span><br><span class="line">	long int screensize = 0;</span><br><span class="line">	char *fbp = 0;</span><br><span class="line">	long int location = 0;</span><br><span class="line">	// Open the file for reading and writing</span><br><span class="line">	fbfd = open(&quot;/dev/graphics/fb0&quot;, O_RDWR);</span><br><span class="line">	if (!fbfd) &#123;</span><br><span class="line">		printf(&quot;Error: cannot open framebuffer device.\n&quot;);</span><br><span class="line">		exit(1);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;The framebuffer device was opened successfully.\n&quot;);</span><br><span class="line">	// Get fixed screen information</span><br><span class="line">	if (ioctl(fbfd, FBIOGET_FSCREENINFO, &amp;finfo)) &#123;</span><br><span class="line">		printf(&quot;Error reading fixed information.\n&quot;);</span><br><span class="line">		exit(2);</span><br><span class="line">	&#125;</span><br><span class="line">	// Get variable screen information</span><br><span class="line">	if (ioctl(fbfd, FBIOGET_VSCREENINFO, &amp;vinfo)) &#123;</span><br><span class="line">		printf(&quot;Error reading variable information.\n&quot;);</span><br><span class="line">		exit(3);</span><br><span class="line">	&#125;</span><br><span class="line">	screensize =  finfo.smem_len;</span><br><span class="line">	// screensize = vinfo.xres * vinfo.yres * vinfo.bits_per_pixel &gt;&gt; 3  // &gt;&gt;3 表示算出字节数</span><br><span class="line">	fbp = (char *)mmap(0, screensize, PROT_READ | PROT_WRITE, MAP_SHARED,fbfd, 0);</span><br><span class="line"></span><br><span class="line">	if ((int)fbp == -1) &#123;</span><br><span class="line">		printf(&quot;Error: failed to map framebuffer device to memory.\n&quot;);</span><br><span class="line">	exit(4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="FrameBuffer-相关结构"><a href="#FrameBuffer-相关结构" class="headerlink" title="FrameBuffer 相关结构"></a>FrameBuffer 相关结构</h3><p>FrameBuffer设备驱动基于如下两个文件：  </p>
+<blockquote>
+</blockquote>
+<p>1) linux/include/linux/fb.h<br>2) linux/drivers/video/fbmem.c  </p>
+<p>FrameBuffer 主要包含的结构有以下：fb_info ，fb_ops ，fb_var_screeninfo，fb_fix_screeninfo,上面的结构都定义在fb.h里。</p>
+<h4 id="fb-var-screeninfo"><a href="#fb-var-screeninfo" class="headerlink" title="fb_var_screeninfo"></a>fb_var_screeninfo</h4><p>用于记录用户可修改的显示属性参数，包括屏幕分辨率、每个像素点的比特数等。<br>显卡的显示属性,用户可修改，此数据结构中，定义了偏移量（xoffset ,yoffset）、可见行列像素点（xres，yres）、每个像素所占bit位数（bits_per_pixel), 虚拟分辨率（xres_virtual、yres_virtual）在显存中包含的分辨率等信息，这些都是我们常见也是常用的到的。<br>这些数据我们是可以通过ioctl函数来获取，获取操作如下：<code>ioctl(fbfd, FBIOGET_FSCREENINFO, &amp;finfo)</code> 。也可以重新进行赋值，之后再将设置进系统：设置如下：<code>ioctl(fbfd, FBIOPUT_VSCREENINFO, &amp;finfo)</code></p>
+<p>数据结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">struct fb_var_screeninfo &#123;  </span><br><span class="line">    __u32 xres;         /* 行可见像素*/  </span><br><span class="line">    __u32 yres;         /* 列可见像素*/  </span><br><span class="line">    __u32 xres_virtual; /* 行虚拟像素*/  </span><br><span class="line">    __u32 yres_virtual; /* 列虚拟像素*/  </span><br><span class="line">    __u32 xoffset;      /* 水平偏移量*/  </span><br><span class="line">    __u32 yoffset;      /* 垂直偏移量*/  </span><br><span class="line">    __u32 bits_per_pixel;/*每个像素所占bit位数*/  </span><br><span class="line">    __u32 grayscale;    /* 灰色刻度*/  </span><br><span class="line">    struct fb_bitfield red; /* bitfield in fb mem if true color, */  </span><br><span class="line">    struct fb_bitfield green;   /* else only length is significant */  </span><br><span class="line">    struct fb_bitfield blue;  </span><br><span class="line">    struct fb_bitfield transp;  /* transparency         */    </span><br><span class="line">    __u32 nonstd;           /* != 0 Non standard pixel format */  </span><br><span class="line">    __u32 activate;         /* see FB_ACTIVATE_*        */  </span><br><span class="line">    __u32 height;           /* 图像高度*/  </span><br><span class="line">    __u32 width;            /* 图像宽度*/  </span><br><span class="line">    __u32 accel_flags;      /* (OBSOLETE) see fb_info.flags */  </span><br><span class="line">    __u32 pixclock;         /* pixel clock in ps (pico seconds) */  </span><br><span class="line">    __u32 left_margin;      /* time from sync to picture    */  </span><br><span class="line">    __u32 right_margin;     /* time from picture to sync    */  </span><br><span class="line">    __u32 upper_margin;     /* time from sync to picture    */  </span><br><span class="line">    __u32 lower_margin;  </span><br><span class="line">    __u32 hsync_len;        /* length of horizontal sync    */  </span><br><span class="line">    __u32 vsync_len;        /* length of vertical sync  */  </span><br><span class="line">    __u32 sync;         /* see FB_SYNC_*        */  </span><br><span class="line">    __u32 vmode;            /* see FB_VMODE_*       */  </span><br><span class="line">    __u32 rotate;           /* angle we rotate counter clockwise */  </span><br><span class="line">    __u32 reserved[5];      /* Reserved for future compatibility */  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="fb-fix-screeninfo"><a href="#fb-fix-screeninfo" class="headerlink" title="fb_fix_screeninfo"></a>fb_fix_screeninfo</h4><p>这个结构在显卡被设定模式后创建，它描述显示卡的属性，并且系统运行时不能被修改；比如FrameBuffer内存的起始地址。它依赖于被设定的模式，当一个模式被设定后，内存信息由显示卡硬件给出，内存的位置等信息就不可以修改。<br>显卡的硬件属性, 用户不可修改, 驱动程序初始化时设置。比如可以获取内存空间大小，起始地址，每行占用的字节数line_length等等。</p>
+<p>数据结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">struct fb_fix_screeninfo &#123;  </span><br><span class="line">    char id[16];            /* identification string eg &quot;TT Builtin&quot; */  </span><br><span class="line">    unsigned long smem_start;/* Start of frame buffer mem */  </span><br><span class="line">    __u32 smem_len;         /* Length of frame buffer mem */  </span><br><span class="line">    __u32 type;             /* see FB_TYPE_*        */  </span><br><span class="line">    __u32 type_aux;         /* Interleave for interleaved Planes */  </span><br><span class="line">    __u32 visual;           /* see FB_VISUAL_*      */   </span><br><span class="line">    __u16 xpanstep;         /* zero if no hardware panning  */  </span><br><span class="line">    __u16 ypanstep;         /* zero if no hardware panning  */  </span><br><span class="line">    __u16 ywrapstep;        /* zero if no hardware ywrap    */  </span><br><span class="line">    __u32 line_length;      /* length of a line in bytes    */  </span><br><span class="line">    unsigned long mmio_start;/* Start of Memory Mapped I/O   */  </span><br><span class="line">    __u32 mmio_len;         /* Length of Memory Mapped I/O  */  </span><br><span class="line">    __u32 accel;            /* Indicate to driver which */  </span><br><span class="line">    __u16 reserved[3];      /* Reserved for future compatibility */  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="fb-ops"><a href="#fb-ops" class="headerlink" title="fb_ops"></a>fb_ops</h4><p>是提供给底层设备驱动的一个接口，用户应用可以使用 ioctl() 系统调用来操作设备。</p>
+<h4 id="fb-cmap"><a href="#fb-cmap" class="headerlink" title="fb_cmap"></a>fb_cmap</h4><p>描述设备无关的颜色映射信息。可以通过 FBIOGETCMAP 和 FBIOPUTCMAP 对应的 ioctl 操作设定或获取颜色映射信息。主要是颜色映射表，颜色相关一些映射信息。</p>
+<h4 id="fb-info"><a href="#fb-info" class="headerlink" title="fb_info"></a>fb_info</h4><p>结构仅在内核中可见，在这个结构中有一个fb_ops指针，指向驱动设备工作所需的函数集，是Linux为帧缓冲设备定义的驱动层接口。它不仅包含了底层函数，而且还有记录设备状态的数据。每个帧缓冲设备都与一个fb_info结构相对应。</p>
+<p>结构如下：<br><img src="http://images2015.cnblogs.com/blog/417887/201605/417887-20160512000159046-1661072189.jpg" alt="FrameBuffer结构图"></p>
+<p><strong>ioctl中request参数：</strong></p>
+<ul>
+<li>FBIOGET_VSCREENINFO 表示用户获取屏幕的可变参数；</li>
+<li>FBIOPUT_VSCREENINFO 表示用户设置可变的屏幕参数；</li>
+<li>FBIOGET_FSCREENINFO 表示用户获得屏幕的固定参数；</li>
+<li>FBIOBLANK表示调用sep4020fb_blank函数清空液晶屏；</li>
+<li>FBIOPUTCMAP 表示设置屏幕的颜色表；</li>
+<li>FBIOGETCMAP 表示获得颜色表。</li>
+</ul>
+<h2 id="双缓冲机制"><a href="#双缓冲机制" class="headerlink" title="双缓冲机制"></a>双缓冲机制</h2><p>Android 使用SurfaceFlinger作为屏幕合成引擎。它管理来自各个窗口的Surface objects，然后将其写入到framebuffer去。SurfaceFlinger使用前buffer来合成，后buffer来绘制。一旦绘制完成，Android通过页翻转操作，交换Y轴坐标的偏移量，选择不同buffer。在EGL显示服务初始化时，如果虚拟Y轴分辨率大于实际Y轴分辨率，说明framebuffer可以直接使用双缓冲。否则，后buffer要复制到前buffer，这样会导致页交换延迟。为了提高系统性能，Framebuffer驱动最好提供双缓冲机制。  </p>
+<h3 id="双缓冲机制的原理"><a href="#双缓冲机制的原理" class="headerlink" title="双缓冲机制的原理"></a>双缓冲机制的原理</h3><p>所有画图操作将它们画图的结果保存在一块系统内存区域中，这块区域通常被称作“后缓冲区（backbuffer）”，当所有的绘图操作结束之后，系统通过换页机制将绘制区域指向先前的后缓冲区，然后进行绘制显示，而原来的绘制缓冲区就变为“后缓冲区”，之后按照这种情况不停循环切换。这个复制操作通常要跟显示器的光栈束同步，以避免撕裂。双缓冲机制必须要求有比单缓冲更多的显示内存和CPU消耗时间，因为“后缓冲区”需要显示内存，而复制操作和等待同步需要CPU时间。  </p>
+<p><img src="http://hi.csdn.net/attachment/201107/14/0_1310644759mil1.gif" alt="FrameBuffer1"><br><img src="http://hi.csdn.net/attachment/201107/14/0_1310644815JN51.gif" alt="framebuffer2"> </p>
+<p><strong>双缓冲是一种画图技术，使用这种技术可以使得画图没有（至少是减少）闪烁、撕裂等不良效果，并减少等待时间。</strong></p>
+<h3 id="缓冲区切换步骤"><a href="#缓冲区切换步骤" class="headerlink" title="缓冲区切换步骤:"></a>缓冲区切换步骤:</h3><ol>
+<li>把fb驱动的framebuffer通过mmap映射到应用空间的内存地址map_base，一般来说framebuffer size是2*framesize或者3*framesize 大小（和平台相关）  </li>
+<li>把第一帧数据写入map_base  </li>
+<li>调用FBIOPAN_DISPLAY显示  </li>
+<li>把第二帧数据写入map_base+framesize处  </li>
+<li>调用FBIOPAN_DISPLAY  </li>
+<li>重复step2~step5  </li>
+</ol>
+<blockquote>
+<p>FBIOPAN_DISPLAY  在linux的注释里是“平移显示”的意思,调用FBIOPAN_DISPLAY时，会传一个y坐标偏移量yoffset给驱动，然后驱动会把当前显存的指针偏移 “yoffset X 屏幕宽度 X 位色字节数” 个字节，这样就好像实现了图像的y坐标平移，也就是“平移显示”。当这个yoffset等于屏幕高度的时候，就实现了显存的切换。  </p>
+</blockquote>
+<p><strong>参考链接</strong> </p>
+<p><a href="http://www.cnblogs.com/armlinux/archive/2012/02/25/2396760.html" target="_blank" rel="noopener">http://www.cnblogs.com/armlinux/archive/2012/02/25/2396760.html</a><br><a href="http://blog.csdn.net/yangwen123/article/details/12096483" target="_blank" rel="noopener">http://blog.csdn.net/yangwen123/article/details/12096483</a><br><a href="http://blog.csdn.net/louiswangbing/article/details/6606837" target="_blank" rel="noopener">http://blog.csdn.net/louiswangbing/article/details/6606837</a><br><a href="http://lib.csdn.net/article/android/4928" target="_blank" rel="noopener">http://lib.csdn.net/article/android/4928</a><br><a href="http://www.cnblogs.com/mfryf/archive/2013/05/22/3093912.html" target="_blank" rel="noopener">http://www.cnblogs.com/mfryf/archive/2013/05/22/3093912.html</a><br><a href="http://www.cnblogs.com/hzl6255/p/5476012.html" target="_blank" rel="noopener">http://www.cnblogs.com/mfryf/archive/2013/05/22/3093912.html</a><br><a href="http://blog.csdn.net/molibaobei90/article/details/40826791" target="_blank" rel="noopener">http://blog.csdn.net/molibaobei90/article/details/40826791</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="WangXin wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎订阅我的微信公众号，第一时间获取最新文章！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/payImg/wechat.jpeg" alt="WangXin WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/payImg/alipay.jpeg" alt="WangXin Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      WangXin
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.wxtlife.com/2017/06/07/Android-framebuffer/" title="Android Framebuffer介绍及使用">http://www.wxtlife.com/2017/06/07/Android-framebuffer/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="external nofollow" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/Framebuffer/" rel="tag"># Framebuffer</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/16/check-gradle-dependency/" rel="next" title="Gradle 查看项目依赖情况">
+                <i class="fa fa-chevron-left"></i> Gradle 查看项目依赖情况
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/07/Android-adb-commond/" rel="prev" title="Android adb 开发常用命令">
+                Android adb 开发常用命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/android.jpg"
+               alt="WangXin" />
+          <p class="site-author-name" itemprop="name">WangXin</p>
+           
+              <p class="site-description motion-element" itemprop="description">当你的成功欲望足以和呼吸的欲望相媲美的时候你就会成功。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://open.weixin.qq.com/qr/code/?username=FutureCoder" target="_blank" title="微信">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微信
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wx962464" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wx962464" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/wx_962464" title="CSDN Blog" target="_blank">CSDN Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/guolin_blog" title="郭霖的博客" target="_blank">郭霖的博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/lmj623565791" title="鸿洋Android" target="_blank">鸿洋Android</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gank.io/" title="极客公园" target="_blank">极客公园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/v_JULY_v" title="算法之道" target="_blank">算法之道</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/innost" title="深入Anroid系统" target="_blank">深入Anroid系统</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.enkichen.com/" title="双龙IOS" target="_blank">双龙IOS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.devhua.com/" title="华润IOS" target="_blank">华润IOS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://davidleee.com/" title="Lee的笔记本" target="_blank">Lee的笔记本</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FrameBuffer-介绍"><span class="nav-number"></span> <span class="nav-text">FrameBuffer 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FrameBuffer-使用"><span class="nav-number"></span> <span class="nav-text">FrameBuffer 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作framebuffer的主要步骤"><span class="nav-number"></span> <span class="nav-text">操作framebuffer的主要步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、打开可用的FrameBuffer设备；"><span class="nav-number">1.</span> <span class="nav-text">1、打开可用的FrameBuffer设备；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、计算映射大小"><span class="nav-number">2.</span> <span class="nav-text">2、计算映射大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、通过mmap映射地址空间"><span class="nav-number">3.</span> <span class="nav-text">3、通过mmap映射地址空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、更改内存空间里的像素数据并显示；"><span class="nav-number">4.</span> <span class="nav-text">4、更改内存空间里的像素数据并显示；</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1-首先先计算偏移量"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 首先先计算偏移量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-2-给偏移量的内存地址赋值"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 给偏移量的内存地址赋值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、退出时关闭framebuffer设备。"><span class="nav-number">5.</span> <span class="nav-text">5、退出时关闭framebuffer设备。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FrameBuffer-相关结构"><span class="nav-number"></span> <span class="nav-text">FrameBuffer 相关结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fb-var-screeninfo"><span class="nav-number">1.</span> <span class="nav-text">fb_var_screeninfo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fb-fix-screeninfo"><span class="nav-number">2.</span> <span class="nav-text">fb_fix_screeninfo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fb-ops"><span class="nav-number">3.</span> <span class="nav-text">fb_ops</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fb-cmap"><span class="nav-number">4.</span> <span class="nav-text">fb_cmap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fb-info"><span class="nav-number">5.</span> <span class="nav-text">fb_info</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双缓冲机制"><span class="nav-number"></span> <span class="nav-text">双缓冲机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#双缓冲机制的原理"><span class="nav-number"></span> <span class="nav-text">双缓冲机制的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓冲区切换步骤"><span class="nav-number"></span> <span class="nav-text">缓冲区切换步骤:</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WangXin</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144372"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("lpr4hdMeJLrSXdNnOkQiS9p9-gzGzoHsz", "gCd21osrFIp5CfhvSToaoOWh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

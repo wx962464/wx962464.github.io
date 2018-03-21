@@ -1,0 +1,1156 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Android技术特工队" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 Android 支持库软件有多个库，每个库均支持特定范围的 Android 平台版本和功能。像大家比较熟悉的 v4 、v7、 v13、v14 等。下面将分别介绍下各个库版本所兼容或带来的功能有哪些？ v4 支持库v4库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。与其他支持库相比，它们包含的 API 集合最大，包括对">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Support 库各版本功能介绍">
+<meta property="og:url" content="http://www.wxtlife.com/2017/11/05/Android-support/index.html">
+<meta property="og:site_name" content="Android技术特工队">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 Android 支持库软件有多个库，每个库均支持特定范围的 Android 平台版本和功能。像大家比较熟悉的 v4 、v7、 v13、v14 等。下面将分别介绍下各个库版本所兼容或带来的功能有哪些？ v4 支持库v4库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。与其他支持库相比，它们包含的 API 集合最大，包括对">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-16T15:49:44.450Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Support 库各版本功能介绍">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 Android 支持库软件有多个库，每个库均支持特定范围的 Android 平台版本和功能。像大家比较熟悉的 v4 、v7、 v13、v14 等。下面将分别介绍下各个库版本所兼容或带来的功能有哪些？ v4 支持库v4库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。与其他支持库相比，它们包含的 API 集合最大，包括对">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wxtlife.com/2017/11/05/Android-support/"/>
+
+
+
+
+
+  <title> Android Support 库各版本功能介绍 | Android技术特工队 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72326106-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1257153943&web_id=1257153943" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Android技术特工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人因梦想而伟大，因坚持而可贵</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/11/05/Android-support/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Android技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android Support 库各版本功能介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T12:59:15+08:00">
+                2017-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/05/Android-support/" class="leancloud_visitors" data-flag-title="Android Support 库各版本功能介绍">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  2,918
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  11 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
+<p>Android 支持库软件有多个库，每个库均支持特定范围的 Android 平台版本和功能。像大家比较熟悉的 v4 、v7、 v13、v14 等。下面将分别介绍下各个库版本所兼容或带来的功能有哪些？</p>
+<h3 id="v4-支持库"><a href="#v4-支持库" class="headerlink" title="v4 支持库"></a>v4 支持库</h3><p>v4库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。与其他支持库相比，它们包含的 API 集合最大，包括对应用组件、用户界面功能、辅助功能、数据处理、网络连接以及编程实用工具的支持。</p>
+<blockquote>
+<p>注：在支持库修订版 24.2.0 之前，存在一个 v4 支持库。为了提高效率，此库拆分成多个模块。出于向后兼容的考虑，如果您在 Gradle 脚本中列出了 support-v4，您的 APK 将包含所有的 v4 模块。不过，要减少 APK 大小，我们建议仅列出应用需要的特定模块。</p>
+</blockquote>
+<h4 id="v4-compat-库"><a href="#v4-compat-库" class="headerlink" title="v4 compat 库"></a>v4 compat 库</h4><p>此为众多框架 API 提供兼容性包装器，例如 Context.obtainDrawable() 和 View.performAccessibilityAction()</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-compat:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v4-core-utils-库"><a href="#v4-core-utils-库" class="headerlink" title="v4 core-utils 库"></a>v4 core-utils 库</h4><p>提供大量实用程序类，例如 AsyncTaskLoader 和 PermissionChecker。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-core-utils:24.2.0</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h4 id="v4-core-ui-库"><a href="#v4-core-ui-库" class="headerlink" title="v4 core-ui 库"></a>v4 core-ui 库</h4><p>实现各种 UI 相关组件，例如 ViewPager、NestedScrollView 和 ExploreByTouchHelper。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-core-ui:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v4-media-compat-库"><a href="#v4-media-compat-库" class="headerlink" title="v4 media-compat 库"></a>v4 media-compat 库</h4><p>向后移植部分媒体框架，包括 MediaBrowser 和 MediaSession。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-media-compat:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v4-fragment-库"><a href="#v4-fragment-库" class="headerlink" title="v4 fragment 库"></a>v4 fragment 库</h4><p>添加对使用片段封装用户界面和功能的支持，从而使应用能够提供可以在大屏幕设备与小屏幕设备之间进行调节的布局。此模块依赖于 compat、core-utils、core-ui 和 media-compat。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-fragment:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="Dalvik-可执行文件分包支持库"><a href="#Dalvik-可执行文件分包支持库" class="headerlink" title="Dalvik 可执行文件分包支持库"></a>Dalvik 可执行文件分包支持库</h4><p>此库可以为使用多个 Dalvik Executable (DEX) 文件开发应用提供支持。引用超过 65536 个方法的应用须使用 Dalvik 可执行文件分包配置。如需了解有关使用 Dalvik 可执行文件分包的详细信息，请参阅使用超过 6.4 万种方法开发应用。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:multidex:1.0.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="v7-支持库"><a href="#v7-支持库" class="headerlink" title="v7 支持库"></a>v7 支持库</h3><p>一些库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。这些库提供了特定的功能集，并且可以单独添加到应用中，与其他库互不影响。</p>
+<h4 id="v7-appcompat-库"><a href="#v7-appcompat-库" class="headerlink" title="v7 appcompat 库"></a>v7 appcompat 库</h4><p>此库添加了对操作栏用户界面设计模式的支持。此库包含对 Material Design 用户界面实现的支持。</p>
+<blockquote>
+<p>注：此库依赖于 v4 支持库。</p>
+</blockquote>
+<p>下面是 v7 appcompat 库中包含的一些关键类：</p>
+<ul>
+<li>ActionBar - 提供操作栏用户界面模式的实现。如需了解有关使用操作栏的详细信息，请参阅操作栏开发者指南。</li>
+<li>AppCompatActivity - 添加一个应用 Activity 类，此类可作为使用支持库操作栏实现的 Activity 的基础类。</li>
+<li>AppCompatDialog - 添加一个对话框类，此类可作为 AppCompat 主题对话框的基础类。</li>
+<li>ShareActionProvider - 包含对可以添加到操作栏中的标准化分享操作（例如电子邮件或发帖至社交应用）的支持。<br>此库的 Gradle 构建脚本依赖关系标识符如下所示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:appcompat-v7:24.2.0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="v7-cardview-库"><a href="#v7-cardview-库" class="headerlink" title="v7 cardview 库"></a>v7 cardview 库</h4><p>此库添加了对 CardView 小部件的支持，让您能够在卡片内显示信息，从而使应用具备一致的外观。这些卡片对 Material Design 实现非常有用，并在电视应用布局中广为使用。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:cardview-v7:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v7-gridlayout-库"><a href="#v7-gridlayout-库" class="headerlink" title="v7 gridlayout 库"></a>v7 gridlayout 库</h4><p>下载 Android 支持库后，此库可以添加对 GridLayout 类的支持，让您能够使用网状方格安排用户界面元素。如需了解有关 v7 gridlayout 库 API 的详细信息，请参阅 API 参考中的 android.support.v7.widget 软件包。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:gridlayout-v7:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v7-mediarouter-库"><a href="#v7-mediarouter-库" class="headerlink" title="v7 mediarouter 库"></a>v7 mediarouter 库</h4><p>此库可以提供 MediaRouter、MediaRouteProvider 和支持 Google Cast 的相关媒体类。</p>
+<p>一般而言，利用 v7 mediarouter 库中的 API，您可以控制当前设备到外部屏幕、扬声器和其他目标设备的媒体渠道和流的路由。此库包含的 API 可以用于发布应用特定的媒体路由提供程序、发现和选择目标设备，以及检查媒体状态，等等。如需了解有关 v7 mediarouter 库 API 的详细信息，请参阅 API 参考中的 android.support.v7.media 软件包。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:mediarouter-v7:24.2.0</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>支持库 r18 中引入的 v7 mediarouter 库 API 在后续版本的支持库中可能会发生更改。目前，我们建议仅使用与 Google Cast 有关的库。</p>
+</blockquote>
+<h4 id="v7-palette-库"><a href="#v7-palette-库" class="headerlink" title="v7 palette 库"></a>v7 palette 库</h4><p>v7 palette 支持库包含 Palette 类，此类让您可以从图像中抽取突出颜色。例如，音乐应用可以使用 Palette 对象从专辑封面抽取主要颜色，然后使用这些颜色创建一个色彩协调的歌曲标题卡。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:palette-v7:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v7-recyclerview-库"><a href="#v7-recyclerview-库" class="headerlink" title="v7 recyclerview 库"></a>v7 recyclerview 库</h4><p>recyclerview 库添加了 RecyclerView 类。此类能够为 RecyclerView 小部件提供支持，RecyclerView 是一种通过提供有限的数据项窗口有效显示大数据集的视图。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:recyclerview-v7:24.2.0</span><br></pre></td></tr></table></figure></p>
+<p>####v7 Preference 支持库<br>首选项软件包提供的 API 支持添加 preference 对象（例如 CheckBoxPreference 和 ListPreference），方便用户修改 UI 设置。</p>
+<p>v7 Preference 库添加了对接口（例如 Preference.OnPreferenceChangeListener 和 Preference.OnPreferenceClickListener）以及类（例如 CheckBoxPreference 和 ListPreference）的支持。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:preference-v7:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="v8-支持库"><a href="#v8-支持库" class="headerlink" title="v8 支持库"></a>v8 支持库</h3><p>此库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。此库提供了特定的功能集，并且可以单独添加到应用中，与其他库互不影响。</p>
+<h4 id="v8-renderscript-库"><a href="#v8-renderscript-库" class="headerlink" title="v8 renderscript 库"></a>v8 renderscript 库</h4><p>此库旨在与 Android 2.3（API 级别 9）及更高版本搭配使用。它添加了对 RenderScript 计算框架的支持。android.support.v8.renderscript 软件包中包含这些 API。请注意，在应用中添加这些 API 的步骤与添加其他支持库 API 迥然不同。如需了解有关在应用中使用这些 API 的详细信息，请参阅 RenderScript 开发者指南。</p>
+<blockquote>
+<p>注：Android Studio 和 Gradle 构建支持使用带支持库的 RenderScript。renderscript 库位于 build-tools/$VERSION/renderscript/ 文件夹中。</p>
+</blockquote>
+<p>以下示例显示了此库的 Gradle 构建脚本属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">defaultConfig &#123;</span><br><span class="line">    renderscriptTargetApi 18</span><br><span class="line">    renderscriptSupportModeEnabled true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="v13-支持库"><a href="#v13-支持库" class="headerlink" title="v13 支持库"></a>v13 支持库</h3><p>此库旨在用于 Android 3.2（API 级别 13）及更高版本。它添加了对带有 (FragmentCompat) 类和其他片段支持类的 Fragment 用户界面模式的支持。如需了解有关片段的详细信息，请参阅片段开发者指南。如需了解有关 v13 支持库 API 的详细信息，请参阅 API 参考中的 android.support.v13 软件包。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-v13:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="v14-Preference-支持库"><a href="#v14-Preference-支持库" class="headerlink" title="v14 Preference 支持库"></a>v14 Preference 支持库</h3><p>android.support.v14.preference 软件包提供的 API 添加了对首选项接口（例如 PreferenceFragment.OnPreferenceStartFragmentCallback 和 PreferenceFragment.OnPreferenceStartScreenCallback）以及类（例如 MultiSelectListPreference 和 PreferenceFragment）的支持。如需了解有关 v14 Preference 支持库 API 的详细信息，请参阅 API 参考中的首选项软件包。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:preference-v14:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="适用于电视的-v17-Preference-支持库"><a href="#适用于电视的-v17-Preference-支持库" class="headerlink" title="适用于电视的 v17 Preference 支持库"></a>适用于电视的 v17 Preference 支持库</h3><p>android.support.v17.preference 软件包提供的 API 可以在电视设备上提供首选项接口，包括对 LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener 接口和类的支持，例如 BaseLeanbackPreferenceFragment 和 LeanbackPreferenceFragment。如需了解有关 v17 Preference 支持库 API 的详细信息，请参阅 API 参考中的首选项软件包。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:preference-leanback-v17:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="v17-Leanback-库"><a href="#v17-Leanback-库" class="headerlink" title="v17 Leanback 库"></a>v17 Leanback 库</h4><p>android.support.v17.leanback 软件包提供的 API 支持在电视设备上构建用户界面。它为电视应用提供了一些重要的小部件。一些值得注意的类包括：</p>
+<ul>
+<li>BrowseFragment - 一种用于创建主要布局的片段，主要布局用于浏览类别和媒体项目。</li>
+<li>DetailsFragment - 用于 Leanback 细节屏幕的包装器片段。</li>
+<li>PlaybackOverlayFragment - 用于显示播放控件及相关内容的 DetailsFragment 子类。</li>
+<li>SearchFragment - 用于处理搜索的片段。片段可以接收用户的搜索请求并将其传递给应用提供的 SearchResultProvider。SearchResultProvider 可以将搜索结果返回给 SearchFragment，后者会将结果渲染到 RowsFragment 中。</li>
+</ul>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:leanback-v17:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="注解支持库"><a href="#注解支持库" class="headerlink" title="注解支持库"></a>注解支持库</h3><p>注解软件包提供的 API 支持向应用中添加注解元数据。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:support-annotations:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="设计支持库"><a href="#设计支持库" class="headerlink" title="设计支持库"></a>设计支持库</h3><p>设计软件包提供的 API 支持向应用中添加 Material Design 组件和模式。</p>
+<p>设计支持库添加了对应用开发者依赖的各种 Material Design 组件和模式的支持，例如抽屉式导航栏、浮动操作按钮 (FAB)、快捷信息栏和标签页。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:design:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="自定义标签页支持库"><a href="#自定义标签页支持库" class="headerlink" title="自定义标签页支持库"></a>自定义标签页支持库</h3><p>自定义标签页软件包提供的 API 支持向应用中添加自定义标签页并对其进行管理。</p>
+<p>自定义标签页支持库添加了对自定义标签页服务和自定义标签页回调等各种类的支持。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:customtabs:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="百分比支持库"><a href="#百分比支持库" class="headerlink" title="百分比支持库"></a>百分比支持库</h3><p>百分比软件包提供的 API 支持向应用中添加基于百分比的尺寸并对其进行管理。</p>
+<p>百分比支持库添加了对 PercentLayoutHelper.PercentLayoutParams 接口和各种类的支持，例如 PercentFrameLayout 和 PercentRelativeLayout。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:percent:24.2.0</span><br></pre></td></tr></table></figure></p>
+<h3 id="适用于电视的应用建议支持库"><a href="#适用于电视的应用建议支持库" class="headerlink" title="适用于电视的应用建议支持库"></a>适用于电视的应用建议支持库</h3><p>应用建议软件包提供的 API 支持向电视设备上运行的应用中添加内容建议。</p>
+<p>应用库添加了对注解（例如 ContentRecommendation.ContentMaturity 和各种类（例如 ContentRecommendation 和 RecommendationExtender）的支持。</p>
+<p>此库的 Gradle 构建脚本依赖关系标识符如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.android.support:recommendation:24.2.0</span><br></pre></td></tr></table></figure></p>
+<p>看完上面的介绍，是不是对 Google 这些 Support 库 有了更全面的了解以及各版本之间的区别。如果希望就分享出去让更多的人知道吧。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="WangXin wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎订阅我的微信公众号，第一时间获取最新文章！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/payImg/wechat.jpeg" alt="WangXin WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/payImg/alipay.jpeg" alt="WangXin Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      WangXin
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.wxtlife.com/2017/11/05/Android-support/" title="Android Support 库各版本功能介绍">http://www.wxtlife.com/2017/11/05/Android-support/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="external nofollow" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/27/developers-need-tools/" rel="next" title="【推荐】开发人员必备的强兵利器">
+                <i class="fa fa-chevron-left"></i> 【推荐】开发人员必备的强兵利器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/05/Android-compile/" rel="prev" title="还再用compile依赖？那你就落后啦">
+                还再用compile依赖？那你就落后啦 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/android.jpg"
+               alt="WangXin" />
+          <p class="site-author-name" itemprop="name">WangXin</p>
+           
+              <p class="site-description motion-element" itemprop="description">当你的成功欲望足以和呼吸的欲望相媲美的时候你就会成功。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://open.weixin.qq.com/qr/code/?username=FutureCoder" target="_blank" title="微信">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微信
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wx962464" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wx962464" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/wx_962464" title="CSDN Blog" target="_blank">CSDN Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/guolin_blog" title="郭霖的博客" target="_blank">郭霖的博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/lmj623565791" title="鸿洋Android" target="_blank">鸿洋Android</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gank.io/" title="极客公园" target="_blank">极客公园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/v_JULY_v" title="算法之道" target="_blank">算法之道</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/innost" title="深入Anroid系统" target="_blank">深入Anroid系统</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.enkichen.com/" title="双龙IOS" target="_blank">双龙IOS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.devhua.com/" title="华润IOS" target="_blank">华润IOS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://davidleee.com/" title="Lee的笔记本" target="_blank">Lee的笔记本</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v4-支持库"><span class="nav-number"></span> <span class="nav-text">v4 支持库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v4-compat-库"><span class="nav-number">1.</span> <span class="nav-text">v4 compat 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v4-core-utils-库"><span class="nav-number">2.</span> <span class="nav-text">v4 core-utils 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v4-core-ui-库"><span class="nav-number">3.</span> <span class="nav-text">v4 core-ui 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v4-media-compat-库"><span class="nav-number">4.</span> <span class="nav-text">v4 media-compat 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v4-fragment-库"><span class="nav-number">5.</span> <span class="nav-text">v4 fragment 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dalvik-可执行文件分包支持库"><span class="nav-number">6.</span> <span class="nav-text">Dalvik 可执行文件分包支持库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-支持库"><span class="nav-number"></span> <span class="nav-text">v7 支持库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v7-appcompat-库"><span class="nav-number">1.</span> <span class="nav-text">v7 appcompat 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v7-cardview-库"><span class="nav-number">2.</span> <span class="nav-text">v7 cardview 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v7-gridlayout-库"><span class="nav-number">3.</span> <span class="nav-text">v7 gridlayout 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v7-mediarouter-库"><span class="nav-number">4.</span> <span class="nav-text">v7 mediarouter 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v7-palette-库"><span class="nav-number">5.</span> <span class="nav-text">v7 palette 库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v7-recyclerview-库"><span class="nav-number">6.</span> <span class="nav-text">v7 recyclerview 库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v8-支持库"><span class="nav-number"></span> <span class="nav-text">v8 支持库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v8-renderscript-库"><span class="nav-number">1.</span> <span class="nav-text">v8 renderscript 库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v13-支持库"><span class="nav-number"></span> <span class="nav-text">v13 支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v14-Preference-支持库"><span class="nav-number"></span> <span class="nav-text">v14 Preference 支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#适用于电视的-v17-Preference-支持库"><span class="nav-number"></span> <span class="nav-text">适用于电视的 v17 Preference 支持库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v17-Leanback-库"><span class="nav-number">1.</span> <span class="nav-text">v17 Leanback 库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注解支持库"><span class="nav-number"></span> <span class="nav-text">注解支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计支持库"><span class="nav-number"></span> <span class="nav-text">设计支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义标签页支持库"><span class="nav-number"></span> <span class="nav-text">自定义标签页支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#百分比支持库"><span class="nav-number"></span> <span class="nav-text">百分比支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#适用于电视的应用建议支持库"><span class="nav-number"></span> <span class="nav-text">适用于电视的应用建议支持库</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WangXin</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144372"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("lpr4hdMeJLrSXdNnOkQiS9p9-gzGzoHsz", "gCd21osrFIp5CfhvSToaoOWh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1201 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,kotlin," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Android技术特工队" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队  Kotlin开发基础（一） Kotlin开发基础（二） Kotlin开发基础（三）  为什么学习kotlinkotlin在今年的Google IO 上正式被确认为Android的官方开发语言，想必原因大家也能猜到一二，一是Google与oracle关于Java相关的版权相关的问题，二是kotlin语言很简洁，不罗嗦，支持很多的新特性。 由">
+<meta name="keywords" content="Android,kotlin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin开发基础（一）">
+<meta property="og:url" content="http://www.wxtlife.com/2017/09/08/kotlin-share-1/index.html">
+<meta property="og:site_name" content="Android技术特工队">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队  Kotlin开发基础（一） Kotlin开发基础（二） Kotlin开发基础（三）  为什么学习kotlinkotlin在今年的Google IO 上正式被确认为Android的官方开发语言，想必原因大家也能猜到一二，一是Google与oracle关于Java相关的版权相关的问题，二是kotlin语言很简洁，不罗嗦，支持很多的新特性。 由">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-16T15:49:44.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin开发基础（一）">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队  Kotlin开发基础（一） Kotlin开发基础（二） Kotlin开发基础（三）  为什么学习kotlinkotlin在今年的Google IO 上正式被确认为Android的官方开发语言，想必原因大家也能猜到一二，一是Google与oracle关于Java相关的版权相关的问题，二是kotlin语言很简洁，不罗嗦，支持很多的新特性。 由">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wxtlife.com/2017/09/08/kotlin-share-1/"/>
+
+
+
+
+
+  <title> Kotlin开发基础（一） | Android技术特工队 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72326106-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1257153943&web_id=1257153943" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Android技术特工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人因梦想而伟大，因坚持而可贵</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/09/08/kotlin-share-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Android技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Kotlin开发基础（一）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-08T23:17:40+08:00">
+                2017-09-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/08/kotlin-share-1/" class="leancloud_visitors" data-flag-title="Kotlin开发基础（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  2,784
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  11 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
+<ul>
+<li><strong><a href="http://www.wxtlife.com/2017/09/08/kotlin-share-1/">Kotlin开发基础（一）</a></strong></li>
+<li><strong><a href="http://www.wxtlife.com/2017/12/12/kotlin-share-2/">Kotlin开发基础（二）</a></strong></li>
+<li><strong><a href="http://www.wxtlife.com/2017/12/17/kotlin-share-3/">Kotlin开发基础（三）</a></strong></li>
+</ul>
+<h3 id="为什么学习kotlin"><a href="#为什么学习kotlin" class="headerlink" title="为什么学习kotlin"></a>为什么学习kotlin</h3><p>kotlin在今年的Google IO 上正式被确认为Android的官方开发语言，想必原因大家也能猜到一二，一是Google与oracle关于Java相关的版权相关的问题，二是kotlin语言很简洁，不罗嗦，支持很多的新特性。</p>
+<p>由于Google都已经官方支持了，语法简洁高效，和IOS的 swift 很是相似，发展趋势不可小觑，还有个大新闻就是我们的大神 <a href="https://github.com/JakeWharton" target="_blank" rel="noopener">Jake Wharton</a> 从square 辞职加入了Google，且其在最近的github中国fork了kotlin 仓库，想必是为kotlin在Android的发展做贡献，就从这可以断定kotlin的未来不会太差， 当然作为技术人就需要不断的学习，不段的挑战。如果想在Android上继续深造kotlin肯定是要学习的。</p>
+<h3 id="怎么学习"><a href="#怎么学习" class="headerlink" title="怎么学习"></a>怎么学习</h3><p>我的想法是，大家都是学过基本的语言的，比如C，C++，做Android的肯定学过Java，所以我的想法是对照Java的基础与kotlin基础做对比着学习， 这样印象会深刻点，差异化学习。</p>
+<h3 id="Kotlin基础"><a href="#Kotlin基础" class="headerlink" title="Kotlin基础"></a>Kotlin基础</h3><h4 id="Kotlin-数据类型"><a href="#Kotlin-数据类型" class="headerlink" title="Kotlin 数据类型"></a>Kotlin 数据类型</h4><p>在kotlin语言中，所有的类型都是都是对象，kotlin中没有了基础数据类型（int，boolean，char，byte）等。全部换为对象类型。类型如下：<br><code>Int</code>,<code>Boolean</code>,<code>String</code>,<code>Byte</code>,<code>Float</code>,<code>Char</code>,<code>Double</code>,<code>Short</code>，这些没有了Java中隐式拓宽转换，例如不能把Int类型直接赋值给Long类型了，如要要这样做这些书类型可以调用如下方法进行转换：</p>
+<a id="more"></a>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">toByte():   <span class="built_in">Byte</span></span><br><span class="line">toShort():  <span class="built_in">Short</span></span><br><span class="line">toInt():    <span class="built_in">Int</span></span><br><span class="line">toLong():   <span class="built_in">Long</span></span><br><span class="line">toFloat():  <span class="built_in">Float</span></span><br><span class="line">toDouble(): <span class="built_in">Double</span></span><br><span class="line">toChar():   <span class="built_in">Char</span></span><br></pre></td></tr></table></figure>
+<p>kotlin 中各数字类型所占位数如下：</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>bit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Double</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Int</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Short</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>数值常量和Java中基本无区别，十进制：123，十六进制：0x1F。</p>
+<p>主要是以下几种字面值常量： </p>
+<ul>
+<li>十进制数值: 123</li>
+<li>长整型要加大写 L : 123L</li>
+<li>16进制：0x0f</li>
+<li>二进制：0b00001011</li>
+<li>默认双精度浮点数(Double) : 123.5 , 123.5e10</li>
+<li>单精度浮点数(Float)要添加 f 或 F ：123.5f</li>
+</ul>
+<p><strong>注意: kotlin不支持八进制</strong></p>
+<p><strong>黑魔法：</strong> 在我们写Int或者Long类型数据时，常常一写一长串，不便于识别，现在kotlin支持在数字常量中可以添加<code>_</code>了，便于阅读，不影响数据类型和值，例如电话号码可以这样写了。<code>val phone : Long = 186_****_0814</code>便于我们阅读。不得不说kotlin语言的灵活性。</p>
+<p><strong>kotlin中不会在末尾写分号啦！！！！！</strong></p>
+<h4 id="与-的区别"><a href="#与-的区别" class="headerlink" title="== 与 ===的区别"></a>== 与 ===的区别</h4><p>在kotlin中多了一种判断符<code>===</code>三个等号，这个特点呢就是判断两个对象是否指向同一个对象，也就是引用相等，而<code>==</code>则表示的数据的结构相等，也就是调用<code>equals</code>方法的返回值。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a : Int = 3 </span><br><span class="line">println(a===a)  // true </span><br><span class="line">var b : Int  = a</span><br><span class="line">var c : Int = a</span><br><span class="line">println(b===c) // false 因为指向的对象不是同一个</span><br><span class="line">println(b==c)  // true</span><br></pre></td></tr></table></figure></p>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>字符串有两种表达方式，一种是可以带转义符的，另外一种是可以包含任意字符的。例如下面有转义的<code>val s = &quot;hello world \n&quot;</code> ，但如果真正的字符串就是上面带有转义字符<code>\n</code>的，那么要怎么表示呢，kotlin中使用三引号 <code>&quot;&quot;&quot;</code>来表示，例如：<code>val s = &quot;&quot;&quot;hello world \n&quot;&quot;&quot;</code> 这样<code>\n</code>就不会被转义为回车，而是原封原样的字符串了。</p>
+<p>字符串还有了很好的模板特性，会极大的方便字符串拼接，操作等。下面就直接看例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">val a = 1</span><br><span class="line">var str : String = &quot;this num is $a&quot;</span><br><span class="line">a = 2</span><br><span class="line">val s2 = &quot;$&#123;str.replace(&quot;is&quot;, &quot;was&quot;)&#125;, but now is $a&quot;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到这极大的方便字符串的操作，使用$即可直接取到变量的值，如果在字符串中操作则使用表达式<code>${}</code>直接对字符串进行操作。</p>
+<h4 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h4><p>控制流基本与java中常用的保持一致，有<code>for</code>,<code>while</code>,但<code>switch</code>在kotlin中换为<code>when</code>，学过其他语言的应该都能很容易的掌握。</p>
+<h5 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h5><p>for循环使用 in 关键字进行遍历，普通的如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">val array = 1..100</span><br><span class="line">for (value in array) &#123;</span><br><span class="line">    print(&quot;value = $value&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于之前for循环的步长使用<code>step</code>来表示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (i in 1..100 step 2) &#123;</span><br><span class="line">    print(&quot;i = $i&quot;)</span><br><span class="line">&#125;</span><br><span class="line">// 1..100  表示是闭区间 ，[1,100]</span><br></pre></td></tr></table></figure></p>
+<p>为了表示开闭区间，可以使用<code>until</code> 来表示。如下:<code>1 until 100</code> 表示 [1,100)</p>
+<p>倒序的话将<code>..</code>替换为<code>downTo</code></p>
+<h5 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h5><p><code>while</code> 循环与java 一样，不在多说，以及<code>do while</code></p>
+<h5 id="when"><a href="#when" class="headerlink" title="when"></a>when</h5><p>when 的功能与java switch 功能类似，但是其便捷性不仅仅能case 一些基本数据类型，它可以支持表达式，这样会更加的灵活便捷。下面看个例子吧：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fun describe(obj: Any): String =</span><br><span class="line">    when (obj) &#123;</span><br><span class="line">        1,&apos;1&apos; -&gt; &quot;One&quot;</span><br><span class="line">        &quot;Hello&quot;,&quot;Good&quot; -&gt; &quot;Greeting&quot;</span><br><span class="line">        is Long -&gt; &quot;Long&quot;</span><br><span class="line">        !is String -&gt; &quot;Not a string&quot;</span><br><span class="line">        else -&gt; &quot;Unknown&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>看到上面的是不是很灵活? 可以对不同的类型在同一个分支中进行判断，极大的提高了灵活性。</p>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><ul>
+<li>数组：</li>
+</ul>
+<p>在Kotlin中使用<code>Array</code>来表示数组，它本身定义了<code>set</code>,<code>get</code>,<code>size</code>等属性，可以使用<code>arrayOf</code>来创建数组，例如：<code>var test = arrayof(1,2,3)</code>,数组中的数据类型可以是任何类型，但是使用时需要注意类型，访问可以用<code>get(index)</code> 或者<code>[index]</code>来访问，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (ar in array) &#123;</span><br><span class="line">    print(&quot;array value = $ar&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (i in array.indices) &#123;</span><br><span class="line">    print(&quot;array value = $array[i]&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>List</li>
+</ul>
+<p>list的创建也很简便，使用<code>listOf</code>创建，使用<code>val list = listOf(1,2,3,&quot;string&quot;)</code>, 当然遍历也提供了多种方式，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (it in list) &#123;</span><br><span class="line">    print(&quot;list value = $it&quot;)</span><br><span class="line">&#125;</span><br><span class="line">// 带下标，以及值的遍历方式</span><br><span class="line">for ((index,value) in list.withIndex()) &#123;</span><br><span class="line">    print(&quot;index = $index value = $value &quot; )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Map</li>
+</ul>
+<p>map的创建<code>val map = mapOf(&quot;a&quot; to 1, &quot;b&quot; to 2, &quot;c&quot; to 3)</code>,访问也是很简单，比java中访问简单太多，方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for ((key, value) in map) &#123;</span><br><span class="line">    print(&quot;key = $key  value = $value&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>看到上面常见集合的类型套路都是一样使用<code>类型Of()</code>来创建，访问遍历也是很方便。</p>
+<h4 id="空安全"><a href="#空安全" class="headerlink" title="空安全"></a>空安全</h4><p>在kotlin是空类型安全的，所以如果要给一个变量赋值为null，则必须在其定义后面加上？,否则无法编译器会报错。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str : String ? = null </span><br><span class="line">var  size =  str.length   //此时会编译报错，提示可能为空</span><br></pre></td></tr></table></figure></p>
+<p>那么怎么获取呢，在kotlin中提供两种方法来访问，第一种为<code>?.</code>的访问形式，此种表示如果为空则不执行，非空再继续，则上面则可以写成这样<code>val size = str?.length</code>,第二种就是可能在执行前给变量赋值了，我们肯定它不为空，那么可以用<code>!!.</code>来获取，如下：<code>val size = str!!.length</code>,当然第二种你必须为运行时控制住做好心理准备。</p>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>在Java中变量有普通的变量，静态常量（<code>final</code>），静态编量(<code>static</code>)，但在kotlin中没有<code>static</code>关键字了，需要使用静态变量有另外的一种表示，后续在将这部分，那在kotlin中的变量的表示方式为<code>var</code>,常量的表达方式为<code>val</code>, 具体表达方式如下： </p>
+<p><code>val a :Float = 1f</code>, <code>val a = &quot;Aaron&quot;, var c :Int = 2, c += 2</code><br>kotlin中定义的类型是放在变量后面的，且类型有时可省略。</p>
+<p><code>var a : Int = 2</code>, <code>var a = 2</code> 这两个表达的是一样的，后面的表达式会进行自动类型推倒。</p>
+<p>kotlin是空类型安全的，所以在赋值时也有些差别，如果想要空类型的则在赋值后面需要加<code>？</code>，</p>
+<h4 id="延迟属性"><a href="#延迟属性" class="headerlink" title="延迟属性"></a>延迟属性</h4><p>延迟属性或者延初始化可以帮助我们在需要用到时在初始化，不需要时不初始化，帮助程序节省内存空间及启动速度。</p>
+<p>在kotlin中使用<code>lazy</code>关键字来表示。直接看下面的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">val answer by lazy &#123;</span><br><span class="line">    println(&quot;Calculating the answer...&quot;)</span><br><span class="line">    42</span><br><span class="line">&#125;</span><br><span class="line">if (needAnswer()) &#123; // 返回随机值</span><br><span class="line">    println(&quot;The answer is $answer.&quot;) // 此时计算出答案</span><br><span class="line">&#125;else &#123;</span><br><span class="line">    println(&quot;Sometimes no answer is the answer...&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只有执行到上面needAnswer()为true时，answer才会被初始化。<br>想想是不是我们写的很多初始化的代码，都可以用lazy来延迟初始化了。</p>
+<ul>
+<li>注意<code>by lazy</code>所赋值的变量必须为<code>val</code>类型</li>
+</ul>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>函数在kotlin中使用 <code>fun</code> 来表示，函数参数与定义变量一样放在变量后面，参数的类型不可省略，返回值也是在放在参数括号后面，当没有返回值的时候使用<code>Unit</code>代替 java中的<code>void</code>关键字，当然<code>Unit</code>也是可以省略的。下面我们看几个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fun sum(a: Int, b: Int): Int &#123;</span><br><span class="line">    return a + b</span><br><span class="line">&#125;</span><br><span class="line">// 等同于下面语句，简称函数式表达式</span><br><span class="line">fun sum(a:Int, b:Int) = a + b</span><br><span class="line"></span><br><span class="line">val sum = &#123;x:Int ,y:Int -&gt; x + y&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面就是一个简单的函数，有参数又返回值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fun printSum(a: Int, b: Int): Unit &#123;</span><br><span class="line">  println(&quot;sum of $a and $b is $&#123;a + b&#125;&quot;)</span><br><span class="line">&#125;</span><br><span class="line">// 等同于下面</span><br><span class="line">fun printSum(a: Int, b: Int) &#123;</span><br><span class="line">  println(&quot;sum of $a and $b is $&#123;a + b&#125;&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面则为没有返回值，其可以将函数后面的<code>Unit</code>省略掉。</p>
+<h5 id="函数默认参数"><a href="#函数默认参数" class="headerlink" title="函数默认参数"></a>函数默认参数</h5><p>在java中我们如果对同一个方法名，但是有不同的参数个数，需要写多个方法出来，看起来很臃肿，对于少参数的来说，可能就是某个参数为固定或者默认值，那么在kotlin中有了默认参数的表示方式。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fun sum(a :Int , b : Int = 3) : Int &#123;</span><br><span class="line">    return a +b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//调用 sum(1,2) // 代表 1 + 2 </span><br><span class="line">//调用 sum (2)  // 代表2 + 3</span><br></pre></td></tr></table></figure></p>
+<h5 id="函数具名参数"><a href="#函数具名参数" class="headerlink" title="函数具名参数"></a>函数具名参数</h5><p>具名参数是对上面的一种特殊情况的考虑，比如我们将上面的代码改为如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fun sum(a :Int = 3, b : Int) : Int &#123;</span><br><span class="line">    return a +b</span><br><span class="line">&#125;</span><br><span class="line">//调用 sum (2)   此时对于此调用，编译器认为2 是为a赋值，而b没有赋值，无法编译通过。那么要调用则采用具名参数来指明参数。</span><br><span class="line">// 改为 sum(b = 2) 这样既可指定将2赋值给b，则a使用默认的值。</span><br></pre></td></tr></table></figure></p>
+<h5 id="扩展函数"><a href="#扩展函数" class="headerlink" title="扩展函数"></a>扩展函数</h5><p>在Android可能很常见的是有一个Utils包，专门放置一些常用的公共方法，比如String，Toast，File 操作等等，然而现在kotlin可以直接对系统类，进行扩展。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) &#123;</span><br><span class="line">    Toast.makeText(this, message, duration).show()</span><br><span class="line">&#125;</span><br><span class="line">//在Activity，Context实例中就可以直接调用了。</span><br><span class="line">toast(&quot;我是Toast&quot;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上面讲述了kotlin 很基础的知识，讲解了些kotlin的特性，当然还有很多的特性，以及在Android上开发的便捷性等等，本篇就先说这么多，下一篇将会说到kotlin更多的特性，比如：自定义类的getter和setter 方法，inline 函数，高阶函数，数据类，单例类等。敬请期待！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="WangXin wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎订阅我的微信公众号，第一时间获取最新文章！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/payImg/wechat.jpeg" alt="WangXin WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/payImg/alipay.jpeg" alt="WangXin Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      WangXin
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.wxtlife.com/2017/09/08/kotlin-share-1/" title="Kotlin开发基础（一）">http://www.wxtlife.com/2017/09/08/kotlin-share-1/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="external nofollow" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/kotlin/" rel="tag"># kotlin</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/07/Android-adb-commond/" rel="next" title="Android adb 开发常用命令">
+                <i class="fa fa-chevron-left"></i> Android adb 开发常用命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/10/00-ceo-fun-things/" rel="prev" title="00后CEO引起的那些趣事">
+                00后CEO引起的那些趣事 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/android.jpg"
+               alt="WangXin" />
+          <p class="site-author-name" itemprop="name">WangXin</p>
+           
+              <p class="site-description motion-element" itemprop="description">当你的成功欲望足以和呼吸的欲望相媲美的时候你就会成功。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://open.weixin.qq.com/qr/code/?username=FutureCoder" target="_blank" title="微信">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微信
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wx962464" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wx962464" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/wx_962464" title="CSDN Blog" target="_blank">CSDN Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/guolin_blog" title="郭霖的博客" target="_blank">郭霖的博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/lmj623565791" title="鸿洋Android" target="_blank">鸿洋Android</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gank.io/" title="极客公园" target="_blank">极客公园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/v_JULY_v" title="算法之道" target="_blank">算法之道</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/innost" title="深入Anroid系统" target="_blank">深入Anroid系统</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.enkichen.com/" title="双龙IOS" target="_blank">双龙IOS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.devhua.com/" title="华润IOS" target="_blank">华润IOS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://davidleee.com/" title="Lee的笔记本" target="_blank">Lee的笔记本</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么学习kotlin"><span class="nav-number">2.</span> <span class="nav-text">为什么学习kotlin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么学习"><span class="nav-number">3.</span> <span class="nav-text">怎么学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kotlin基础"><span class="nav-number">4.</span> <span class="nav-text">Kotlin基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Kotlin-数据类型"><span class="nav-number">4.1.</span> <span class="nav-text">Kotlin 数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#与-的区别"><span class="nav-number">4.2.</span> <span class="nav-text">== 与 ===的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串"><span class="nav-number">4.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制流"><span class="nav-number">4.4.</span> <span class="nav-text">控制流</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#for-循环"><span class="nav-number">4.4.1.</span> <span class="nav-text">for 循环</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#while循环"><span class="nav-number">4.4.2.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#when"><span class="nav-number">4.4.3.</span> <span class="nav-text">when</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合"><span class="nav-number">4.5.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空安全"><span class="nav-number">4.6.</span> <span class="nav-text">空安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">4.7.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#延迟属性"><span class="nav-number">4.8.</span> <span class="nav-text">延迟属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">4.9.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数默认参数"><span class="nav-number">4.9.1.</span> <span class="nav-text">函数默认参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数具名参数"><span class="nav-number">4.9.2.</span> <span class="nav-text">函数具名参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扩展函数"><span class="nav-number">4.9.3.</span> <span class="nav-text">扩展函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WangXin</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144372"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("lpr4hdMeJLrSXdNnOkQiS9p9-gzGzoHsz", "gCd21osrFIp5CfhvSToaoOWh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
