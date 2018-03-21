@@ -49,6 +49,25 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
+    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
+    <data>
+        <display>
+        <title>使用系统key文件生成keystore</title>
+        <pubTime>2016-07-11T12:36:16.000Z</pubTime>
+        
+        <tag>Android系统</tag>
+         
+        <tag>keystore</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</loc>
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     <data>
@@ -65,25 +84,6 @@
              
               <breadCrumb title="Gradle" url="http://www.wxtlife.com/categories/Gradle/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
-    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
-    <data>
-        <display>
-        <title>使用系统key文件生成keystore</title>
-        <pubTime>2016-07-11T12:36:16.000Z</pubTime>
-        
-        <tag>Android系统</tag>
-         
-        <tag>keystore</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -110,28 +110,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    <data>
-        <display>
-        <title>Android系统预制可自由卸载apk</title>
-        <pubTime>2016-01-08T14:03:56.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Android系统</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
@@ -147,6 +125,28 @@
            
              
               <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    <data>
+        <display>
+        <title>Android系统预制可自由卸载apk</title>
+        <pubTime>2016-01-08T14:03:56.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Android系统</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
           
         </display>
     </data>
@@ -416,25 +416,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
-    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
-    <data>
-        <display>
-        <title>Android Studio 编译报错问题汇总</title>
-        <pubTime>2017-03-12T02:26:55.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>AndroidStudio</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     <data>
@@ -469,16 +450,16 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
+    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     <data>
         <display>
-        <title>Android 设置无线热点模块隐藏SSID</title>
-        <pubTime>2017-02-16T11:11:42.000Z</pubTime>
+        <title>Android Studio 编译报错问题汇总</title>
+        <pubTime>2017-03-12T02:26:55.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Android System</tag>
+        <tag>AndroidStudio</tag>
          
          
            
@@ -488,31 +469,14 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>Gradle 查看项目依赖情况</title>
-        <pubTime>2017-04-16T06:06:53.000Z</pubTime>
+        <title>Android Support 库各版本功能介绍</title>
+        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
         
-        <tag>Gradle</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    <data>
-        <display>
-        <title>十分钟理清常见的开源协议</title>
-        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
-        
-        <tag>License</tag>
+        <tag>Android</tag>
          
          
            
@@ -539,14 +503,50 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>Android Support 库各版本功能介绍</title>
-        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
+        <title>Gradle 查看项目依赖情况</title>
+        <pubTime>2017-04-16T06:06:53.000Z</pubTime>
+        
+        <tag>Gradle</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    <data>
+        <display>
+        <title>Android 设置无线热点模块隐藏SSID</title>
+        <pubTime>2017-02-16T11:11:42.000Z</pubTime>
         
         <tag>Android</tag>
+         
+        <tag>Android System</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    <data>
+        <display>
+        <title>十分钟理清常见的开源协议</title>
+        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
+        
+        <tag>License</tag>
          
          
            
@@ -724,25 +724,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    <data>
-        <display>
-        <title>Android adb 开发常用命令</title>
-        <pubTime>2017-09-07T00:44:04.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>adb</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
@@ -753,6 +734,25 @@
         <tag>Android</tag>
          
         <tag>gradle</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    <data>
+        <display>
+        <title>Android adb 开发常用命令</title>
+        <pubTime>2017-09-07T00:44:04.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>adb</tag>
          
          
            
