@@ -4,7 +4,7 @@
   <url>
     <loc>http://www.wxtlife.com/2018/04/02/chrome-insight/</loc>
     
-    <lastmod>2018-04-02T13:24:55.934Z</lastmod>
+    <lastmod>2018-04-02T13:26:02.919Z</lastmod>
     
   </url>
   
@@ -23,6 +23,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/categories/index.html</loc>
+    
+    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/about/index.html</loc>
     
     <lastmod>2018-03-16T15:49:44.457Z</lastmod>
@@ -30,9 +37,9 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/categories/index.html</loc>
+    <loc>http://www.wxtlife.com/2016/03/27/%E8%AF%A6%E8%A7%A3https%E6%98%AF%E5%A6%82%E4%BD%95%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%9F/</loc>
     
-    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
   </url>
   
@@ -51,28 +58,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/03/27/%E8%AF%A6%E8%A7%A3https%E6%98%AF%E5%A6%82%E4%BD%95%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%9F/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -86,7 +72,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2020/01/01/my-blog-step-wxtlife-com/</loc>
     
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2020/01/01/my-blog-step-wxtlife-com/</loc>
+    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
+    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
+    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
@@ -149,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
+    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
+    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -166,6 +166,13 @@
     <loc>http://www.wxtlife.com/2015/07/31/how-to-find-system-error/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     
   </url>
   
@@ -184,21 +191,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
@@ -212,13 +205,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
@@ -226,9 +212,16 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
+    <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
     
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
   </url>
   
@@ -241,6 +234,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
@@ -261,13 +261,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
@@ -275,14 +268,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
+    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
