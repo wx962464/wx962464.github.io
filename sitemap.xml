@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/categories/index.html</loc>
+    <loc>http://www.wxtlife.com/about/index.html</loc>
     
     <lastmod>2018-03-16T15:49:44.457Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/about/index.html</loc>
+    <loc>http://www.wxtlife.com/categories/index.html</loc>
     
     <lastmod>2018-03-16T15:49:44.457Z</lastmod>
     
@@ -72,20 +72,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
@@ -100,21 +86,21 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2018/02/27/log-tools/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
@@ -128,14 +114,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
+    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
     
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
+    <loc>http://www.wxtlife.com/2018/02/27/log-tools/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
@@ -149,6 +142,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
+    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
+    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -198,21 +198,14 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/09/27/developers-need-tools/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
@@ -226,14 +219,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
+    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     
@@ -268,6 +268,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
@@ -275,14 +282,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
+    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
@@ -296,6 +296,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
@@ -303,14 +310,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
+    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     

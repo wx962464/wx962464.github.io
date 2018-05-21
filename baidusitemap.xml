@@ -157,45 +157,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    <data>
-        <display>
-        <title>Android系统预制可自由卸载apk</title>
-        <pubTime>2016-01-08T14:03:56.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Android系统</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    <data>
-        <display>
-        <title>Anroid系统解决扫码枪无法输入字母和字符问题</title>
-        <pubTime>2016-11-09T14:19:43.000Z</pubTime>
-        
-        <tag>Android系统</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
@@ -238,6 +199,45 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    <data>
+        <display>
+        <title>Android系统预制可自由卸载apk</title>
+        <pubTime>2016-01-08T14:03:56.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Android系统</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    <data>
+        <display>
+        <title>Anroid系统解决扫码枪无法输入字母和字符问题</title>
+        <pubTime>2016-11-09T14:19:43.000Z</pubTime>
+        
+        <tag>Android系统</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     <data>
@@ -254,6 +254,42 @@
              
               <breadCrumb title="Mac" url="http://www.wxtlife.com/categories/Mac/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/12/21/modify-android-media-default-voice/</loc>
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
+    <data>
+        <display>
+        <title>Android默认系统声音/大小修改及配置</title>
+        <pubTime>2016-12-21T14:36:39.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Android系统</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
+    <data>
+        <display>
+        <title>Linux下记录操作命令的详细信息</title>
+        <pubTime>2016-04-12T14:42:17.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
         </display>
     </data>
     </url>
@@ -280,70 +316,12 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    <data>
-        <display>
-        <title>Linux下记录操作命令的详细信息</title>
-        <pubTime>2016-04-12T14:42:17.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2016/12/21/modify-android-media-default-voice/</loc>
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    <data>
-        <display>
-        <title>Android默认系统声音/大小修改及配置</title>
-        <pubTime>2016-12-21T14:36:39.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Android系统</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     <data>
         <display>
         <title>Kotlin开发基础（三）</title>
         <pubTime>2017-12-17T12:17:45.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>kotlin</tag>
-         
-         
-           
-             
-              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
-    <data>
-        <display>
-        <title>Kotlin开发基础（二）</title>
-        <pubTime>2017-12-12T13:29:09.000Z</pubTime>
         
         <tag>Android</tag>
          
@@ -380,6 +358,28 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    <data>
+        <display>
+        <title>Kotlin开发基础（二）</title>
+        <pubTime>2017-12-12T13:29:09.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>kotlin</tag>
+         
+         
+           
+             
+              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     <data>
@@ -397,21 +397,21 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
+    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     <data>
         <display>
-        <title>Kotlin开发基础（一）</title>
-        <pubTime>2017-09-08T15:17:40.000Z</pubTime>
+        <title>如何使用android系统隐藏hide的类和方法</title>
+        <pubTime>2015-03-31T13:48:37.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>kotlin</tag>
+        <tag>Android系统</tag>
          
          
            
              
-              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
+              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
           
         </display>
     </data>
@@ -441,21 +441,21 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
+    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     <data>
         <display>
-        <title>如何使用android系统隐藏hide的类和方法</title>
-        <pubTime>2015-03-31T13:48:37.000Z</pubTime>
+        <title>Kotlin开发基础（一）</title>
+        <pubTime>2017-09-08T15:17:40.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Android系统</tag>
+        <tag>kotlin</tag>
          
          
            
              
-              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
+              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
           
         </display>
     </data>
@@ -516,6 +516,23 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    <data>
+        <display>
+        <title>Android Support 库各版本功能介绍</title>
+        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2017/09/27/developers-need-tools/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
@@ -524,40 +541,6 @@
         <pubTime>2017-09-27T11:47:59.000Z</pubTime>
         
         <tag>工具</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    <data>
-        <display>
-        <title>十分钟理清常见的开源协议</title>
-        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
-        
-        <tag>License</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    <data>
-        <display>
-        <title>Gradle 查看项目依赖情况</title>
-        <pubTime>2017-04-16T06:06:53.000Z</pubTime>
-        
-        <tag>Gradle</tag>
          
          
            
@@ -586,14 +569,14 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>Android Support 库各版本功能介绍</title>
-        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
+        <title>Gradle 查看项目依赖情况</title>
+        <pubTime>2017-04-16T06:06:53.000Z</pubTime>
         
-        <tag>Android</tag>
+        <tag>Gradle</tag>
          
          
            
@@ -603,44 +586,17 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>Android系统设置Android adb 开关的方法</title>
-        <pubTime>2015-11-24T09:38:26.000Z</pubTime>
+        <title>十分钟理清常见的开源协议</title>
+        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
-        <tag>Android系统</tag>
+        <tag>License</tag>
          
          
            
-             
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
-    <data>
-        <display>
-        <title>Android 源码编译服务器问题汇总</title>
-        <pubTime>2015-06-21T10:40:24.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.wxtlife.com/categories/Linux/"/>
-          
         </display>
     </data>
     </url>
@@ -671,14 +627,60 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    <data>
+        <display>
+        <title>Android 源码编译服务器问题汇总</title>
+        <pubTime>2015-06-21T10:40:24.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.wxtlife.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    <data>
+        <display>
+        <title>Android系统设置Android adb 开关的方法</title>
+        <pubTime>2015-11-24T09:38:26.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Android系统</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     <data>
         <display>
-        <title>Android开发中一些容易踩的坑</title>
-        <pubTime>2015-12-30T16:20:38.000Z</pubTime>
+        <title>Android简单内存映射与访问</title>
+        <pubTime>2016-01-17T08:35:23.000Z</pubTime>
         
-        <tag>Android应用</tag>
+        <tag>Android</tag>
+         
+        <tag>C++</tag>
          
          
            
@@ -710,6 +712,26 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    <data>
+        <display>
+        <title>Android开发中一些容易踩的坑</title>
+        <pubTime>2015-12-30T16:20:38.000Z</pubTime>
+        
+        <tag>Android应用</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     <data>
@@ -727,38 +749,14 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
-    <data>
-        <display>
-        <title>Android简单内存映射与访问</title>
-        <pubTime>2016-01-17T08:35:23.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
+    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
         <display>
-        <title>Android 系统添加自定义主题属性</title>
-        <pubTime>2015-07-21T13:20:27.000Z</pubTime>
+        <title>滑动按钮（Sliding Button）实现</title>
+        <pubTime>2015-04-06T04:12:54.000Z</pubTime>
         
-        <tag>Android</tag>
-         
-        <tag>Android系统</tag>
+        <tag>Android UI</tag>
          
          
            
@@ -790,6 +788,23 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    <data>
+        <display>
+        <title>00后CEO引起的那些趣事</title>
+        <pubTime>2017-09-10T15:24:08.000Z</pubTime>
+        
+        <tag>趣事</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
@@ -809,37 +824,22 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
+    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
         <display>
-        <title>滑动按钮（Sliding Button）实现</title>
-        <pubTime>2015-04-06T04:12:54.000Z</pubTime>
+        <title>Android 系统添加自定义主题属性</title>
+        <pubTime>2015-07-21T13:20:27.000Z</pubTime>
         
-        <tag>Android UI</tag>
+        <tag>Android</tag>
+         
+        <tag>Android系统</tag>
          
          
            
              
               <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    <data>
-        <display>
-        <title>00后CEO引起的那些趣事</title>
-        <pubTime>2017-09-10T15:24:08.000Z</pubTime>
-        
-        <tag>趣事</tag>
-         
-         
-           
         </display>
     </data>
     </url>
