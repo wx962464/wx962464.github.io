@@ -484,6 +484,205 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/07/22/osx-dev-summary-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/07/22/osx-dev-summary-1/" itemprop="url">
+                  OSX 开发知识点汇总（一）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T17:33:41+08:00">
+                2018-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OSX/" itemprop="url" rel="index">
+                    <span itemprop="name">OSX</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/22/osx-dev-summary-1/" class="leancloud_visitors" data-flag-title="OSX 开发知识点汇总（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  1,607
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  7 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
+<p>下面为最近使用swift 进行 OSX 开发中，对于一些知识点的总结与汇总，主要是跨行过来，很多内容都不太熟悉，所以这里进行一部分的记录与总结，方便日后的回顾与思考，后续有新的也会继续进行补充。</p>
+<h3 id="swift-代码同步块"><a href="#swift-代码同步块" class="headerlink" title="swift 代码同步块"></a>swift 代码同步块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">objc_sync_enter(Obj)</span><br><span class="line"> //code </span><br><span class="line">objc_sync_exit(Obj)</span><br></pre></td></tr></table></figure>
+<p>在上面两句话中间的语句则为同步代码块，Obj 为锁的对象。类似Java中的 synchronized(Obj)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//代码块</span><br><span class="line">synchronized(Obj) &#123;</span><br><span class="line">    //cide </span><br><span class="line">&#125;</span><br><span class="line">// synchronized 用到方法上</span><br><span class="line">public void synchronized method() &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>参考：<a href="http://swift.gg/2017/09/04/all-about-concurrency-in-swift-1-the-present/" target="_blank" rel="noopener">http://swift.gg/2017/09/04/all-about-concurrency-in-swift-1-the-present/</a></p>
+<h3 id="swift-布局约束"><a href="#swift-布局约束" class="headerlink" title="swift 布局约束"></a>swift 布局约束</h3><p>1、在Xib或者StoryBoard中的view间的依赖，都正常但是无法按照我们预期的显示，这时需要检查 约束之间的优先级，通常这部分很容易导致View依赖出现错误，而很难排查。</p>
+<p>2、在定义布局时，有图片控件ImageView的时候，默认指定了图片，这时相当于控件的大小是固定的，如果我们想让其铺满父view，设置了相应的约束，但是实际运行中不起作用</p>
+<p>原因： ImageView已经有图片，所以默认其图片是固定大小了，也就意味着ImageView是固定的了，所以这时view不会跟随父view铺满全屏，想要以 ImageView 的大小铺满父View，则 ImageView 的优先级则应该要低一些。 在xib中选中相应的ImageView，在约束那找到 Content compression resistance priority,将其优先级进行降低，也就是视图越容易被压缩。</p>
+<p>如果在其他需求中ImageView不想被压缩，想要拉伸，而是设置Content Hugging Priority</p>
+<p>约束优先级: 在Autolayout中每个约束都有一个优先级, 优先级的范围是1 ~ 1000。创建一个约束，默认的优先级是最高的1000</p>
+<p>下面是关于两种属性的解释说明：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/22/osx-dev-summary-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/05/20/bat-tool/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1998,176 +2197,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/11/05/Android-compile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WangXin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/android.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术特工队">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/05/Android-compile/" itemprop="url">
-                  还再用compile依赖？那你就落后啦
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T13:56:45+08:00">
-                2017-11-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/11/05/Android-compile/" class="leancloud_visitors" data-flag-title="还再用compile依赖？那你就落后啦">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 : </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计 :</span>
-                
-                <span title="字数统计 :">
-                  729
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 :</span>
-                
-                <span title="阅读时长 :">
-                  3 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<p>在上上一篇文章<a href="https://mp.weixin.qq.com/s?__biz=MzIwODI3MTc2Ng==&amp;mid=2649647447&amp;idx=1&amp;sn=4bcd221929a2982d231994af4aa0abe5&amp;chksm=8f1f69aeb868e0b8c5cf98c44a9b789a2fcd17497e3cd1df74aead19514c3a3bfeb0957c543c#rd" target="_blank" rel="noopener">《Android Studio 3.0版本正式发布啦》</a> 中说到AS 3.0 正式版已经出来了，讲到新版本支持的一些新特性，那么今天就来说说新版本中 Moudle 中 build.gradle 文件中的变化。</p>
-<p>我们来看看新建一个项目在 Moudle 中的 dependencies 中的变化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</span><br><span class="line">    implementation &apos;com.android.support:appcompat-v7:26.1.0&apos;</span><br><span class="line">    implementation &apos;com.android.support.constraint:constraint-layout:1.0.2&apos;</span><br><span class="line">    testImplementation &apos;junit:junit:4.12&apos;</span><br><span class="line">    androidTestImplementation &apos;com.android.support.test:runner:1.0.1&apos;</span><br><span class="line">    androidTestImplementation &apos;com.android.support.test.espresso:espresso-core:3.0.1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>发现我们经常添加依赖使用的 <code>compile</code>不见了，而现在改变为 <code>implementation</code>了，那么就来看看这个到底是有什么新的意思呢。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/05/Android-compile/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2217,7 +2246,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">43</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2228,7 +2257,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2239,7 +2268,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
