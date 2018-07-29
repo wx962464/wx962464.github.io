@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wxtlife.com/2018/07/29/osx-dev-summary-2/</loc>
+    
+    <lastmod>2018-07-29T15:40:43.472Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2018/07/29/osx-webview-native-bridge/</loc>
+    
+    <lastmod>2018-07-29T15:38:44.598Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2018/07/22/osx-dev-summary-1/</loc>
     
-    <lastmod>2018-07-22T14:45:02.449Z</lastmod>
+    <lastmod>2018-07-29T15:35:52.637Z</lastmod>
     
   </url>
   
@@ -44,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/categories/index.html</loc>
-    
-    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/about/index.html</loc>
     
     <lastmod>2018-03-16T15:49:44.457Z</lastmod>
@@ -58,14 +65,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
+    <loc>http://www.wxtlife.com/categories/index.html</loc>
+    
+    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</loc>
     
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</loc>
+    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
     
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
@@ -86,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -100,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -121,14 +135,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
+    <loc>http://www.wxtlife.com/2018/02/27/log-tools/</loc>
     
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2018/02/27/log-tools/</loc>
+    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
@@ -142,6 +156,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
@@ -149,9 +170,9 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
+    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
     
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
   </url>
   
@@ -177,14 +198,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
+    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
     
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     
@@ -198,16 +212,9 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
+    <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
     
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
   </url>
   
@@ -220,6 +227,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2017/09/27/developers-need-tools/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
@@ -261,7 +275,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
+    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     
@@ -275,6 +289,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
@@ -282,21 +303,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
+    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
@@ -310,14 +317,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
+    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
+    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
