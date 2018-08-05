@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.wxtlife.com/2018/07/29/osx-dev-summary-2/</loc>
+    <loc>http://www.wxtlife.com/2018/08/05/iOS-UIWindow-overlay-StatusBar/</loc>
     
-    <lastmod>2018-07-29T15:40:43.472Z</lastmod>
+    <lastmod>2018-08-05T14:45:00.591Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.wxtlife.com/2018/07/29/osx-webview-native-bridge/</loc>
     
-    <lastmod>2018-07-29T15:38:44.598Z</lastmod>
+    <lastmod>2018-07-29T15:44:26.851Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2018/07/29/osx-dev-summary-2/</loc>
+    
+    <lastmod>2018-07-29T15:40:43.472Z</lastmod>
     
   </url>
   
@@ -93,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
+    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -107,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -149,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
+    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
     
-    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
+    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -192,6 +192,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -219,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     
@@ -240,23 +247,16 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
   </url>
   
@@ -269,6 +269,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
@@ -310,6 +317,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
@@ -318,13 +332,6 @@
   
   <url>
     <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     

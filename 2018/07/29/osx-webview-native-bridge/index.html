@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="技术特工队">
 <meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在开发混合应用中，经常需要 js 与 webview 进行通信，那么官方也提供了一些方法进行消息处理，今天这里介绍一款开源库来更好的解决的 native 与 js 通信的问题，也就是 WebViewJavascriptBridge 基本配置使用 在 Podfile 文件中添加库稳健配置pod &amp;#39;WebViewJavascriptBr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-29T15:38:44.598Z">
+<meta property="og:updated_time" content="2018-07-29T15:44:26.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSX webview 与 native 通信简单介绍">
 <meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在开发混合应用中，经常需要 js 与 webview 进行通信，那么官方也提供了一些方法进行消息处理，今天这里介绍一款开源库来更好的解决的 native 与 js 通信的问题，也就是 WebViewJavascriptBridge 基本配置使用 在 Podfile 文件中添加库稳健配置pod &amp;#39;WebViewJavascriptBr">
@@ -456,10 +456,10 @@
 <ul>
 <li>js 层注册方法供 native 调用 （registerHandler）</li>
 </ul>
-<p>调用 js  层前面注册的函数进行注册，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setupWebViewJavascriptBridge(function(bridge) &#123;</span><br><span class="line">    bridge.registerHandler(&apos;methodName&apos;, function(data, responseCallback) &#123;</span><br><span class="line">            // data 为 native 调用的方法参数</span><br><span class="line">            log(&apos;ObjC called testJavascriptHandler with&apos;, data)</span><br><span class="line">            var responseData = &#123; &apos;Javascript Says&apos;:&apos;Right back atcha!&apos; &#125;</span><br><span class="line">            log(&apos;JS responding with&apos;, responseData)</span><br><span class="line">            // resonpsecallback 为js处理完告诉native 的结果</span><br><span class="line">            responseCallback(responseData)</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>调用 js 层前面注册的函数进行注册，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setupWebViewJavascriptBridge(function(bridge) &#123;</span><br><span class="line">    bridge.registerHandler(&apos;methodName&apos;, function(data, responseCallback) &#123;</span><br><span class="line">            // data 为 native 调用的方法参数</span><br><span class="line">            log(&apos;ObjC called testJavascriptHandler with&apos;, data)</span><br><span class="line">            var responseData = &#123; &apos;Javascript Says&apos;:&apos;Right back atcha!&apos; &#125;</span><br><span class="line">            log(&apos;JS responding with&apos;, responseData)</span><br><span class="line">            // resonpsecallback 为js处理完告诉native 的结果</span><br><span class="line">            responseCallback(responseData)</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>上面的 native 注册供 js 调用的模式，与 js 注册供 native 调用的方法基本上是一样的，方法，参数，回调等都基本上一致。</p>
 <ul>
-<li><p>native 调用 js  层注册的方法。 （callhandler）</p>
+<li><p>native 调用 js  层注册的方法 （callhandler）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// bridge 为native 绑定后的 WebViewJavascriptBridge 对象</span><br><span class="line">// methodName 为js 注册的方法</span><br><span class="line">// data 为调用js的方法参数</span><br><span class="line">// callback 为 js 方法执行后的回调方法。</span><br><span class="line">bridge.callHandler(methodName, data: data, responseCallback: callback)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>js 调用 native 层注册的方法 （callHanlder）</p>
@@ -568,8 +568,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/01/my-blog-step-wxtlife-com/" rel="prev" title="文章首发公众号【技术特工队】">
-                文章首发公众号【技术特工队】 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/05/iOS-UIWindow-overlay-StatusBar/" rel="prev" title="iOS UIWindow 覆盖 StatusBar">
+                iOS UIWindow 覆盖 StatusBar <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -667,7 +667,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -678,7 +678,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -689,7 +689,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

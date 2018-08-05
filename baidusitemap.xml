@@ -4,12 +4,36 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2018/07/29/osx-dev-summary-2/</loc>
-    <lastmod>2018-07-29T15:40:43.472Z</lastmod>
+    <loc>http://www.wxtlife.com/2018/08/05/iOS-UIWindow-overlay-StatusBar/</loc>
+    <lastmod>2018-08-05T14:45:00.591Z</lastmod>
     <data>
         <display>
-        <title>OSX 开发知识点汇总（二）</title>
-        <pubTime>2018-07-29T15:34:48.000Z</pubTime>
+        <title>iOS UIWindow 覆盖 StatusBar</title>
+        <pubTime>2018-08-05T14:38:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+        <tag>object-c</tag>
+         
+        <tag>iOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://www.wxtlife.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2018/07/29/osx-webview-native-bridge/</loc>
+    <lastmod>2018-07-29T15:44:26.851Z</lastmod>
+    <data>
+        <display>
+        <title>OSX webview 与 native 通信简单介绍</title>
+        <pubTime>2018-07-29T15:36:55.000Z</pubTime>
         
         <tag>Mac</tag>
          
@@ -28,12 +52,12 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2018/07/29/osx-webview-native-bridge/</loc>
-    <lastmod>2018-07-29T15:38:44.598Z</lastmod>
+    <loc>http://www.wxtlife.com/2018/07/29/osx-dev-summary-2/</loc>
+    <lastmod>2018-07-29T15:40:43.472Z</lastmod>
     <data>
         <display>
-        <title>OSX webview 与 native 通信简单介绍</title>
-        <pubTime>2018-07-29T15:36:55.000Z</pubTime>
+        <title>OSX 开发知识点汇总（二）</title>
+        <pubTime>2018-07-29T15:34:48.000Z</pubTime>
         
         <tag>Mac</tag>
          
@@ -229,21 +253,19 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
+    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
         <display>
-        <title>Android sdk content loader 一直显示0% 解决办法</title>
-        <pubTime>2015-09-27T10:45:00.000Z</pubTime>
+        <title>Hexo 使用中遇到的问题总结</title>
+        <pubTime>2015-03-24T14:53:13.000Z</pubTime>
         
-        <tag>Android</tag>
-         
-        <tag>Eclipse</tag>
+        <tag>Hexo</tag>
          
          
            
              
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+              <breadCrumb title="Hexo" url="http://www.wxtlife.com/categories/Hexo/"/>
           
         </display>
     </data>
@@ -268,26 +290,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo 使用中遇到的问题总结</title>
-        <pubTime>2015-03-24T14:53:13.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://www.wxtlife.com/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
@@ -303,6 +305,28 @@
            
              
               <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    <data>
+        <display>
+        <title>Android sdk content loader 一直显示0% 解决办法</title>
+        <pubTime>2015-09-27T10:45:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Eclipse</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
           
         </display>
     </data>
@@ -388,26 +412,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
-    <data>
-        <display>
-        <title>Linux 多硬盘开机自动挂载</title>
-        <pubTime>2015-05-04T14:24:46.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.wxtlife.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     <data>
@@ -452,6 +456,26 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    <data>
+        <display>
+        <title>Linux 多硬盘开机自动挂载</title>
+        <pubTime>2015-05-04T14:24:46.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.wxtlife.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     <data>
@@ -463,28 +487,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
-    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
-    <data>
-        <display>
-        <title>Kotlin开发基础（一）</title>
-        <pubTime>2017-09-08T15:17:40.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>kotlin</tag>
-         
-         
-           
-             
-              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
-          
         </display>
     </data>
     </url>
@@ -528,6 +530,28 @@
            
              
               <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
+    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    <data>
+        <display>
+        <title>Kotlin开发基础（一）</title>
+        <pubTime>2017-09-08T15:17:40.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>kotlin</tag>
+         
+         
+           
+             
+              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
           
         </display>
     </data>
@@ -588,14 +612,14 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>十分钟理清常见的开源协议</title>
-        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
+        <title>Android Support 库各版本功能介绍</title>
+        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
         
-        <tag>License</tag>
+        <tag>Android</tag>
          
          
            
@@ -639,6 +663,23 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    <data>
+        <display>
+        <title>十分钟理清常见的开源协议</title>
+        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
+        
+        <tag>License</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
@@ -652,47 +693,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    <data>
-        <display>
-        <title>Android Support 库各版本功能介绍</title>
-        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
-    <data>
-        <display>
-        <title>Android Studio多工程引用同一个library项目配置方法</title>
-        <pubTime>2015-12-17T13:57:12.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Gradle</tag>
-         
-        <tag>Studio</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android Studio" url="http://www.wxtlife.com/categories/Android-Studio/"/>
-          
         </display>
     </data>
     </url>
@@ -736,6 +736,30 @@
            
              
               <breadCrumb title="Linux" url="http://www.wxtlife.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    <data>
+        <display>
+        <title>Android Studio多工程引用同一个library项目配置方法</title>
+        <pubTime>2015-12-17T13:57:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Gradle</tag>
+         
+        <tag>Studio</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android Studio" url="http://www.wxtlife.com/categories/Android-Studio/"/>
           
         </display>
     </data>
@@ -843,6 +867,26 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    <data>
+        <display>
+        <title>滑动按钮（Sliding Button）实现</title>
+        <pubTime>2015-04-06T04:12:54.000Z</pubTime>
+        
+        <tag>Android UI</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
@@ -875,26 +919,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    <data>
-        <display>
-        <title>滑动按钮（Sliding Button）实现</title>
-        <pubTime>2015-04-06T04:12:54.000Z</pubTime>
-        
-        <tag>Android UI</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
-          
         </display>
     </data>
     </url>

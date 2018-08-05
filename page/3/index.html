@@ -298,6 +298,175 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/06/07/Android-framebuffer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/07/Android-framebuffer/" itemprop="url">
+                  Android Framebuffer介绍及使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T22:57:35+08:00">
+                2017-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/07/Android-framebuffer/" class="leancloud_visitors" data-flag-title="Android Framebuffer介绍及使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  2,890
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  12 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
+<h2 id="FrameBuffer-介绍"><a href="#FrameBuffer-介绍" class="headerlink" title="FrameBuffer 介绍"></a>FrameBuffer 介绍</h2><p>FrameBuffer中文译名为帧缓冲驱动，它是出现在2.2.xx内核中的一种驱动程序接口。主设备号为29，次设备号递增。<br>Linux抽象出FrameBuffer这个设备来供用户态进程实现直接写屏。<code>FrameBuffer机制模仿显卡的功能，将显卡硬件结构抽象掉，可以通过FrameBuffer的读写直接对显存进行操作。用户可以将FrameBuffer看成是显示内存的一个映像，将其映射到进程地址空间之后，就可以直接进行读写操作，而写操作可以立即反应在屏幕上。</code>这种操作是抽象的，统一的。用户不必关心物理显存的位置、换页机制等等具体细节，这些都是由FrameBuffer设备驱动来完成的。<br>FrameBuffer实际上就是嵌入式系统中专门为GPU所保留的一块连续的物理内存，LCD通过专门的总线从framebuffer读取数据，显示到屏幕上。<br>FrameBuffer本质上是一块显示缓存，往显示缓存中写入特定格式的数据就意味着向屏幕输出内容。所以说FrameBuffer就是一块白板。</p>
+<p><strong>屏幕位置从上到下，从左至右与内存地址是顺序的线性关系</strong><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/07/Android-framebuffer/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/04/16/check-gradle-dependency/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1825,179 +1994,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2016/03/27/详解https是如何确保安全的？/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WangXin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/android.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术特工队">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/27/详解https是如何确保安全的？/" itemprop="url">
-                  详解https是如何确保安全的？
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-27T22:57:18+08:00">
-                2016-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2016/03/27/详解https是如何确保安全的？/" class="leancloud_visitors" data-flag-title="详解https是如何确保安全的？">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 : </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计 :</span>
-                
-                <span title="字数统计 :">
-                  4,660
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 :</span>
-                
-                <span title="阅读时长 :">
-                  16 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<h1 id="Https-介绍"><a href="#Https-介绍" class="headerlink" title="Https 介绍"></a>Https 介绍</h1><h2 id="什么是Https"><a href="#什么是Https" class="headerlink" title="什么是Https"></a>什么是Https</h2><p> HTTPS（全称：Hypertext Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL</p>
-<h2 id="Https的作用"><a href="#Https的作用" class="headerlink" title="Https的作用"></a>Https的作用</h2><ul>
-<li><strong>内容加密</strong> 建立一个信息安全通道，来保证数据传输的安全；</li>
-<li><strong>身份认证</strong> 确认网站的真实性</li>
-<li><strong>数据完整性</strong> 防止内容被第三方冒充或者篡改</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/27/详解https是如何确保安全的？/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2047,7 +2043,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2058,7 +2054,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2069,7 +2065,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
