@@ -92,7 +92,7 @@
 <meta name="description" content="人因梦想而伟大，因坚持而可贵">
 <meta property="og:type" content="website">
 <meta property="og:title" content="技术特工队">
-<meta property="og:url" content="http://www.wxtlife.com/tags/gradle/index.html">
+<meta property="og:url" content="http://www.wxtlife.com/tags/Gradle/index.html">
 <meta property="og:site_name" content="技术特工队">
 <meta property="og:description" content="人因梦想而伟大，因坚持而可贵">
 <meta property="og:locale" content="zh-Hans">
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wxtlife.com/tags/gradle/"/>
+  <link rel="canonical" href="http://www.wxtlife.com/tags/Gradle/"/>
 
 
 
 
 
-  <title> 标签: gradle | 技术特工队 </title>
+  <title> 标签: Gradle | 技术特工队 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +289,7 @@
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        gradle
+        Gradle
         <small>标签</small>
       </h2>
     </div>
@@ -302,9 +302,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2017/11/05/Android-compile/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/16/check-gradle-dependency/" itemprop="url">
               
-                <span itemprop="name">还再用compile依赖？那你就落后啦</span>
+                <span itemprop="name">Gradle 查看项目依赖情况</span>
               
             </a>
         
@@ -312,9 +312,65 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-05T13:56:45+08:00"
-              content="2017-11-05" >
-          11-05
+              datetime="2017-04-16T14:06:53+08:00"
+              content="2017-04-16" >
+          04-16
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2015/12/17/Android-studio-quote-same-lib/" itemprop="url">
+              
+                <span itemprop="name">Android Studio多工程引用同一个library项目配置方法</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2015-12-17T21:57:12+08:00"
+              content="2015-12-17" >
+          12-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2015/09/26/slove-studio-default-not-found/" itemprop="url">
+              
+                <span itemprop="name">Android Studio gradle 编译提示‘default not found’ 解决办法</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2015-09-26T16:05:48+08:00"
+              content="2015-09-26" >
+          09-26
         </time>
       </div>
 
@@ -746,63 +802,6 @@
             acl.setPublicReadAccess(true);
             acl.setPublicWriteAccess(true);
             newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-
-  
-
-</body>
-</html>
-setACL(acl);
             /* End Set ACL */
             newcounter.set("title", title);
             newcounter.set("url", url);

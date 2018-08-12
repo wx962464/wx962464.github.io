@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="技术特工队">
 <meta property="og:description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-12T15:59:39.434Z">
+<meta property="og:updated_time" content="2018-08-12T16:03:40.982Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSX 开发知识点汇总（三）">
 <meta name="twitter:description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  1,493
+                  1,511
                 </span>
               
 
@@ -452,7 +452,7 @@
 <p>当app的 storyboard 或者 xib文件未加载完成，或者当前窗口为未激活状态或者是隐藏状态时，将返回nil。</p>
 <p><strong>注意： 所以项目中需要使用mainWindow 或者keyWinodw 时需要注意为空的情况。</strong></p>
 <p><a href="https://zonble.net/archives/2010_08/1352.php" target="_blank" rel="noopener">https://zonble.net/archives/2010_08/1352.php</a></p>
-<h4 id="window-窗口最小化"><a href="#window-窗口最小化" class="headerlink" title="window 窗口最小化"></a>window 窗口最小化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 使当前的窗口最小化</span><br><span class="line">window.miniaturize(self)</span><br><span class="line">// 使当前的窗口恢复原来状态取消最小化</span><br><span class="line">window.deminiaturize(self)</span><br><span class="line">// 如果当前为最小化则最大化，如果当前为最大化则最小化，取反。</span><br><span class="line">window.toggleFullScreen(nil)</span><br></pre></td></tr></table></figure>
+<h4 id="window-窗口最小化"><a href="#window-窗口最小化" class="headerlink" title="window 窗口最小化"></a>window 窗口最小化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 使当前的窗口最小化</span><br><span class="line">window.miniaturize(self)</span><br><span class="line">// 使当前的窗口恢复原来状态取消最小化</span><br><span class="line">window.deminiaturize(self)</span><br><span class="line">// 如果当前为最小化则最大化，如果当前为最大化则最小化，取反。</span><br><span class="line">window.toggleFullScreen(nil)</span><br><span class="line">// 判断是否为全屏的状态</span><br><span class="line">let isFullScreen = window.styleMask.contains(.fullScreen)</span><br></pre></td></tr></table></figure>
 <h4 id="window-storyboard-代码加载"><a href="#window-storyboard-代码加载" class="headerlink" title="window storyboard 代码加载"></a>window storyboard 代码加载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let mainStoryboard = NSStoryboard(name: NSStoryboard.Name(rawValue: &quot;main&quot;), bundle: nil)</span><br><span class="line">// 使用mainStoryboard自动连线控制的NSWindowController，</span><br><span class="line">let mainWindowController = mainStoryboard.instantiateInitialController() as! MainWindowController</span><br><span class="line">mainWindowController.showWindow(nil) // 显示出来。</span><br></pre></td></tr></table></figure>
 <p>如果storyboard 不是我们默认启动，需要代码启动的化，上面需要我们自行定义一个NSWindow的子类<code>MainWindowController</code>，在初始化完成后强制转化为 <code>MainWindowController</code></p>
 <p>如果已经有一个window启动，需要加载storyboard中的某个viewControl进行替换。可以使用下面的语句进行初始化:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let mainStoryboard = NSStoryboard(name: NSStoryboard.Name(rawValue: &quot;main&quot;), bundle: nil)</span><br><span class="line">//得到指定的storyboard中指定的ViewController。</span><br><span class="line">let mainViewController = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: &quot;InMeetingViewController&quot;)) as? NSViewController</span><br><span class="line">// 将新创建的viewController 赋值给已经存在的Window中的contentViewController。</span><br><span class="line">otherWindowController.contentViewController = mainViewController</span><br></pre></td></tr></table></figure></p>
@@ -471,32 +471,27 @@
 <tr>
 <td>OBJC_ASSOCIATION_ASSIGN</td>
 <td>@property (assign) or @property (unsafe_unretained)</td>
-<td>弱引用关联对象</td>
-<td></td>
+<td>弱引用关联对象 </td>
 </tr>
 <tr>
 <td>OBJC_ASSOCIATION_RETAIN_NONATOMIC</td>
 <td>@property (strong, nonatomic)</td>
-<td>强引用关联对象，且为非原子操作</td>
-<td></td>
+<td>强引用关联对象，且为非原子操作 </td>
 </tr>
 <tr>
 <td>OBJC_ASSOCIATION_COPY_NONATOMIC</td>
 <td>@property (copy, nonatomic)</td>
-<td>复制关联对象，且为非原子操作</td>
-<td></td>
+<td>复制关联对象，且为非原子操作 </td>
 </tr>
 <tr>
 <td>OBJC_ASSOCIATION_RETAIN</td>
 <td>@property (strong, atomic)</td>
-<td>强引用关联对象，且为原子操作</td>
-<td></td>
+<td>强引用关联对象，且为原子操作 </td>
 </tr>
 <tr>
 <td>OBJC_ASSOCIATION_COPY</td>
 <td>@property (copy, atomic)</td>
-<td>复制关联对象，且为原子操作</td>
-<td></td>
+<td>复制关联对象，且为原子操作 </td>
 </tr>
 </tbody>
 </table>
