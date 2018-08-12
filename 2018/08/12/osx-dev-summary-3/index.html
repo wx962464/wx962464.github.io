@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="swift,Mac,OSX," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在有些 Android 机器上首次启动时会出现很明显的卡顿问题，且比较明显的是只会在安装后的首次出现，很是奇怪，那么要分析这个问题则需要了解启动的不同类型的区别以及不同版本间的区别了。 启动的分类启动分三种，首次安装后的冷启动，冷启动，热启动 首次安装完的冷启动这个指的是用户对APK进行安装后，首次进行打开的过程。 app的冷启动指当启动应">
-<meta name="keywords" content="Android">
+<meta name="description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
+<meta name="keywords" content="swift,Mac,OSX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android首次启动卡顿问题分析">
-<meta property="og:url" content="http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/index.html">
+<meta property="og:title" content="OSX 开发知识点汇总（三）">
+<meta property="og:url" content="http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/index.html">
 <meta property="og:site_name" content="技术特工队">
-<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在有些 Android 机器上首次启动时会出现很明显的卡顿问题，且比较明显的是只会在安装后的首次出现，很是奇怪，那么要分析这个问题则需要了解启动的不同类型的区别以及不同版本间的区别了。 启动的分类启动分三种，首次安装后的冷启动，冷启动，热启动 首次安装完的冷启动这个指的是用户对APK进行安装后，首次进行打开的过程。 app的冷启动指当启动应">
+<meta property="og:description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-16T15:49:44.448Z">
+<meta property="og:updated_time" content="2018-08-12T15:59:39.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android首次启动卡顿问题分析">
-<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在有些 Android 机器上首次启动时会出现很明显的卡顿问题，且比较明显的是只会在安装后的首次出现，很是奇怪，那么要分析这个问题则需要了解启动的不同类型的区别以及不同版本间的区别了。 启动的分类启动分三种，首次安装后的冷启动，冷启动，热启动 首次安装完的冷启动这个指的是用户对APK进行安装后，首次进行打开的过程。 app的冷启动指当启动应">
+<meta name="twitter:title" content="OSX 开发知识点汇总（三）">
+<meta name="twitter:description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/"/>
+  <link rel="canonical" href="http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/"/>
 
 
 
 
 
-  <title> Android首次启动卡顿问题分析 | 技术特工队 </title>
+  <title> OSX 开发知识点汇总（三） | 技术特工队 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangXin">
@@ -319,7 +319,7 @@
             
             
               
-                Android首次启动卡顿问题分析
+                OSX 开发知识点汇总（三）
               
             
           </h1>
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T20:56:09+08:00">
-                2017-11-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T23:51:41+08:00">
+                2018-08-12
               </time>
             
 
@@ -345,6 +345,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OSX/" itemprop="url" rel="index">
+                    <span itemprop="name">OSX</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -352,7 +374,7 @@
 
           
           
-             <span id="/2017/11/14/Android-first-launcher-problem/" class="leancloud_visitors" data-flag-title="Android首次启动卡顿问题分析">
+             <span id="/2018/08/12/osx-dev-summary-3/" class="leancloud_visitors" data-flag-title="OSX 开发知识点汇总（三）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -376,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  1,301
+                  1,493
                 </span>
               
 
@@ -392,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 :</span>
                 
                 <span title="阅读时长 :">
-                  5 分钟
+                  6 分钟
                 </span>
               
             </div>
@@ -411,50 +433,79 @@
       
 
       
-        <blockquote>
-<h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
-<p>在有些 Android 机器上首次启动时会出现很明显的卡顿问题，且比较明显的是只会在安装后的首次出现，很是奇怪，那么要分析这个问题则需要了解启动的不同类型的区别以及不同版本间的区别了。</p>
-<h3 id="启动的分类"><a href="#启动的分类" class="headerlink" title="启动的分类"></a>启动的分类</h3><p>启动分三种，首次安装后的冷启动，冷启动，热启动</p>
-<h4 id="首次安装完的冷启动"><a href="#首次安装完的冷启动" class="headerlink" title="首次安装完的冷启动"></a>首次安装完的冷启动</h4><p>这个指的是用户对APK进行安装后，首次进行打开的过程。</p>
-<h4 id="app的冷启动"><a href="#app的冷启动" class="headerlink" title="app的冷启动"></a>app的冷启动</h4><p>指当启动应用时，后台没有该程序的进程。</p>
-<h4 id="热启动"><a href="#热启动" class="headerlink" title="热启动"></a>热启动</h4><p>指程序依然在，启动时通过已有进程启动应用。</p>
+        <h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
+<h4 id="添加子view"><a href="#添加子view" class="headerlink" title="添加子view"></a>添加子view</h4><p>为stackView 中添加 子view的方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackView.addArrangedSubview(view)</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意： 由于stackView 是继承自 NSView， 所有也会有 <code>addSubview(view)</code> 的方法，但是调用此方法，不会自动扩大 stackView 的宽高，而导致新加的view 显示不出来。</strong></p>
+<h4 id="移除子view"><a href="#移除子view" class="headerlink" title="移除子view"></a>移除子view</h4><p>移除子 View 采用如下方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.removeArrangedSubview(view) </span><br><span class="line">view.removeFromSuperview()</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意：子view从stackView移除后，还必须将子view从父view中移除</strong></p>
 <a id="more"></a>
-<h3 id="虚拟机区别"><a href="#虚拟机区别" class="headerlink" title="虚拟机区别"></a>虚拟机区别</h3><h4 id="Dalvik（Android5-0-以下系统）"><a href="#Dalvik（Android5-0-以下系统）" class="headerlink" title="Dalvik（Android5.0 以下系统）"></a>Dalvik（Android5.0 以下系统）</h4><p>在5.0以下的版本中，默认的虚拟机为Dalvik，Dalvik虚拟机与Java虚拟机有差不多的特性，都是解释执行的。Dalvik采用的是JIT（及时编译）技术。 <code>.dex</code>格式是专为Dalvik设计的一种压缩格式,在每次执行应用的时候Dalvik虚拟机都会将程序的语言由高级语言编译为机器语言。</p>
-<p>在应用启动时 JIT通过进行连续的性能分析来优化程序代码的执行，在程序运行的过程中，Dalvik虚拟机在不断的进行将字节码编译成机器码的工作，这样当前的程序才能运行。启动程序优化代码并存储在Dalvik缓存中。Dalvik第一次加载后会生成Cache文件，以提供下次快速加载，所以第一次会很慢。</p>
-<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p><strong>优点：</strong></p>
-<ul>
-<li>1、 占用空间较小</li>
-<li>2、 安装速度快</li>
-</ul>
-<p><strong>缺点：</strong></p>
-<ul>
-<li>1、 启动速度慢<h4 id="ART-Android-RunTime-Android-5-0-以上系统"><a href="#ART-Android-RunTime-Android-5-0-以上系统" class="headerlink" title="ART-Android RunTime (Android 5.0 以上系统)"></a>ART-Android RunTime (Android 5.0 以上系统)</h4></li>
-</ul>
-<p>在5.0以上的系统默认采用了<code>ART（Android RunTime）</code>模式，它正式的取代了以往的Dalvik虚拟机，ART能够把应用程序的字节码转换为机器码，是Android所使用的一种新的虚拟机，ART采用Ahead-of-time（AOT）技术，此种模式对Dalvik进行了很多的优化，包括性能，以及垃圾回收器等。</p>
-<p>在ART模式下系统在安装应用的时候会进行一次预编译，在安装应用程序时会先将代码转换为机器语言存储在本地，这样在运行程序时就不会每次都进行一次编译了，执行效率也大大提升。</p>
-<h5 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h5><p><strong>优点：</strong></p>
-<ul>
-<li>1、系统性能的显著提升。</li>
-<li>2、应用启动更快、运行更快、体验更流畅、触感反馈更及时。</li>
-<li>3、更长的电池续航能力。</li>
-<li>4、支持更低的硬件。</li>
-</ul>
-<p><strong>缺点：</strong></p>
-<ul>
-<li>1、占用更多空间</li>
-<li>2、安装时间变长</li>
-</ul>
-<p>对上面两个有个很好的比喻：</p>
+<h4 id="指定添加的每个View的间距"><a href="#指定添加的每个View的间距" class="headerlink" title="指定添加的每个View的间距"></a>指定添加的每个View的间距</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//指定每个添加的每个View间的间距</span><br><span class="line">stackView.spacing = 5</span><br><span class="line"></span><br><span class="line">// 在customerView 后设置space为10</span><br><span class="line">stackView.setCustomSpacing(10, customerView）</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>Dalvik 是已经折叠起来的自行车，每次骑都要先组装自行车才能骑<br>ART 是已经组装好的自行车，每次骑直接上车就能走人</p>
+<p>参考资料：<br><a href="https://swift.gg/2016/03/31/ios9-uistackview-guide-swift/" target="_blank" rel="noopener">https://swift.gg/2016/03/31/ios9-uistackview-guide-swift/</a>  </p>
 </blockquote>
-<h3 id="综合分析"><a href="#综合分析" class="headerlink" title="综合分析"></a>综合分析</h3><p>Dalvik是执行的时候编译+运行的模式。而ART是编译好的直接进行运行。<br>如果我们的应用比较大，比如有多个dex文件，那么这时候在不同虚拟机平台上启动速度是很不一样的，在Dalvik的虚拟机上，需要将每一个dex文件转化为机器码，dex越多越大则耗时越高，所以对于首次安装的冷启动是很慢很慢的，有时可能还会造成 ANR ，当然第一次之后会将相应的缓存保存在<code>data/dalvik-cache</code>下面，后续的冷启动读取缓存进行加载运行。相对会比首次安装后启动快很多。<br>然而在ART的模式下，由于其是在安装的过程中进行这部分处理的，所以应用的启动速度不受这些的影响。 </p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>对于在Dalvi虚拟机上的目前是没有很好的办法去解决首次安装后的冷启动，因为这个是系统虚拟机的限制导致此问题，此过程是必经之路。</p>
-<p><strong>瞎方法（不推荐）</strong><br>对于系统定制开发来说，可以在自己代码中起一个很普通的service，什么都不做，启动起来只有就自己结束。然后另外一个系统常驻的service，监听系统新增的应用包，监听到后启动这个应用的空白service，这个过程就相当于让程序能够自运行一下。让虚拟机首次启动执行的过程跑一遍，加快后续在启动的一个启动速度。当然这样就会导致系统与应用有些耦合。当然这只是一个瞎推荐的方法。</p>
-<h3 id="相关的参考资料"><a href="#相关的参考资料" class="headerlink" title="相关的参考资料"></a>相关的参考资料</h3><p>Activity 启动 Display 延迟问题源码分析代码如下：<a href="http://blog.csdn.net/kc58236582/article/details/60134836" target="_blank" rel="noopener">http://blog.csdn.net/kc58236582/article/details/60134836</a></p>
-<p>Google 官方对于启动时间一些说明: <a href="https://developer.android.com/topic/performance/launch-time.html" target="_blank" rel="noopener">https://developer.android.com/topic/performance/launch-time.html </a>  </p>
+<h3 id="OSX坐标系翻转"><a href="#OSX坐标系翻转" class="headerlink" title="OSX坐标系翻转"></a>OSX坐标系翻转</h3><p>这里为什么要说坐标系呢？ 因为在 iOS等其他移动设备上远点都左上角，而在OSX中坐标原点在左下角，这导致在有些 iOS 库想兼容到 OSX就要做很多的适配的问题。然而系统提供了坐标翻转的函数，可以很方便的将 OSX 坐标原点转化为 左上角，保持与iOS一致，在使用的NSView中复写如下方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isFlipped &#123;</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.macdev.io/ebook/nsview.html" target="_blank" rel="noopener">http://www.macdev.io/ebook/nsview.html</a></p>
+<h3 id="Swift-倒序循环"><a href="#Swift-倒序循环" class="headerlink" title="Swift 倒序循环"></a>Swift 倒序循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for i in (0..&lt;3).reversed()</span><br><span class="line">//表示：2，1，0</span><br><span class="line"></span><br><span class="line">for i in stride(from:3, through:0, by:-1)  </span><br><span class="line">//表示3，2，1，0</span><br></pre></td></tr></table></figure>
+<h3 id="NSWindow"><a href="#NSWindow" class="headerlink" title="NSWindow"></a>NSWindow</h3><h4 id="NSApp-keyWindow"><a href="#NSApp-keyWindow" class="headerlink" title="NSApp.keyWindow"></a>NSApp.keyWindow</h4><p>表示当前正在接受键盘事件的窗口，比如一个应用有多个窗口，当前窗口正在接受键盘事件或状态栏未灰掉的当前的窗口为 keyWindow, 官方文档对返回值解释如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The value of this property is nil when there is no window receiving keyboard events. </span><br><span class="line">The property might be nil because the app’s storyboard file has not yet finished loading or when the receiver is not active.</span><br></pre></td></tr></table></figure></p>
+<p>也就是说如果如果没有窗口接收键盘事件或者storyboard文件还未加载完，或窗口未激活，将返回的都是 nil。</p>
+<h4 id="NSApp-mainWindow"><a href="#NSApp-mainWindow" class="headerlink" title="NSApp.mainWindow"></a>NSApp.mainWindow</h4><p>表示一个应用程序的主Window，官方的返回值说明如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The value in this property is nil when the app’s storyboard or nib file has not yet finished loading. It might also be nil when the app is inactive or hidden.</span><br></pre></td></tr></table></figure></p>
+<p>当app的 storyboard 或者 xib文件未加载完成，或者当前窗口为未激活状态或者是隐藏状态时，将返回nil。</p>
+<p><strong>注意： 所以项目中需要使用mainWindow 或者keyWinodw 时需要注意为空的情况。</strong></p>
+<p><a href="https://zonble.net/archives/2010_08/1352.php" target="_blank" rel="noopener">https://zonble.net/archives/2010_08/1352.php</a></p>
+<h4 id="window-窗口最小化"><a href="#window-窗口最小化" class="headerlink" title="window 窗口最小化"></a>window 窗口最小化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 使当前的窗口最小化</span><br><span class="line">window.miniaturize(self)</span><br><span class="line">// 使当前的窗口恢复原来状态取消最小化</span><br><span class="line">window.deminiaturize(self)</span><br><span class="line">// 如果当前为最小化则最大化，如果当前为最大化则最小化，取反。</span><br><span class="line">window.toggleFullScreen(nil)</span><br></pre></td></tr></table></figure>
+<h4 id="window-storyboard-代码加载"><a href="#window-storyboard-代码加载" class="headerlink" title="window storyboard 代码加载"></a>window storyboard 代码加载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let mainStoryboard = NSStoryboard(name: NSStoryboard.Name(rawValue: &quot;main&quot;), bundle: nil)</span><br><span class="line">// 使用mainStoryboard自动连线控制的NSWindowController，</span><br><span class="line">let mainWindowController = mainStoryboard.instantiateInitialController() as! MainWindowController</span><br><span class="line">mainWindowController.showWindow(nil) // 显示出来。</span><br></pre></td></tr></table></figure>
+<p>如果storyboard 不是我们默认启动，需要代码启动的化，上面需要我们自行定义一个NSWindow的子类<code>MainWindowController</code>，在初始化完成后强制转化为 <code>MainWindowController</code></p>
+<p>如果已经有一个window启动，需要加载storyboard中的某个viewControl进行替换。可以使用下面的语句进行初始化:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let mainStoryboard = NSStoryboard(name: NSStoryboard.Name(rawValue: &quot;main&quot;), bundle: nil)</span><br><span class="line">//得到指定的storyboard中指定的ViewController。</span><br><span class="line">let mainViewController = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: &quot;InMeetingViewController&quot;)) as? NSViewController</span><br><span class="line">// 将新创建的viewController 赋值给已经存在的Window中的contentViewController。</span><br><span class="line">otherWindowController.contentViewController = mainViewController</span><br></pre></td></tr></table></figure></p>
+<h3 id="objc-setAssociatedObject-objc-getAssociatedObject"><a href="#objc-setAssociatedObject-objc-getAssociatedObject" class="headerlink" title="objc_setAssociatedObject/objc_getAssociatedObject"></a>objc_setAssociatedObject/objc_getAssociatedObject</h3><p>这两个方式是oc中方法，主要功能是什么呢？。在 oc 中可以使用 <code>Category</code>可以对一些系统类进行添加方法，相当于 Swift 中的 <code>extension</code>的概念，但是我们常用有需求希望能够对一个类中添加一个属性，经常是很难弄，但是 oc 就很好的提供了一个方法 <code>objc_setAssociatedObject</code> 来对一个类进行属性的添加扩展。这是一个运行时修改的库，<br>所以必须要先引入 <code>objc/runtime.h</code> </p>
+<h4 id="objc-setAssociatedObject"><a href="#objc-setAssociatedObject" class="headerlink" title="objc_setAssociatedObject"></a>objc_setAssociatedObject</h4><p>具体如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// object 为需要添加属性的类</span><br><span class="line">// key 为保证对象级别唯一的常量</span><br><span class="line">// value 为object 对所添加对象的值</span><br><span class="line">// policy 为关联的策略。</span><br><span class="line">public func objc_setAssociatedObject(_ object: Any, _ key: UnsafeRawPointer, _ value: Any?, _ policy: objc_AssociationPolicy)</span><br></pre></td></tr></table></figure></p>
+<p>关联的策略就像是在 oc 中自定义 property 的引用类型一样。具体对应的类型如下：</p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>等价属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OBJC_ASSOCIATION_ASSIGN</td>
+<td>@property (assign) or @property (unsafe_unretained)</td>
+<td>弱引用关联对象</td>
+<td></td>
+</tr>
+<tr>
+<td>OBJC_ASSOCIATION_RETAIN_NONATOMIC</td>
+<td>@property (strong, nonatomic)</td>
+<td>强引用关联对象，且为非原子操作</td>
+<td></td>
+</tr>
+<tr>
+<td>OBJC_ASSOCIATION_COPY_NONATOMIC</td>
+<td>@property (copy, nonatomic)</td>
+<td>复制关联对象，且为非原子操作</td>
+<td></td>
+</tr>
+<tr>
+<td>OBJC_ASSOCIATION_RETAIN</td>
+<td>@property (strong, atomic)</td>
+<td>强引用关联对象，且为原子操作</td>
+<td></td>
+</tr>
+<tr>
+<td>OBJC_ASSOCIATION_COPY</td>
+<td>@property (copy, atomic)</td>
+<td>复制关联对象，且为原子操作</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>实例如下对 NSApp 添加一个属性值为test:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 执行一个对象变量，后面使用该对象的地址。</span><br><span class="line"> var keyMainString:UInt8 = 0</span><br><span class="line"> objc_setAssociatedObject(NSApplication.shared, &amp;keyMainString, &quot;test&quot;, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)</span><br></pre></td></tr></table></figure></p>
+<h4 id="objc-getAssociatedObject"><a href="#objc-getAssociatedObject" class="headerlink" title="objc_getAssociatedObject"></a>objc_getAssociatedObject</h4><p>上面添加了相应的属性，下面则要获取添加的属性 <code>objc_getAssociatedObject</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let value = objc_getAssociatedObject(NSApplication.shared, &amp;keyMainString)</span><br><span class="line">// 如果上面进行了设置，那么这里将获得的值为“test”</span><br></pre></td></tr></table></figure></p>
+<p>通过上面两个方法就可以对系统类添加一个任意的属性值，和获取系统类的添加的属性值，对了，<strong>如果要移除关联的对象，可以对上面设置的值重新设置为 nil 即可。</strong><br>当然还有一个 <code>objc_removeAssociatedObjects</code>,这样可以把某个对象所设置的所有关联属性全部移除掉，一般都不会这样做，避免引起其他异常。</p>
 <blockquote>
-<h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队-1"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队-1" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
+<p>参考资料：<br><a href="http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/" target="_blank" rel="noopener">http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/</a><br><a href="https://www.jianshu.com/p/7f7255d4e76d" target="_blank" rel="noopener">https://www.jianshu.com/p/7f7255d4e76d</a></p>
+</blockquote>
 
       
     </div>
@@ -509,7 +560,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/" title="Android首次启动卡顿问题分析">http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</a>
+      <a href="http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/" title="OSX 开发知识点汇总（三）">http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -525,7 +576,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/swift/" rel="tag"># swift</a>
+          
+            <a href="/tags/Mac/" rel="tag"># Mac</a>
+          
+            <a href="/tags/OSX/" rel="tag"># OSX</a>
           
         </div>
       
@@ -538,8 +593,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/10/gitignore-auto-create/" rel="next" title="【工具】gitignore全自动生成">
-                <i class="fa fa-chevron-left"></i> 【工具】gitignore全自动生成
+              <a href="/2018/08/05/iOS-UIWindow-overlay-StatusBar/" rel="next" title="iOS UIWindow 覆盖 StatusBar">
+                <i class="fa fa-chevron-left"></i> iOS UIWindow 覆盖 StatusBar
               </a>
             
           </div>
@@ -548,8 +603,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/12/kotlin-share-2/" rel="prev" title="Kotlin开发基础（二）">
-                Kotlin开发基础（二） <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/01/my-blog-step-wxtlife-com/" rel="prev" title="文章首发公众号【技术特工队】">
+                文章首发公众号【技术特工队】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -778,7 +833,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动的分类"><span class="nav-number">2.</span> <span class="nav-text">启动的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#首次安装完的冷启动"><span class="nav-number">2.1.</span> <span class="nav-text">首次安装完的冷启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#app的冷启动"><span class="nav-number">2.2.</span> <span class="nav-text">app的冷启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#热启动"><span class="nav-number">2.3.</span> <span class="nav-text">热启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机区别"><span class="nav-number">3.</span> <span class="nav-text">虚拟机区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dalvik（Android5-0-以下系统）"><span class="nav-number">3.1.</span> <span class="nav-text">Dalvik（Android5.0 以下系统）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优缺点"><span class="nav-number">3.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ART-Android-RunTime-Android-5-0-以上系统"><span class="nav-number">3.3.</span> <span class="nav-text">ART-Android RunTime (Android 5.0 以上系统)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优缺点-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">优缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合分析"><span class="nav-number">4.</span> <span class="nav-text">综合分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">5.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关的参考资料"><span class="nav-number">6.</span> <span class="nav-text">相关的参考资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队-1"><span class="nav-number">7.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSStackView"><span class="nav-number">1.</span> <span class="nav-text">NSStackView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加子view"><span class="nav-number">1.1.</span> <span class="nav-text">添加子view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移除子view"><span class="nav-number">1.2.</span> <span class="nav-text">移除子view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定添加的每个View的间距"><span class="nav-number">1.3.</span> <span class="nav-text">指定添加的每个View的间距</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSX坐标系翻转"><span class="nav-number">2.</span> <span class="nav-text">OSX坐标系翻转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift-倒序循环"><span class="nav-number">3.</span> <span class="nav-text">Swift 倒序循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSWindow"><span class="nav-number">4.</span> <span class="nav-text">NSWindow</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NSApp-keyWindow"><span class="nav-number">4.1.</span> <span class="nav-text">NSApp.keyWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSApp-mainWindow"><span class="nav-number">4.2.</span> <span class="nav-text">NSApp.mainWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window-窗口最小化"><span class="nav-number">4.3.</span> <span class="nav-text">window 窗口最小化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window-storyboard-代码加载"><span class="nav-number">4.4.</span> <span class="nav-text">window storyboard 代码加载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#objc-setAssociatedObject-objc-getAssociatedObject"><span class="nav-number">5.</span> <span class="nav-text">objc_setAssociatedObject/objc_getAssociatedObject</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#objc-setAssociatedObject"><span class="nav-number">5.1.</span> <span class="nav-text">objc_setAssociatedObject</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#objc-getAssociatedObject"><span class="nav-number">5.2.</span> <span class="nav-text">objc_getAssociatedObject</span></a></li></ol></li></ol></div>
             
 
           </div>
