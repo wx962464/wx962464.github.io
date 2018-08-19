@@ -298,6 +298,197 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/09/26/slove-studio-default-not-found/" itemprop="url">
+                  Android Studio gradle 编译提示‘default not found’ 解决办法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-26T16:05:48+08:00">
+                2015-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Gradle/" itemprop="url" rel="index">
+                    <span itemprop="name">Gradle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2015/09/26/slove-studio-default-not-found/" class="leancloud_visitors" data-flag-title="Android Studio gradle 编译提示‘default not found’ 解决办法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  388
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
+<p>在导入studio工程的时候，进行sync的时候，提示<code>Error:Configuration with name &#39;default&#39; not found.</code><br>之前由于对gradle不熟悉，所以没有找到原因，其实也是偷懒，没有认真去排查问题，今天又遇到了，就折腾了会，把所有的配置文件都打开看，最终解决问题了，发现尽然是个低级的不能低级的问题，故记录下，警醒自己。</p>
+<ol>
+<li>打开settings.gradle发现里面有很多个<code>include &#39;:app&#39;</code>这样的include，然而发现在工程的目录下面根本没有include的项目，所以将需要include的项目添加进来，如果include的项目不需要，则将其include语句直接删掉，重新sync尝试。</li>
+<li>按照上面的操作，要么添加了相应inlcude的工程进来，但是发现还是会提示这样的<code>default not found</code>语句，怎么回事呢，原来用gradle编译的工程，每个工程下面都必须要有<code>build.gradle</code>文件,才能够编译include的工程。整个大工程才能sync通过。把include工程中都添加上相应的gradle配置文件，再重新进行sync，整个工程都通过了。</li>
+</ol>
+<p>终于处理掉了这个问题，其实这个问题是很简单的问题，只是怪自己年少无知，故现在记录下这些曾经无知的过错，等以后反过来看自己也许会一笑而过。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2015/07/31/how-to-find-system-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1683,7 +1874,7 @@ b.  我的C盘占用过多，盘符标红，然后卸载一些不常用软件解
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">48</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

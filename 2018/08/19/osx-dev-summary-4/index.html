@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,kotlin," />
+  <meta name="keywords" content="swift,Mac,OSX," />
 
 
 
@@ -89,21 +89,18 @@
 
 
 
-<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 作为程序员经常使用命令行来进行一些文件的处理，比如常见的：git， vim ，以及不同语言下的一些命令等。那么这么多的命令中，相信你肯定有用过cat命令用来查看文件的内容，但是这个命令仅仅只能将文本展示出来，并不会很好的辅助我们阅读和理解里面的内容，尤其是文件中内容为 代码时，看起来就特别的痛苦了。那么这篇文章就要介绍更好命令来替代 cat">
-<meta name="keywords" content="Android,kotlin">
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队OSX 中Window中常用的一些属性1. applicationShouldTerminate在 AppDelegate 中，复写applicationShouldTerminate方法可以达到控制是否点击关闭按钮是否关闭应用的效果，其返回值TerminateReply有三个值，具体如下：12345public enum TerminateR">
+<meta name="keywords" content="swift,Mac,OSX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="比 cat 更好用的命令了解一下？">
-<meta property="og:url" content="http://www.wxtlife.com/2018/05/20/bat-tool/index.html">
+<meta property="og:title" content="OSX 开发知识点汇总（四）">
+<meta property="og:url" content="http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/index.html">
 <meta property="og:site_name" content="技术特工队">
-<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 作为程序员经常使用命令行来进行一些文件的处理，比如常见的：git， vim ，以及不同语言下的一些命令等。那么这么多的命令中，相信你肯定有用过cat命令用来查看文件的内容，但是这个命令仅仅只能将文本展示出来，并不会很好的辅助我们阅读和理解里面的内容，尤其是文件中内容为 代码时，看起来就特别的痛苦了。那么这篇文章就要介绍更好命令来替代 cat">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队OSX 中Window中常用的一些属性1. applicationShouldTerminate在 AppDelegate 中，复写applicationShouldTerminate方法可以达到控制是否点击关闭按钮是否关闭应用的效果，其返回值TerminateReply有三个值，具体如下：12345public enum TerminateR">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://camo.githubusercontent.com/9d3d89364f2cc83ace8f29646a6236bc15ea1da0/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67">
-<meta property="og:image" content="https://camo.githubusercontent.com/67e44f4a68150325f74b3a46820b7473ff7b91a6/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67">
-<meta property="og:updated_time" content="2018-05-20T14:32:08.629Z">
+<meta property="og:updated_time" content="2018-08-19T14:07:57.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="比 cat 更好用的命令了解一下？">
-<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 作为程序员经常使用命令行来进行一些文件的处理，比如常见的：git， vim ，以及不同语言下的一些命令等。那么这么多的命令中，相信你肯定有用过cat命令用来查看文件的内容，但是这个命令仅仅只能将文本展示出来，并不会很好的辅助我们阅读和理解里面的内容，尤其是文件中内容为 代码时，看起来就特别的痛苦了。那么这篇文章就要介绍更好命令来替代 cat">
-<meta name="twitter:image" content="https://camo.githubusercontent.com/9d3d89364f2cc83ace8f29646a6236bc15ea1da0/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67">
+<meta name="twitter:title" content="OSX 开发知识点汇总（四）">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队OSX 中Window中常用的一些属性1. applicationShouldTerminate在 AppDelegate 中，复写applicationShouldTerminate方法可以达到控制是否点击关闭按钮是否关闭应用的效果，其返回值TerminateReply有三个值，具体如下：12345public enum TerminateR">
 
 
 
@@ -131,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wxtlife.com/2018/05/20/bat-tool/"/>
+  <link rel="canonical" href="http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/"/>
 
 
 
 
 
-  <title> 比 cat 更好用的命令了解一下？ | 技术特工队 </title>
+  <title> OSX 开发知识点汇总（四） | 技术特工队 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -301,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/05/20/bat-tool/">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangXin">
@@ -322,7 +319,7 @@
             
             
               
-                比 cat 更好用的命令了解一下？
+                OSX 开发知识点汇总（四）
               
             
           </h1>
@@ -337,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T21:50:58+08:00">
-                2018-05-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T22:04:25+08:00">
+                2018-08-19
               </time>
             
 
@@ -360,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
+                  <a href="/categories/OSX/" itemprop="url" rel="index">
+                    <span itemprop="name">OSX</span>
                   </a>
                 </span>
 
@@ -377,7 +374,7 @@
 
           
           
-             <span id="/2018/05/20/bat-tool/" class="leancloud_visitors" data-flag-title="比 cat 更好用的命令了解一下？">
+             <span id="/2018/08/19/osx-dev-summary-4/" class="leancloud_visitors" data-flag-title="OSX 开发知识点汇总（四）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -401,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  615
+                  552
                 </span>
               
 
@@ -436,27 +433,15 @@
       
 
       
-        <blockquote>
-<h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
-<p>作为程序员经常使用命令行来进行一些文件的处理，比如常见的：<code>git</code>， <code>vim</code> ，以及不同语言下的一些命令等。那么这么多的命令中，相信你肯定有用过<code>cat</code>命令用来查看文件的内容，但是这个命令仅仅只能将文本展示出来，并不会很好的辅助我们阅读和理解里面的内容，尤其是文件中内容为 代码时，看起来就特别的痛苦了。那么这篇文章就要介绍更好命令来替代 <code>cat</code>命令，它就是<code>bat</code>命令。（不是windows中的那个脚本哟）</p>
-<h3 id="bat介绍"><a href="#bat介绍" class="headerlink" title="bat介绍"></a>bat介绍</h3><p><code>bat</code> 是一个语法高亮显示和<code>Git</code>集成的<code>cat</code>高级版本，也就是说，<code>bat</code> 有 <code>cat</code>的所有功能，且已经集成了代码高亮，和<code>git</code>版本管理的工具，并且会对过长的文件进行自动分页，不会像 <code>cat</code> 一样全部一次打印,先来看张效果图：</p>
-<p><img src="https://camo.githubusercontent.com/9d3d89364f2cc83ace8f29646a6236bc15ea1da0/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt=""></p>
-<a id="more"></a>
-<h3 id="bat安装"><a href="#bat安装" class="headerlink" title="bat安装"></a>bat安装</h3><p>安装的方法也是超级的简单，具体安装如下：</p>
-<ul>
-<li>Linux 上</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://aur.archlinux.org/bat.git</span><br><span class="line">cd bat</span><br><span class="line">makepkg -si</span><br></pre></td></tr></table></figure>
-<ul>
-<li>MACOS 上<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install bat</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>安装完成后，输入<code>bat -help</code> 看下是否会出现相关的提示信息，来确认是否安装成功。</p>
-<h3 id="bat使用"><a href="#bat使用" class="headerlink" title="bat使用"></a>bat使用</h3><p>使用与 <code>cat</code> 类似，在 <code>bat</code> 后面紧跟文件 就行了， 也可以同时打开过个，但结果是以一个接一个展示出来。</p>
-<p>如打开一个有 <code>git</code> 管理的文件，会展示出文件中添加与删除的部分，如下图所示：<br><img src="https://camo.githubusercontent.com/67e44f4a68150325f74b3a46820b7473ff7b91a6/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt=""></p>
-<p>如果需要制定文件中高亮的语言，可以使用 <code>-l</code> 参数来制定语言，例如：<br><code>bat  ./test.json -l json</code> 则指定文件中高亮为 json 模式，当然不指定也没有问题，默认会自动识别。<br>总之使用还是比较简单，一点都不复杂。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>如果有了这个命令，我想一般都不会再用 <code>cat</code>命令了，但每次敲命令都习惯使用 <code>cat</code> 了， 那么建议将 cat 命令使用 <code>alias cat= &#39;bat&#39;</code> 将其指定为 <code>bat</code> 这样就可以使用<code>cat</code> 命令，而达到 <code>bat</code> 的使用效果。</p>
-<p>希望大家能够喜欢这篇文章，喜欢就分享出去吧。 如果你有更好的命令，欢迎留言交流。</p>
+        <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="OSX-中Window中常用的一些属性"><a href="#OSX-中Window中常用的一些属性" class="headerlink" title="OSX 中Window中常用的一些属性"></a>OSX 中Window中常用的一些属性</h3><h4 id="1-applicationShouldTerminate"><a href="#1-applicationShouldTerminate" class="headerlink" title="1. applicationShouldTerminate"></a>1. applicationShouldTerminate</h4><p>在 AppDelegate 中，复写<code>applicationShouldTerminate</code>方法可以达到控制是否点击关闭按钮是否关闭应用的效果，其返回值<code>TerminateReply</code>有三个值，具体如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum TerminateReply : UInt &#123;</span><br><span class="line">    case terminateCancel // 取消掉关闭，等于点击无作用</span><br><span class="line">    case terminateNow   // 现在直接关闭</span><br><span class="line">    case terminateLater  // 暂且不关闭</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在下面的返回值可根据一些条件进行判断，比如有些应用点击关闭按钮是仅将窗口关闭，并最小化应用不退出，则可以根据设置情况进行返回不同的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func applicationShouldTerminate(_ sender: NSApplication) -&gt; NSApplication.TerminateReply &#123;</span><br><span class="line">    return .terminateNow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-applicationShouldTerminateAfterLastWindowClosed"><a href="#2-applicationShouldTerminateAfterLastWindowClosed" class="headerlink" title="2. applicationShouldTerminateAfterLastWindowClosed"></a>2. applicationShouldTerminateAfterLastWindowClosed</h4><p>在 AppDelegate中 <code>applicationShouldTerminateAfterLastWindowClosed</code>中的作用为确认是否是等待所有窗口关闭后才关闭整个应用的作用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -&gt; Bool &#123;</span><br><span class="line">    return true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a> 
+<h4 id="3-NSWindow-windowShouldClose"><a href="#3-NSWindow-windowShouldClose" class="headerlink" title="3. NSWindow windowShouldClose"></a>3. NSWindow windowShouldClose</h4><p>在每个NSWindow中,有很多的NSWindowDelegate方法，其中<code>windowShouldClose</code>可以根据返回值控制是否可以关闭此窗口，比如有些情况我们的内容没保存，而直接点击<code>关闭</code>按钮时，可进行不关闭此窗口，而是进行提示，那么就可以通过此属性进行控制。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func windowShouldClose(_ sender: NSWindow) -&gt; Bool &#123;</span><br><span class="line">    return false // window 不关闭</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-NSWindow-单例"><a href="#4-NSWindow-单例" class="headerlink" title="4. NSWindow 单例"></a>4. NSWindow 单例</h4><p>在应用中经常会有很多的弹窗，但这些弹框是需要只弹一个的（未关闭多次点击不新建，显示原来的那个），这时候就需要设置Window的属性。具体如下：<br>选中 <code>目标window</code> 上的<code>Window Controller</code>然后在属性栏中选中<code>show the attributes inspector</code>即可看到<code>Presentation</code>,然后选则<code>single</code>即可，默认是<code>Multiple</code>。</p>
+<h3 id="自定义控件属性"><a href="#自定义控件属性" class="headerlink" title="自定义控件属性"></a>自定义控件属性</h3><p>在 Android 中自定义View，可以自定义很多的属性，对控件进行设置，在 iOS/OSX 中同样存在对自定义控件添加属性的方法，具体为<code>IBInspectable</code>和<code>IBDesignable</code>两个属性，定义了此属性后，在XCode中设置了View为此类型后，可以有可视化的设置项，很是方便，具体可以参考这篇文章:<a href="https://zhangbuhuai.com/ibinspectable-and-ibdesignable/" target="_blank" rel="noopener">https://zhangbuhuai.com/ibinspectable-and-ibdesignable/</a></p>
 
       
     </div>
@@ -511,7 +496,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://www.wxtlife.com/2018/05/20/bat-tool/" title="比 cat 更好用的命令了解一下？">http://www.wxtlife.com/2018/05/20/bat-tool/</a>
+      <a href="http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/" title="OSX 开发知识点汇总（四）">http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -527,9 +512,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/swift/" rel="tag"># swift</a>
           
-            <a href="/tags/kotlin/" rel="tag"># kotlin</a>
+            <a href="/tags/Mac/" rel="tag"># Mac</a>
+          
+            <a href="/tags/OSX/" rel="tag"># OSX</a>
           
         </div>
       
@@ -542,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/02/chrome-insight/" rel="next" title="【工具】github 插件源码浏览利器 Insight">
-                <i class="fa fa-chevron-left"></i> 【工具】github 插件源码浏览利器 Insight
+              <a href="/2018/08/12/osx-dev-summary-3/" rel="next" title="OSX 开发知识点汇总（三）">
+                <i class="fa fa-chevron-left"></i> OSX 开发知识点汇总（三）
               </a>
             
           </div>
@@ -552,8 +539,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/22/osx-dev-summary-1/" rel="prev" title="OSX 开发知识点汇总（一）">
-                OSX 开发知识点汇总（一） <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/01/my-blog-step-wxtlife-com/" rel="prev" title="文章首发公众号【技术特工队】">
+                文章首发公众号【技术特工队】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -782,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bat介绍"><span class="nav-number">2.</span> <span class="nav-text">bat介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bat安装"><span class="nav-number">3.</span> <span class="nav-text">bat安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bat使用"><span class="nav-number">4.</span> <span class="nav-text">bat使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSX-中Window中常用的一些属性"><span class="nav-number">2.</span> <span class="nav-text">OSX 中Window中常用的一些属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-applicationShouldTerminate"><span class="nav-number">2.1.</span> <span class="nav-text">1. applicationShouldTerminate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-applicationShouldTerminateAfterLastWindowClosed"><span class="nav-number">2.2.</span> <span class="nav-text">2. applicationShouldTerminateAfterLastWindowClosed</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-NSWindow-windowShouldClose"><span class="nav-number">2.3.</span> <span class="nav-text">3. NSWindow windowShouldClose</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-NSWindow-单例"><span class="nav-number">2.4.</span> <span class="nav-text">4. NSWindow 单例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义控件属性"><span class="nav-number">3.</span> <span class="nav-text">自定义控件属性</span></a></li></ol></div>
             
 
           </div>
