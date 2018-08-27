@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,Gradle," />
+  <meta name="keywords" content="swift,Mac,OSX," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在导入studio工程的时候，进行sync的时候，提示Error:Configuration with name &amp;#39;default&amp;#39; not found.之前由于对gradle不熟悉，所以没有找到原因，其实也是偷懒，没有认真去排查问题，今天又遇到了，就折腾了会，把所有的配置文件都打开看，最终解决问题了，发现尽然是个低级的不能">
-<meta name="keywords" content="Android,Gradle">
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队TableView在 OSX 中有一些列表的需求，这时候需要使用 OSX 中 TableView 来实现，但是这个 TableView 与 Android的 ListView 不太一样。使用还是比较复杂的。下面做一个简单的介绍， TableView 的使用 首先需要在布局文件中，拖出一个TableView，并且添加相应的每列的数据源，主要是 使">
+<meta name="keywords" content="swift,Mac,OSX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio gradle 编译提示‘default not found’ 解决办法">
-<meta property="og:url" content="http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/index.html">
+<meta property="og:title" content="OSX 开发知识点汇总（五）">
+<meta property="og:url" content="http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/index.html">
 <meta property="og:site_name" content="技术特工队">
-<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在导入studio工程的时候，进行sync的时候，提示Error:Configuration with name &amp;#39;default&amp;#39; not found.之前由于对gradle不熟悉，所以没有找到原因，其实也是偷懒，没有认真去排查问题，今天又遇到了，就折腾了会，把所有的配置文件都打开看，最终解决问题了，发现尽然是个低级的不能">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队TableView在 OSX 中有一些列表的需求，这时候需要使用 OSX 中 TableView 来实现，但是这个 TableView 与 Android的 ListView 不太一样。使用还是比较复杂的。下面做一个简单的介绍， TableView 的使用 首先需要在布局文件中，拖出一个TableView，并且添加相应的每列的数据源，主要是 使">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-16T15:49:44.456Z">
+<meta property="og:updated_time" content="2018-08-27T11:56:50.879Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio gradle 编译提示‘default not found’ 解决办法">
-<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在导入studio工程的时候，进行sync的时候，提示Error:Configuration with name &amp;#39;default&amp;#39; not found.之前由于对gradle不熟悉，所以没有找到原因，其实也是偷懒，没有认真去排查问题，今天又遇到了，就折腾了会，把所有的配置文件都打开看，最终解决问题了，发现尽然是个低级的不能">
+<meta name="twitter:title" content="OSX 开发知识点汇总（五）">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队TableView在 OSX 中有一些列表的需求，这时候需要使用 OSX 中 TableView 来实现，但是这个 TableView 与 Android的 ListView 不太一样。使用还是比较复杂的。下面做一个简单的介绍， TableView 的使用 首先需要在布局文件中，拖出一个TableView，并且添加相应的每列的数据源，主要是 使">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/"/>
+  <link rel="canonical" href="http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/"/>
 
 
 
 
 
-  <title> Android Studio gradle 编译提示‘default not found’ 解决办法 | 技术特工队 </title>
+  <title> OSX 开发知识点汇总（五） | 技术特工队 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangXin">
@@ -319,7 +319,7 @@
             
             
               
-                Android Studio gradle 编译提示‘default not found’ 解决办法
+                OSX 开发知识点汇总（五）
               
             
           </h1>
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-26T16:05:48+08:00">
-                2015-09-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T19:52:08+08:00">
+                2018-08-27
               </time>
             
 
@@ -357,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Gradle/" itemprop="url" rel="index">
-                    <span itemprop="name">Gradle</span>
+                  <a href="/categories/OSX/" itemprop="url" rel="index">
+                    <span itemprop="name">OSX</span>
                   </a>
                 </span>
 
@@ -374,7 +374,7 @@
 
           
           
-             <span id="/2015/09/26/slove-studio-default-not-found/" class="leancloud_visitors" data-flag-title="Android Studio gradle 编译提示‘default not found’ 解决办法">
+             <span id="/2018/08/27/osx-dev-summary-5/" class="leancloud_visitors" data-flag-title="OSX 开发知识点汇总（五）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  388
+                  1,251
                 </span>
               
 
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 :</span>
                 
                 <span title="阅读时长 :">
-                  1 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -433,14 +433,34 @@
       
 
       
-        <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<p>在导入studio工程的时候，进行sync的时候，提示<code>Error:Configuration with name &#39;default&#39; not found.</code><br>之前由于对gradle不熟悉，所以没有找到原因，其实也是偷懒，没有认真去排查问题，今天又遇到了，就折腾了会，把所有的配置文件都打开看，最终解决问题了，发现尽然是个低级的不能低级的问题，故记录下，警醒自己。</p>
-<ol>
-<li>打开settings.gradle发现里面有很多个<code>include &#39;:app&#39;</code>这样的include，然而发现在工程的目录下面根本没有include的项目，所以将需要include的项目添加进来，如果include的项目不需要，则将其include语句直接删掉，重新sync尝试。</li>
-<li>按照上面的操作，要么添加了相应inlcude的工程进来，但是发现还是会提示这样的<code>default not found</code>语句，怎么回事呢，原来用gradle编译的工程，每个工程下面都必须要有<code>build.gradle</code>文件,才能够编译include的工程。整个大工程才能sync通过。把include工程中都添加上相应的gradle配置文件，再重新进行sync，整个工程都通过了。</li>
+        <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="TableView"><a href="#TableView" class="headerlink" title="TableView"></a>TableView</h3><p>在 OSX 中有一些列表的需求，这时候需要使用 OSX 中 TableView 来实现，但是这个 TableView 与 Android的 ListView 不太一样。使用还是比较复杂的。下面做一个简单的介绍，</p>
+<h4 id="TableView-的使用"><a href="#TableView-的使用" class="headerlink" title="TableView 的使用"></a>TableView 的使用</h4><ol>
+<li><p>首先需要在布局文件中，拖出一个TableView，并且添加相应的每列的数据源，主要是 使用 <code>TableCellView</code>， 里面默认的控件有一个<code>TextFiled</code>和一个<code>ImageView</code>,如果需要其他控件则需要自己进行自定义进行实现，下一小节会说到。</p>
+</li>
+<li><p>需要对 TableView 设置一个数据源，需要实现 <code>NSTableViewDataSource</code>接口, 并对 <code>TableView</code> 设置数据源，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tableView.dataSource = self</span><br><span class="line"></span><br><span class="line">extension MainView: NSTableViewDataSource &#123;</span><br><span class="line">    func numberOfRows(in tableView: NSTableView) -&gt; Int &#123;</span><br><span class="line">        return dataSources.count</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对每行的数据进行渲染处理，设置<code>delegate</code>和<code>target</code>代理，并实现 <code>NSTableViewDelegate</code>接口中如下方法 </p>
+</li>
 </ol>
-<p>终于处理掉了这个问题，其实这个问题是很简单的问题，只是怪自己年少无知，故现在记录下这些曾经无知的过错，等以后反过来看自己也许会一笑而过。</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tableView.delegate = self</span><br><span class="line">tableView.target = self</span><br></pre></td></tr></table></figure>
+<p>下面为实现<code>NSTableViewDelegate</code>接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">extension MainView: NSTableViewDelegate &#123;</span><br><span class="line">    fileprivate enum CellIdentifiers &#123;</span><br><span class="line">        static let avatarImgCell = NSUserInterfaceItemIdentifier(&quot;image&quot;)</span><br><span class="line">        static let nickNameCell = NSUserInterfaceItemIdentifier(&quot;name&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -&gt; NSView? &#123;</span><br><span class="line">        let item = dataSouece[row]</span><br><span class="line">        // 图片的资源</span><br><span class="line">        var image: NSImage?</span><br><span class="line">        //名称</span><br><span class="line">        var nickName: String = &quot;&quot;</span><br><span class="line">        var cellIdentifier: NSUserInterfaceItemIdentifier = CellIdentifiers.nickNameCell</span><br><span class="line">        if tableColumn == tableView.tableColumns[0] &#123;</span><br><span class="line">            image = #imageLiteral(resourceName: &quot;member_avatar&quot;)</span><br><span class="line">            cellIdentifier = CellIdentifiers.avatarImgCell</span><br><span class="line">        &#125; else if tableColumn == tableView.tableColumns[1] &#123;</span><br><span class="line">            nickName = item.nickName</span><br><span class="line">            cellIdentifier = CellIdentifiers.nickNameCell</span><br><span class="line">        &#125;</span><br><span class="line">        // 通过 NSUserInterfaceItemIdentifier 构建每一个 CellView </span><br><span class="line">        let view = tableView.makeView(withIdentifier: cellIdentifier, owner: nil)</span><br><span class="line">        if let cellItem = view as? NSTableCellView &#123;</span><br><span class="line">            // 对 CellView 中默认控件进行设置每个资源</span><br><span class="line">            cellItem.textField?.stringValue = nickName</span><br><span class="line">            cellItem.imageView?.image = image</span><br><span class="line">            return cellItem </span><br><span class="line">        &#125;</span><br><span class="line">        return nil</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面的方法可以对基本的 TableView 进行渲染处理，可以看到 <code>NSTableCellView</code> 类中也只有默认 <code>textFiled</code> 与 <code>NSImageView</code> 控件，如果需要在一个<code>NSTableCellView</code>中有两个控件，或者有其他的控件如：NSButton等，则目前是无法完成的，那接下来就介绍下 <code>NSTableCellView</code>的自定义操作。</p>
+<h4 id="TableView-中-TableCellView的自定义"><a href="#TableView-中-TableCellView的自定义" class="headerlink" title="TableView 中 TableCellView的自定义"></a>TableView 中 TableCellView的自定义</h4><ol>
+<li>自定义<code>NSTableCellView</code>，首先先创建一个<code>CustomerTableViewCell</code>类，其继承自<code>NSTableCellView</code>,</li>
+<li>其次主要在 xib 或者 storyboard 的 <code>TableView</code> 中 <code>NSTableCellView</code> 添加新的控件，或者移除掉原来的，添加新的控件进去，并设置相应的约束，与普通 View 操作一致的。最后将自定义的<code>NSTableCellView</code>的类名指定为自定义的类名。</li>
+<li>将新添加的控件拖到<code>CustomerTableViewCell</code>中连线，这样 <code>CustomerTableViewCell</code>就可以控制自定义添加的控件了。</li>
+<li>在上面的TableView 回调中设置相应的值。</li>
+</ol>
+<p>我们拿上面的例子来改造下，</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomerNSTableCellView</span>: <span class="title">NSTableCellView</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 添加了一个 age 的label 在同一个CellView中</span></span><br><span class="line">    <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> ageLabel: <span class="type">NSTextField</span>!</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">init</span>(frame frameRect: <span class="type">NSRect</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(frame: frameRect)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">required</span> <span class="keyword">init</span>?(coder: <span class="type">NSCoder</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(coder: coder)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">awakeFromNib</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.awakeFromNib()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">MainView</span>: <span class="title">NSTableViewDelegate</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">tableView</span><span class="params">(<span class="number">_</span> tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int)</span></span> -&gt; <span class="type">NSView</span>? &#123;</span><br><span class="line">        <span class="keyword">let</span> item = dataSouece[row]</span><br><span class="line">        <span class="comment">// 图片的资源</span></span><br><span class="line">        <span class="keyword">var</span> image: <span class="type">NSImage</span>?</span><br><span class="line">        <span class="comment">//名称</span></span><br><span class="line">        <span class="keyword">var</span> nickName: <span class="type">String</span> = <span class="string">""</span></span><br><span class="line">        <span class="keyword">var</span> age : <span class="type">Int</span> = <span class="number">1</span></span><br><span class="line">        <span class="keyword">var</span> cellIdentifier: <span class="type">NSUserInterfaceItemIdentifier</span> = <span class="type">CellIdentifiers</span>.nickNameCell</span><br><span class="line">        <span class="keyword">if</span> tableColumn == tableView.tableColumns[<span class="number">0</span>] &#123;</span><br><span class="line">            image = #imageLiteral(resourceName: <span class="string">"member_avatar"</span>)</span><br><span class="line">            cellIdentifier = <span class="type">CellIdentifiers</span>.avatarImgCell</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> tableColumn == tableView.tableColumns[<span class="number">1</span>] &#123;</span><br><span class="line">            nickName = item.nickName</span><br><span class="line">            age = item.age</span><br><span class="line">            cellIdentifier = <span class="type">CellIdentifiers</span>.nickNameCell</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 通过 NSUserInterfaceItemIdentifier 构建每一个 CellView </span></span><br><span class="line">        <span class="keyword">let</span> view = tableView.makeView(withIdentifier: cellIdentifier, owner: <span class="literal">nil</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> cellItem = view <span class="keyword">as</span>? <span class="type">NSTableCellView</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> cellItem <span class="keyword">is</span> <span class="type">CustomerNSTableCellView</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> userCellItem  = cellItem <span class="keyword">as</span>! <span class="type">CustomerNSTableCellView</span></span><br><span class="line">                userCellItem.ageLabel.stringValue = age</span><br><span class="line">                userCellItem.textField?.stringValue = nickName</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 对 CellView 中默认控件进行设置每个资源</span></span><br><span class="line">                cellItem.textField?.stringValue = nickName <span class="comment">// 这里默认的Cell里没有则控件会为空。</span></span><br><span class="line">                cellItem.imageView?.image = image</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> cellItem </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此可以在每个 <code>NSTableCellView</code>中进行任意的自定义了，实现自己想要实现的功能。</p>
+<h3 id="NSStoryboardSegue-的自定义"><a href="#NSStoryboardSegue-的自定义" class="headerlink" title="NSStoryboardSegue 的自定义"></a>NSStoryboardSegue 的自定义</h3><p><code>NSStoryboardSegue</code> 的功能是什么呢？官方文档是这样介绍的: <code>A transition or containment relationship between two scenes in a storyboard.</code>  也就是在多个 storyboard 或者 window 中进行的连线，这个连线可以定义一些功能，比如说<code>show</code>操作等等，比如我们点击一个按钮，打开（show）另外一个 window 则可以使用它进行连线操作后，这条线就是<code>NSStoryboardSegue</code>类型的。</p>
+<p>那么为什么要自定义它呢？ 因为如果在 storyboard 中对某个控件连线使用 <code>NSStoryboardSegue</code> 后，如果在对该控件执行 <code>action</code> 操作时，<code>action</code>操作会不起作用，这点需要吐槽下苹果的设计了。如果要想再使用<code>NSStoryboardSegue</code>后还可以指定其他操作，则只能自定义 <code>NSStoryboardSegue</code>了。</p>
+<p>在自定义中复写<code>perform()</code>方法，可以添加自定义的一些操作了。<br>如果一个项目中有多个需要自定义，可以使用<code>NSStoryboardSegue</code>中的<code>identifier</code>来区分不同的<code>NSStoryboardSegue</code>。<code>identifier</code> 是在每个每条连线<code>Segue</code>上设置，同时记得把类指定为我们定义的类型。</p>
+<p>示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class CustomerStoryboardSegue: NSStoryboardSegue &#123;</span><br><span class="line">    </span><br><span class="line">    override func perform() &#123;</span><br><span class="line">        super.perform()</span><br><span class="line">        // 下面则可以做其他的事情了。通过self.identifier 来区分不同的 Sugue,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -495,7 +515,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/" title="Android Studio gradle 编译提示‘default not found’ 解决办法">http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</a>
+      <a href="http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/" title="OSX 开发知识点汇总（五）">http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -511,9 +531,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/swift/" rel="tag"># swift</a>
           
-            <a href="/tags/Gradle/" rel="tag"># Gradle</a>
+            <a href="/tags/Mac/" rel="tag"># Mac</a>
+          
+            <a href="/tags/OSX/" rel="tag"># OSX</a>
           
         </div>
       
@@ -526,8 +548,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/31/how-to-find-system-error/" rel="next" title="Android 查找系统问题由哪儿导致的">
-                <i class="fa fa-chevron-left"></i> Android 查找系统问题由哪儿导致的
+              <a href="/2018/08/19/osx-dev-summary-4/" rel="next" title="OSX 开发知识点汇总（四）">
+                <i class="fa fa-chevron-left"></i> OSX 开发知识点汇总（四）
               </a>
             
           </div>
@@ -536,8 +558,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/27/sdk-content-loader-always-show-0/" rel="prev" title="Android sdk content loader 一直显示0% 解决办法">
-                Android sdk content loader 一直显示0% 解决办法 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/01/my-blog-step-wxtlife-com/" rel="prev" title="文章首发公众号【技术特工队】">
+                文章首发公众号【技术特工队】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -766,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TableView"><span class="nav-number">2.</span> <span class="nav-text">TableView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TableView-的使用"><span class="nav-number">2.1.</span> <span class="nav-text">TableView 的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TableView-中-TableCellView的自定义"><span class="nav-number">2.2.</span> <span class="nav-text">TableView 中 TableCellView的自定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSStoryboardSegue-的自定义"><span class="nav-number">3.</span> <span class="nav-text">NSStoryboardSegue 的自定义</span></a></li></ol></div>
             
 
           </div>

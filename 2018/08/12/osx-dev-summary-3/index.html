@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加">
 <meta name="keywords" content="swift,Mac,OSX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OSX 开发知识点汇总（三）">
 <meta property="og:url" content="http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/index.html">
 <meta property="og:site_name" content="技术特工队">
-<meta property="og:description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-12T16:04:32.847Z">
+<meta property="og:updated_time" content="2018-08-21T01:47:09.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSX 开发知识点汇总（三）">
-<meta name="twitter:description" content="NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加子view为stackView 中添加 子view的方">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队NSStackViewOSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：12stackView.orientation = .horizontal //水平方向stackView.orientation = .vertical  //垂直方向 添加">
 
 
 
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  1,511
+                  1,535
                 </span>
               
 
@@ -433,7 +433,7 @@
       
 
       
-        <h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
+        <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
 <h4 id="添加子view"><a href="#添加子view" class="headerlink" title="添加子view"></a>添加子view</h4><p>为stackView 中添加 子view的方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackView.addArrangedSubview(view)</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意： 由于stackView 是继承自 NSView， 所有也会有 <code>addSubview(view)</code> 的方法，但是调用此方法，不会自动扩大 stackView 的宽高，而导致新加的view 显示不出来。</strong></p>
 <h4 id="移除子view"><a href="#移除子view" class="headerlink" title="移除子view"></a>移除子view</h4><p>移除子 View 采用如下方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.removeArrangedSubview(view) </span><br><span class="line">view.removeFromSuperview()</span><br></pre></td></tr></table></figure></p>
@@ -697,7 +697,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -828,7 +828,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSStackView"><span class="nav-number">1.</span> <span class="nav-text">NSStackView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加子view"><span class="nav-number">1.1.</span> <span class="nav-text">添加子view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移除子view"><span class="nav-number">1.2.</span> <span class="nav-text">移除子view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定添加的每个View的间距"><span class="nav-number">1.3.</span> <span class="nav-text">指定添加的每个View的间距</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSX坐标系翻转"><span class="nav-number">2.</span> <span class="nav-text">OSX坐标系翻转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift-倒序循环"><span class="nav-number">3.</span> <span class="nav-text">Swift 倒序循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSWindow"><span class="nav-number">4.</span> <span class="nav-text">NSWindow</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NSApp-keyWindow"><span class="nav-number">4.1.</span> <span class="nav-text">NSApp.keyWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSApp-mainWindow"><span class="nav-number">4.2.</span> <span class="nav-text">NSApp.mainWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window-窗口最小化"><span class="nav-number">4.3.</span> <span class="nav-text">window 窗口最小化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window-storyboard-代码加载"><span class="nav-number">4.4.</span> <span class="nav-text">window storyboard 代码加载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#objc-setAssociatedObject-objc-getAssociatedObject"><span class="nav-number">5.</span> <span class="nav-text">objc_setAssociatedObject/objc_getAssociatedObject</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#objc-setAssociatedObject"><span class="nav-number">5.1.</span> <span class="nav-text">objc_setAssociatedObject</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#objc-getAssociatedObject"><span class="nav-number">5.2.</span> <span class="nav-text">objc_getAssociatedObject</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSStackView"><span class="nav-number">2.</span> <span class="nav-text">NSStackView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加子view"><span class="nav-number">2.1.</span> <span class="nav-text">添加子view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移除子view"><span class="nav-number">2.2.</span> <span class="nav-text">移除子view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定添加的每个View的间距"><span class="nav-number">2.3.</span> <span class="nav-text">指定添加的每个View的间距</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSX坐标系翻转"><span class="nav-number">3.</span> <span class="nav-text">OSX坐标系翻转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift-倒序循环"><span class="nav-number">4.</span> <span class="nav-text">Swift 倒序循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSWindow"><span class="nav-number">5.</span> <span class="nav-text">NSWindow</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NSApp-keyWindow"><span class="nav-number">5.1.</span> <span class="nav-text">NSApp.keyWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSApp-mainWindow"><span class="nav-number">5.2.</span> <span class="nav-text">NSApp.mainWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window-窗口最小化"><span class="nav-number">5.3.</span> <span class="nav-text">window 窗口最小化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window-storyboard-代码加载"><span class="nav-number">5.4.</span> <span class="nav-text">window storyboard 代码加载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#objc-setAssociatedObject-objc-getAssociatedObject"><span class="nav-number">6.</span> <span class="nav-text">objc_setAssociatedObject/objc_getAssociatedObject</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#objc-setAssociatedObject"><span class="nav-number">6.1.</span> <span class="nav-text">objc_setAssociatedObject</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#objc-getAssociatedObject"><span class="nav-number">6.2.</span> <span class="nav-text">objc_getAssociatedObject</span></a></li></ol></li></ol></div>
             
 
           </div>

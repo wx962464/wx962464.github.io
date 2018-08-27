@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/</loc>
-    <lastmod>2018-08-19T14:07:57.510Z</lastmod>
+    <loc>http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/</loc>
+    <lastmod>2018-08-27T11:56:50.879Z</lastmod>
     <data>
         <display>
-        <title>OSX 开发知识点汇总（四）</title>
-        <pubTime>2018-08-19T14:04:25.000Z</pubTime>
+        <title>OSX 开发知识点汇总（五）</title>
+        <pubTime>2018-08-27T11:52:08.000Z</pubTime>
         
         <tag>swift</tag>
          
@@ -29,11 +29,35 @@
     
   <url>
     <loc>http://www.wxtlife.com/2018/08/12/osx-dev-summary-3/</loc>
-    <lastmod>2018-08-12T16:04:32.847Z</lastmod>
+    <lastmod>2018-08-21T01:47:09.304Z</lastmod>
     <data>
         <display>
         <title>OSX 开发知识点汇总（三）</title>
         <pubTime>2018-08-12T15:51:41.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+        <tag>Mac</tag>
+         
+        <tag>OSX</tag>
+         
+         
+           
+             
+              <breadCrumb title="OSX" url="http://www.wxtlife.com/categories/OSX/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/</loc>
+    <lastmod>2018-08-19T14:07:57.510Z</lastmod>
+    <data>
+        <display>
+        <title>OSX 开发知识点汇总（四）</title>
+        <pubTime>2018-08-19T14:04:25.000Z</pubTime>
         
         <tag>swift</tag>
          
@@ -235,6 +259,28 @@
     
     
   <url>
+    <loc>http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</loc>
+    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
+    <data>
+        <display>
+        <title>Android Studio gradle 编译提示‘default not found’ 解决办法</title>
+        <pubTime>2015-09-26T08:05:48.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Gradle</tag>
+         
+         
+           
+             
+              <breadCrumb title="Gradle" url="http://www.wxtlife.com/categories/Gradle/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     <data>
@@ -279,28 +325,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</loc>
-    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
-    <data>
-        <display>
-        <title>Android Studio gradle 编译提示‘default not found’ 解决办法</title>
-        <pubTime>2015-09-26T08:05:48.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Gradle</tag>
-         
-         
-           
-             
-              <breadCrumb title="Gradle" url="http://www.wxtlife.com/categories/Gradle/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
@@ -323,20 +347,17 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
+    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
         <display>
-        <title>Hexo 使用中遇到的问题总结</title>
-        <pubTime>2015-03-24T14:53:13.000Z</pubTime>
+        <title>Anroid系统解决扫码枪无法输入字母和字符问题</title>
+        <pubTime>2016-11-09T14:19:43.000Z</pubTime>
         
-        <tag>Hexo</tag>
+        <tag>Android系统</tag>
          
          
            
-             
-              <breadCrumb title="Hexo" url="http://www.wxtlife.com/categories/Hexo/"/>
-          
         </display>
     </data>
     </url>
@@ -365,14 +386,34 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/11/09/slove-android-can-not-input-char/</loc>
+    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
         <display>
-        <title>Anroid系统解决扫码枪无法输入字母和字符问题</title>
-        <pubTime>2016-11-09T14:19:43.000Z</pubTime>
+        <title>Hexo 使用中遇到的问题总结</title>
+        <pubTime>2015-03-24T14:53:13.000Z</pubTime>
         
-        <tag>Android系统</tag>
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://www.wxtlife.com/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
+    <data>
+        <display>
+        <title>Linux下记录操作命令的详细信息</title>
+        <pubTime>2016-04-12T14:42:17.000Z</pubTime>
+        
+        <tag>Linux</tag>
          
          
            
@@ -401,28 +442,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    <data>
-        <display>
-        <title>Mac 使用及开发技巧汇总（持续更新）</title>
-        <pubTime>2015-10-20T16:15:50.000Z</pubTime>
-        
-        <tag>Mac</tag>
-         
-        <tag>苹果</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="http://www.wxtlife.com/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2018/02/27/log-tools/</loc>
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     <data>
@@ -443,17 +462,22 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/04/12/linux-record-detail-option-commond/</loc>
+    <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     <data>
         <display>
-        <title>Linux下记录操作命令的详细信息</title>
-        <pubTime>2016-04-12T14:42:17.000Z</pubTime>
+        <title>Mac 使用及开发技巧汇总（持续更新）</title>
+        <pubTime>2015-10-20T16:15:50.000Z</pubTime>
         
-        <tag>Linux</tag>
+        <tag>Mac</tag>
+         
+        <tag>苹果</tag>
          
          
            
+             
+              <breadCrumb title="Mac" url="http://www.wxtlife.com/categories/Mac/"/>
+          
         </display>
     </data>
     </url>
@@ -518,23 +542,6 @@
              
               <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
-    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
-    <data>
-        <display>
-        <title>JAVA垃圾回收机制</title>
-        <pubTime>2016-04-25T12:35:35.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -607,6 +614,23 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2016/04/25/java-jvm-gc/</loc>
+    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    <data>
+        <display>
+        <title>JAVA垃圾回收机制</title>
+        <pubTime>2016-04-25T12:35:35.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2017/11/10/gitignore-auto-create/</loc>
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     <data>
@@ -615,6 +639,23 @@
         <pubTime>2017-11-10T09:23:09.000Z</pubTime>
         
         <tag>工具</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
+    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
+    <data>
+        <display>
+        <title>EditText使用小结</title>
+        <pubTime>2016-05-11T16:52:43.000Z</pubTime>
+        
+        <tag>Android</tag>
          
          
            
@@ -643,31 +684,16 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
-    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
-    <data>
-        <display>
-        <title>EditText使用小结</title>
-        <pubTime>2016-05-11T16:52:43.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>十分钟理清常见的开源协议</title>
-        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
+        <title>Android 设置无线热点模块隐藏SSID</title>
+        <pubTime>2017-02-16T11:11:42.000Z</pubTime>
         
-        <tag>License</tag>
+        <tag>Android</tag>
+         
+        <tag>Android System</tag>
          
          
            
@@ -694,23 +720,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    <data>
-        <display>
-        <title>Android Support 库各版本功能介绍</title>
-        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/09/27/developers-need-tools/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
@@ -728,16 +737,14 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>Android 设置无线热点模块隐藏SSID</title>
-        <pubTime>2017-02-16T11:11:42.000Z</pubTime>
+        <title>十分钟理清常见的开源协议</title>
+        <pubTime>2017-09-18T15:45:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
-        <tag>Android System</tag>
+        <tag>License</tag>
          
          
            
@@ -747,22 +754,17 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
     <data>
         <display>
-        <title>Android系统设置Android adb 开关的方法</title>
-        <pubTime>2015-11-24T09:38:26.000Z</pubTime>
+        <title>Android Support 库各版本功能介绍</title>
+        <pubTime>2017-11-05T04:59:15.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Android系统</tag>
-         
          
            
-             
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
-          
         </display>
     </data>
     </url>
@@ -815,14 +817,16 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     <data>
         <display>
-        <title>Android开发中一些容易踩的坑</title>
-        <pubTime>2015-12-30T16:20:38.000Z</pubTime>
+        <title>Android系统设置Android adb 开关的方法</title>
+        <pubTime>2015-11-24T09:38:26.000Z</pubTime>
         
-        <tag>Android应用</tag>
+        <tag>Android</tag>
+         
+        <tag>Android系统</tag>
          
          
            
@@ -835,16 +839,14 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/06/07/Android-framebuffer/</loc>
+    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     <data>
         <display>
-        <title>Android Framebuffer介绍及使用</title>
-        <pubTime>2017-06-07T14:57:35.000Z</pubTime>
+        <title>Android首次启动卡顿问题分析</title>
+        <pubTime>2017-11-14T12:56:09.000Z</pubTime>
         
         <tag>Android</tag>
-         
-        <tag>Framebuffer</tag>
          
          
            
@@ -876,17 +878,39 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
+    <loc>http://www.wxtlife.com/2017/06/07/Android-framebuffer/</loc>
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     <data>
         <display>
-        <title>Android首次启动卡顿问题分析</title>
-        <pubTime>2017-11-14T12:56:09.000Z</pubTime>
+        <title>Android Framebuffer介绍及使用</title>
+        <pubTime>2017-06-07T14:57:35.000Z</pubTime>
         
         <tag>Android</tag>
          
+        <tag>Framebuffer</tag>
+         
          
            
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    <data>
+        <display>
+        <title>Android开发中一些容易踩的坑</title>
+        <pubTime>2015-12-30T16:20:38.000Z</pubTime>
+        
+        <tag>Android应用</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
         </display>
     </data>
     </url>
@@ -934,26 +958,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    <data>
-        <display>
-        <title>滑动按钮（Sliding Button）实现</title>
-        <pubTime>2015-04-06T04:12:54.000Z</pubTime>
-        
-        <tag>Android UI</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
@@ -984,6 +988,26 @@
          
          
            
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2015/04/06/Android-Sling-button/</loc>
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    <data>
+        <display>
+        <title>滑动按钮（Sliding Button）实现</title>
+        <pubTime>2015-04-06T04:12:54.000Z</pubTime>
+        
+        <tag>Android UI</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
         </display>
     </data>
     </url>

@@ -484,6 +484,203 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/08/27/osx-dev-summary-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/08/27/osx-dev-summary-5/" itemprop="url">
+                  OSX 开发知识点汇总（五）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T19:52:08+08:00">
+                2018-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OSX/" itemprop="url" rel="index">
+                    <span itemprop="name">OSX</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/27/osx-dev-summary-5/" class="leancloud_visitors" data-flag-title="OSX 开发知识点汇总（五）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  1,251
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="TableView"><a href="#TableView" class="headerlink" title="TableView"></a>TableView</h3><p>在 OSX 中有一些列表的需求，这时候需要使用 OSX 中 TableView 来实现，但是这个 TableView 与 Android的 ListView 不太一样。使用还是比较复杂的。下面做一个简单的介绍，</p>
+<h4 id="TableView-的使用"><a href="#TableView-的使用" class="headerlink" title="TableView 的使用"></a>TableView 的使用</h4><ol>
+<li><p>首先需要在布局文件中，拖出一个TableView，并且添加相应的每列的数据源，主要是 使用 <code>TableCellView</code>， 里面默认的控件有一个<code>TextFiled</code>和一个<code>ImageView</code>,如果需要其他控件则需要自己进行自定义进行实现，下一小节会说到。</p>
+</li>
+<li><p>需要对 TableView 设置一个数据源，需要实现 <code>NSTableViewDataSource</code>接口, 并对 <code>TableView</code> 设置数据源，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tableView.dataSource = self</span><br><span class="line"></span><br><span class="line">extension MainView: NSTableViewDataSource &#123;</span><br><span class="line">    func numberOfRows(in tableView: NSTableView) -&gt; Int &#123;</span><br><span class="line">        return dataSources.count</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对每行的数据进行渲染处理，设置<code>delegate</code>和<code>target</code>代理，并实现 <code>NSTableViewDelegate</code>接口中如下方法 </p>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/27/osx-dev-summary-5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/08/19/osx-dev-summary-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -778,7 +975,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  1,511
+                  1,535
                 </span>
               
 
@@ -814,7 +1011,7 @@
 
       
         
-          <h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
+          <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
 <h4 id="添加子view"><a href="#添加子view" class="headerlink" title="添加子view"></a>添加子view</h4><p>为stackView 中添加 子view的方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackView.addArrangedSubview(view)</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意： 由于stackView 是继承自 NSView， 所有也会有 <code>addSubview(view)</code> 的方法，但是调用此方法，不会自动扩大 stackView 的宽高，而导致新加的view 显示不出来。</strong></p>
 <h4 id="移除子view"><a href="#移除子view" class="headerlink" title="移除子view"></a>移除子view</h4><p>移除子 View 采用如下方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.removeArrangedSubview(view) </span><br><span class="line">view.removeFromSuperview()</span><br></pre></td></tr></table></figure></p>
@@ -2045,208 +2242,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/03/21/oh-my-zsh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WangXin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/android.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术特工队">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/03/21/oh-my-zsh/" itemprop="url">
-                  强大的终端工具ohMyZsh
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T23:43:14+08:00">
-                2018-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/03/21/oh-my-zsh/" class="leancloud_visitors" data-flag-title="强大的终端工具ohMyZsh">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 : </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计 :</span>
-                
-                <span title="字数统计 :">
-                  1,192
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 :</span>
-                
-                <span title="阅读时长 :">
-                  5 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天给大家介绍一款强大的终端工具，一般系统默认的终端一般都很鸡肋，要么功能不够智能，要么就是不够美观，这怎么能够体现程序员高大上的逼格呢，所以今天就给大家介绍一款强大的终端工具 <code>oh-my-zsh</code>.</p>
-<p>先来看张我的终端<br><img src="../img/ohmyzsh/ohmyzsh.png" alt="image"></p>
-<p>那么有什么强大的功能呢？</p>
-<ol>
-<li>智能提示</li>
-<li>自动跳转</li>
-<li>智能纠错</li>
-<li>与git 等工具高度集成</li>
-<li>历史记录功能</li>
-<li>目录跳转等</li>
-</ol>
-<p>上面只是我觉得很好用的一些功能，这只是冰山一角，还有其他很多的插件功能，反正一句话就是用了之后你就忘不掉的一个终端。</p>
-<h3 id="什么是-ohMyZsh-介绍"><a href="#什么是-ohMyZsh-介绍" class="headerlink" title="什么是 ohMyZsh 介绍"></a>什么是 ohMyZsh 介绍</h3><p>首先的介绍下 <code>Zsh</code> ，<code>Zsh</code> 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可以作为一个脚本语言的交互解析器。且其兼容Bash，能够为其补充很多强大的功能。那么 <code>Oh My Zsh</code> 是一款社区驱动的命令行工具，正如它的主页上说的，<code>Oh My Zsh</code> 是一种生活方式。它基于zsh命令行，提供了主题配置，插件机制，已经内置的便捷操作。给我们一种全新的方式使用命令行。<br><code>ohMyZsh</code> 拥有 200+ 的插件，及140+ 的主题样式，供你任意搭配定制。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/oh-my-zsh/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2296,7 +2291,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
