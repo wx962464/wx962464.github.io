@@ -298,6 +298,201 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/04/02/chrome-insight/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/04/02/chrome-insight/" itemprop="url">
+                  【工具】github 插件源码浏览利器 Insight
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T22:23:38+08:00">
+                2018-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/02/chrome-insight/" class="leancloud_visitors" data-flag-title="【工具】github 插件源码浏览利器 Insight">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  925
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前的一篇文章中<a href="http://www.wxtlife.com/2017/09/27/developers-need-tools/">《开发人员必备的开发利器》</a>有介绍过一款Chrome插件，名为 Octotree ，它可以以树形结构的样式将源代码源文件展示出来，方便我们查看跳转等。但是有时候在github上看源码时，可能需要进行方法的跳转，查看具体实现，更或者找到某个方法或者类的调用方，那么有没有既有 Octotree 功能又能实现上面的功能呢，那当然是有的，它就是今天要介绍的主角 <code>insight.io</code> </p>
+<h3 id="insight-io-使用"><a href="#insight-io-使用" class="headerlink" title="insight.io 使用"></a>insight.io 使用</h3><p>insight.io 也是一个Chrome 插件， 安装也就直接在Chrome插件中心搜索安装就行了，这里就不多描述。<br>安装好后，在首次安装上后需要使用github账号进行授权登录，之后会进行一些操作相关的提示。<br>整体的界面如下所示</p>
+<p><img src="../img/insight/insight_view.png" alt="insight"></p>
+<p>整体的风格还是很简约，清新的，很是喜欢。</p>
+<p>这样上面树形结构的源代码已经展示出来了。</p>
+<p>但在使用的时候有几点需要注意，此插件不是所有的github 项目都支持，你可以查看页面中间有个提示信息，如果为<code>ready</code> 则可以直接使用，如果提示<code>not indexed</code> 则说明未包含此项目，需要你手动提交，点击即可，之后会进行索引，成功后会邮件通知你，时间大约在半个小时以内，大的项目可能会比较久（本人尝试的时间不到5分钟就OK了），但是不能直接提交fork出来的仓库，fork的仓库可以通过邮件联系对方，可能需要pro付费版本支持。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/02/chrome-insight/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/03/21/oh-my-zsh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1942,194 +2137,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2017/09/18/License-different/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WangXin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/android.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术特工队">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/18/License-different/" itemprop="url">
-                  十分钟理清常见的开源协议
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T23:45:30+08:00">
-                2017-09-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/18/License-different/" class="leancloud_visitors" data-flag-title="十分钟理清常见的开源协议">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 : </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计 :</span>
-                
-                <span title="字数统计 :">
-                  1,450
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 :</span>
-                
-                <span title="阅读时长 :">
-                  5 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<p>从上次和大家聊了下 <a href="http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/">00后CEO的那些趣事</a>，谈到了开源协议相关的内容，那么本篇文章，就主要介绍下大家在工作生活中常用到的开原协议。常见的协议如下：ApacheLicense 2.0 、GPLv3 、LGPL、、MIT License、BSD 和 Mozilla 2.0  。那么我们下面就分别介绍下这些协议的说明、允许项及禁止项。</p>
-<h3 id="Apache-License-2-0"><a href="#Apache-License-2-0" class="headerlink" title="Apache License 2.0"></a>Apache License 2.0</h3><p>这是一个著名的非盈利开源组织Apache采用的协议，它励代码共享和尊重原作者的著作权，同时也允许代码修改，再发布（作为开源或商业软件）。</p>
-<ul>
-<li>要求</li>
-</ul>
-<ol>
-<li>在代码中保留作者提供的协议和版权信息</li>
-<li>如果修改了代码，则必须在被修改的文件中进行说明。</li>
-</ol>
-<ul>
-<li><p>允许的权利<br>商用、分发、修改、专利授权、私用、附加协议</p>
-</li>
-<li><p>禁止项</p>
-</li>
-</ul>
-<ol>
-<li>禁止因使用等造成影响责任承担、也就是说免责申明</li>
-<li>不能使用相应的商标。</li>
-</ol>
-<p><strong>提示：商业软件可以使用，也可以修改使用Apache协议的代码。</strong></p>
-<h3 id="GPLv3"><a href="#GPLv3" class="headerlink" title="GPLv3"></a>GPLv3</h3><p>此协议是应用最为广泛的开源协议，拥有较强的版权自由要求,也赋予和保证了开源项目开发者广泛的权利。基本上，它允许用户合法复制，分发和修改软件，但衍生代码的分发需开源并且也要遵守此协议。此协议有许多变种，不同变种的要求略有不同。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/18/License-different/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2179,7 +2186,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

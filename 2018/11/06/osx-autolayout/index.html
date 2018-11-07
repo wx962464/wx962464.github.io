@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,Android系统," />
+  <meta name="keywords" content="swift,Mac,OSX," />
 
 
 
@@ -89,18 +89,24 @@
 
 
 
-<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在我们都痛恨手机厂商预装着一堆无用的app时，是否考虑怎么实现将app预装在data区，让用户可以自由卸载，做一个有良心的厂商，下面就把来说说如何实现预装app能够让用户卸载。 系统识别的app位置系统能够识别到app的位置有三个，分别是/system/app/,/system/priv-app /data/app/ 下面。但是只有/dat">
-<meta name="keywords" content="Android,Android系统">
+<meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队AutoLayout介绍Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明">
+<meta name="keywords" content="swift,Mac,OSX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android系统预制可自由卸载apk">
-<meta property="og:url" content="http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/index.html">
+<meta property="og:title" content="OSX AutoLayout原理介绍">
+<meta property="og:url" content="http://www.wxtlife.com/2018/11/06/osx-autolayout/index.html">
 <meta property="og:site_name" content="技术特工队">
-<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在我们都痛恨手机厂商预装着一堆无用的app时，是否考虑怎么实现将app预装在data区，让用户可以自由卸载，做一个有良心的厂商，下面就把来说说如何实现预装app能够让用户卸载。 系统识别的app位置系统能够识别到app的位置有三个，分别是/system/app/,/system/priv-app /data/app/ 下面。但是只有/dat">
+<meta property="og:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队AutoLayout介绍Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-16T15:49:44.455Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/696463-66769da1d41fafac.png">
+<meta property="og:image" content="http://macdev.io/ebook/media/14503524325175/AutoLayoutAttributes.png">
+<meta property="og:image" content="http://macdev.io/ebook/media/14503524325175/AutoLayoutCHCR.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/696463-22995f9148fa634e.jpg">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/696463-13cb1bc293287cf9.jpg">
+<meta property="og:updated_time" content="2018-11-06T13:33:42.541Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android系统预制可自由卸载apk">
-<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队 在我们都痛恨手机厂商预装着一堆无用的app时，是否考虑怎么实现将app预装在data区，让用户可以自由卸载，做一个有良心的厂商，下面就把来说说如何实现预装app能够让用户卸载。 系统识别的app位置系统能够识别到app的位置有三个，分别是/system/app/,/system/priv-app /data/app/ 下面。但是只有/dat">
+<meta name="twitter:title" content="OSX AutoLayout原理介绍">
+<meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队AutoLayout介绍Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/696463-66769da1d41fafac.png">
 
 
 
@@ -128,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/"/>
+  <link rel="canonical" href="http://www.wxtlife.com/2018/11/06/osx-autolayout/"/>
 
 
 
 
 
-  <title> Android系统预制可自由卸载apk | 技术特工队 </title>
+  <title> OSX AutoLayout原理介绍 | 技术特工队 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +304,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2018/11/06/osx-autolayout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangXin">
@@ -319,7 +325,7 @@
             
             
               
-                Android系统预制可自由卸载apk
+                OSX AutoLayout原理介绍
               
             
           </h1>
@@ -334,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-08T22:03:56+08:00">
-                2016-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T21:25:58+08:00">
+                2018-11-06
               </time>
             
 
@@ -357,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android系统/" itemprop="url" rel="index">
-                    <span itemprop="name">Android系统</span>
+                  <a href="/categories/OSX/" itemprop="url" rel="index">
+                    <span itemprop="name">OSX</span>
                   </a>
                 </span>
 
@@ -374,7 +380,7 @@
 
           
           
-             <span id="/2016/01/08/preinstall-app-can-uninstall/" class="leancloud_visitors" data-flag-title="Android系统预制可自由卸载apk">
+             <span id="/2018/11/06/osx-autolayout/" class="leancloud_visitors" data-flag-title="OSX AutoLayout原理介绍">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计 :</span>
                 
                 <span title="字数统计 :">
-                  2,124
+                  1,944
                 </span>
               
 
@@ -414,7 +420,7 @@
                   <span class="post-meta-item-text">阅读时长 :</span>
                 
                 <span title="阅读时长 :">
-                  8 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -433,44 +439,64 @@
       
 
       
-        <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<p>在我们都痛恨手机厂商预装着一堆无用的app时，是否考虑怎么实现将app预装在data区，让用户可以自由卸载，做一个有良心的厂商，下面就把来说说如何实现预装app能够让用户卸载。</p>
-<h3 id="系统识别的app位置"><a href="#系统识别的app位置" class="headerlink" title="系统识别的app位置"></a>系统识别的app位置</h3><p>系统能够识别到app的位置有三个，分别是<code>/system/app/</code>,<code>/system/priv-app</code> <code>/data/app/</code> 下面。但是只有<code>/data/app</code>下面的app才可以被用户可以卸载。那就得想办法将apk放在<code>/data/app</code>下面。</p>
+        <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="AutoLayout介绍"><a href="#AutoLayout介绍" class="headerlink" title="AutoLayout介绍"></a>AutoLayout介绍</h3><p>Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明，Auto Layout源于Cassary约束解析工具包。该算法由Alan Borning、Kim Marriott、Peter Stuckey、Yi Xiao于1997年发布，该算法的主要思想是：将基于约束系统的布局规则（本质上是表示视图布局关系的线性方程组）转化为表示规则的视图几何参数。</p>
+<h3 id="传统的布局"><a href="#传统的布局" class="headerlink" title="传统的布局"></a>传统的布局</h3><h4 id="frame-布局"><a href="#frame-布局" class="headerlink" title="frame 布局"></a>frame 布局</h4><p>传统的布局方式是基于Frame来做UI控件的界面布局的,即设置控件在父视图中的起始坐标点Origin(x,y)和控件的大小Size(width,height)，为了精确，我们必须计算每个视图的frame。但布局一旦发生变化，相关frame都需要重新计算。然后这些计算都需要不断的手动动态的去计算，导致一旦有变化，就会需要去维护和调试。</p>
+<h4 id="自动缩放（auto-resizing）"><a href="#自动缩放（auto-resizing）" class="headerlink" title="自动缩放（auto resizing）"></a>自动缩放（auto resizing）</h4><p>自动缩放的出现在一定程度上减轻了我们的负担。自动缩放规定父视图的frame变化时，视图的frame如何应对。如此一来，简化了布局响应外部变化所需的工作。但是他仅能应对外部父布局的变化，自身大小的变化则无法进行处理。</p>
 <a id="more"></a>
-<h3 id="尝试将预装app放进升级包data区中"><a href="#尝试将预装app放进升级包data区中" class="headerlink" title="尝试将预装app放进升级包data区中"></a>尝试将预装app放进升级包data区中</h3><p>根据编译的情况知道，一般在源码下编译的应用都会被放在<code>out/targe/.../system/app</code>或者<code>out/targe/.../system/priv-app</code>下面，用户区是在/data/app/ ，如果在编译后打包前copy某个app到/data/app/下面，且打包的系统img是只会在system区起作用，在data区是不起作用的。所以这种方案不行，只能将app放在system区的文件中了。</p>
-<h3 id="在编译时预制到系统system目录中"><a href="#在编译时预制到系统system目录中" class="headerlink" title="在编译时预制到系统system目录中"></a>在编译时预制到系统system目录中</h3><p>先将放在系统编译到某个目录下面，我这边放在<code>android/kk-4.x/device/mtk/mtk/preinstall/apk</code>下面，由于现在使用的平台为mtk所以放在mtk下面，preinstall为自己创建的文件夹，以及子目录apk，然后将所有app放在此目录下，当然这样是不能被打包到系统目录的，然后在preinstall目录下面创建一个<code>preinstall.mk</code>文件，当然名字随便了，里面的主要功能就是copy预装的app到系统分区目录中。  </p>
-<p>主要内容如下：</p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###################################################</span></span><br><span class="line"><span class="comment">#Copy proprietary apk to system/usr/app</span></span><br><span class="line"><span class="comment">###################################################</span></span><br><span class="line"><span class="comment">#定义mk函数，$(1)和$(2)为定义函数的前两个参数</span></span><br><span class="line"><span class="keyword">define</span> all-data-files-under</span><br><span class="line"><span class="variable">$(<span class="built_in">patsubst</span> ./%,%, \</span></span><br><span class="line"><span class="variable">$(<span class="built_in">shell</span> cd <span class="variable">$(LOCAL_PATH)</span>/$(1)</span> ; \</span><br><span class="line">      find ./ -maxdepth 1  -name <span class="string">"$(2)"</span>) \</span><br><span class="line">)</span><br><span class="line"><span class="keyword">endef</span></span><br><span class="line"><span class="comment">#copy apk files to /system/user/app/</span></span><br><span class="line"><span class="comment">#调用函数，将已apk后缀的copy到目标位置</span></span><br><span class="line">COPY_APK_TARGET := <span class="variable">$(<span class="built_in">call</span>                                                 all-data-files-under,apk,*.apk)</span></span><br><span class="line">PRODUCT_COPY_FILES += <span class="variable">$(<span class="built_in">foreach</span> apkName, (COPY_APK_TARGET)</span>, \</span><br><span class="line"><span class="variable">$(<span class="built_in">addprefix</span> <span class="variable">$(LOCAL_PATH)</span>/apk/, <span class="variable">$(apkName)</span>)</span>:<span class="variable">$(<span class="built_in">addprefix</span> system/usr/app/, <span class="variable">$(apkName)</span>)</span>)</span><br></pre></td></tr></table></figure>
-<p><code>PRODUCT_COPY_FILES</code>为Android系统提供的一个copy机制。但是默认是不允许copy apk的，它建议我们用pre_build来替代copy apk方式，但是pre_build的方式在多个应用情况下就会比较麻烦。那就直接修改<code>Makefile</code>文件，将其禁止copy的警告校验去掉即可。在<code>build/core/Makefile</code>中定义了一个函数如下：</p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">define</span> check-product-copy-files</span><br><span class="line"><span class="variable">$(<span class="built_in">if</span> $(<span class="built_in">filter</span> %.apk, $(1)</span>),<span class="variable">$(<span class="built_in">error</span> \</span></span><br><span class="line"><span class="variable">    Prebuilt apk found in PRODUCT_COPY_FILES: $(1)</span>, use BUILD_PREBUILT instead!))</span><br><span class="line"><span class="keyword">endef</span></span><br></pre></td></tr></table></figure>
-<p>这就是提示警告的地方，把调用<code>check-product-copy-files</code>的地方注释掉即可，当然这里面不能用#进行简单注释，具体查看Makefile的注释<br>上面的脚本为Makefile的一些用法，可以参考网上<a href="http://www.cnblogs.com/wang_yb/p/3990952.html" target="_blank" rel="noopener">Makefile总结</a><br><strong>此方法的弊端就是系统包会因为app的数量及大小而增大。</strong></p>
-<h3 id="如何在系统中加载preinstall-mk"><a href="#如何在系统中加载preinstall-mk" class="headerlink" title="如何在系统中加载preinstall.mk"></a>如何在系统中加载preinstall.mk</h3><p>这里参考其他Mk调用的方式来实现。一般增加一个编译源码下的应用到系统，默认都会在<code>build/target/product</code>下面的<code>generic_no_telephony.mk</code>中的<code>PRODUCT_PACKAGES</code>添加应用名称，当然不同厂商可能目录位置不同。<br>在这个文件中有加载很多mk的代码，所以照着加载之前mk的写法，</p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, device/mtk/mtk/preinstall/preinstall.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, frameworks/base/data/fonts/fonts.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, external/noto-fonts/fonts.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, external/naver-fonts/fonts.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, external/sil-fonts/fonts.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, frameworks/base/data/keyboards/keyboards.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product-<span class="built_in">if</span>-exists, frameworks/webview/chromium/chromium.mk)</span></span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product, <span class="variable">$(SRC_TARGET_DIR)</span>/product/core.mk)</span></span><br></pre></td></tr></table></figure>
-<p>上面的就是调用加载其他的mk文件，第一行就为加载自己添加的mk文件如果存在(路径为前面自己定义的)，这样在编译的时候就会执行定义的mk，也就是把预制的app全部copy到系统的指定目录下面。</p>
-<h3 id="将系统中的app放到data区的app中"><a href="#将系统中的app放到data区的app中" class="headerlink" title="将系统中的app放到data区的app中"></a>将系统中的app放到data区的app中</h3><p>前面的操作步骤已经能够将预制的app打包进系统包中，但是系统上那些app还是在system区的，并不能在data区，那么就要想在用户第一次使用的情况下将app<code>复制</code>到data区的app安装位置，，且不能让用户有察觉。</p>
+<h3 id="AutoLayout剖析"><a href="#AutoLayout剖析" class="headerlink" title="AutoLayout剖析"></a>AutoLayout剖析</h3><h4 id="布局变化原因"><a href="#布局变化原因" class="headerlink" title="布局变化原因"></a>布局变化原因</h4><p><strong>外在变化：</strong> 窗口缩放，设备旋转，屏幕尺寸不同，分屏模式等。<br><strong>内在变化：</strong> 内容展示变化，国际化，字体变化等。</p>
+<h4 id="AutoLayout方程式"><a href="#AutoLayout方程式" class="headerlink" title="AutoLayout方程式"></a>AutoLayout方程式</h4><p>先来看一张官方的图，表示一个约束的表达式。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/696463-66769da1d41fafac.png" alt="autoLayout"></p>
+<p>下面来具体介绍下其各个变量的意义。</p>
+<ul>
+<li>Item1、Item2：一般是UIView，表示该约束关系对应的两个视图，当约束等式表示尺寸时，其中一个Item为nil。</li>
+<li>Attribute1、Attribute2：NSLayoutAttribute类型，表示约束属性。当约束等式表示尺寸时，其中一个Attribute为NSLayoutAttributeNotAnAttribute，表示占位，无任何意义。具体看下图</li>
+<li>Relationship：NSLayoutRelation类型，表示约束关系，可以是=、&gt;=、&lt;=。</li>
+<li>Multiplier：CGFloat类型，表示倍数关系，一般用于尺寸（eg：Item1的宽度为Item2的两倍，则Multiplier为2.0）</li>
+<li>Constant：CGFloat类型，表示常数。</li>
+</ul>
+<p><img src="http://macdev.io/ebook/media/14503524325175/AutoLayoutAttributes.png" alt="Attribute"></p>
 <blockquote>
-<p><strong>注意：</strong>上面提到的是复制，原因是如果是移动的话，源文件会没有，当用户恢复出厂设置的时候，data区app会没有，重新启动后，系统里面要复制的app也不存在了，则预装的app也就无法安装了，相当于恢复出厂后有漏洞了。</p>
+<p><strong>注意</strong></p>
+<ul>
+<li>只有同类型的约束才能互相做约束</li>
+<li>建议开发中一直使用leading、trailing。leading表示前边、trailing表示后边，在阅读习惯从左到右的语言中，leading相当于left、trailing相当于right。在从右到左的语言中，leading相当于right、trailing相当于left。</li>
+</ul>
 </blockquote>
-<p>下面就是如何复制到data区的问题了，我们主要利用shell脚本来做应用复制，在配合上系统的init.rc初始化来做，因为方便快捷。当然也有其他方法，但不是最佳，等会会说。<br>现说怎么实现首次copy应用到data区，下面就是主要是shell脚本了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/sbin/sh</span></span><br><span class="line">CUSTOMIZED_APK=/system/usr/app</span><br><span class="line">DATA_APK=/data/app</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"CUSTOMIZED_APK=<span class="variable">$&#123;CUSTOMIZED_APK&#125;</span>"</span></span><br><span class="line"><span class="comment">#获取是否已经预安装过标记位</span></span><br><span class="line">PREINSTALL_RESULT=`getprop persist.sys.preinstall.value`</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"PREINSTALL_RESULT=<span class="variable">$&#123;PREINSTALL_RESULT&#125;</span>"</span></span><br><span class="line">apk_files=<span class="string">""</span></span><br><span class="line"><span class="comment">#判断标记位是否为空，为空则没有预装过。然后将所有apk均copy到data/app下面。</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$&#123;PREINSTALL_RESULT&#125;</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">cd</span> <span class="variable">$&#123;CUSTOMIZED_APK&#125;</span></span><br><span class="line">        apk_files=$(ls *.apk )</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"apks files = <span class="variable">$&#123;apk_files&#125;</span>"</span></span><br><span class="line">        <span class="keyword">for</span> apkfile <span class="keyword">in</span> <span class="variable">$apk_files</span></span><br><span class="line">        <span class="keyword">do</span> </span><br><span class="line">                <span class="built_in">echo</span> <span class="string">" apkfiles = <span class="variable">$&#123;apkfile&#125;</span> "</span> </span><br><span class="line">                busybox cp -vf <span class="variable">$&#123;CUSTOMIZED_APK&#125;</span>/<span class="variable">$&#123;apkfile&#125;</span> <span class="variable">$&#123;DATA_APK&#125;</span>/<span class="variable">$&#123;apkfile&#125;</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"start copy "</span></span><br><span class="line">                chmod 777 <span class="variable">$&#123;DATA_APK&#125;</span>/<span class="variable">$&#123;apkfile&#125;</span></span><br><span class="line">        <span class="keyword">done</span> </span><br><span class="line">        <span class="comment">#设置标记位</span></span><br><span class="line">        setprop persist.sys.preinstall.value 1</span><br><span class="line">        <span class="built_in">cd</span> ../..</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<p>注意上面开头为<code>#!/sbin/sh</code>这个要根据系统的sh位置来进行确认，为了实现首次安装所以需要用到一个标记，这里采用系统的property来做标记，在复制时使用<code>busybox cp</code>是因为好多shell被Android系统精简了，还有copy完成后记得修改应用的权限，避免权限不够而知无法安装的问题，所有都copy完成后将标记为修改了，避免下次还会执行此操作。</p>
-<p>另外一种方法就是单独一个app，在系统起来后进行首次的app转移。这种就是实际上已经进入到launcher界面了，如果开机广播慢的话，用户就会察觉到怎么突然多了几个应用，体验很不好。</p>
-<h3 id="shell如何放入系统"><a href="#shell如何放入系统" class="headerlink" title="shell如何放入系统"></a>shell如何放入系统</h3><p>此方法基本和前面写好的preinstall.mk复制应用方法 一致，也是在<code>generic_no_telephony.mk</code>中用Android自带的<code>PRODUCT_COPY_FILES</code>来将shell脚本copy进系统的bin文件下，然后在需要的时候进行执行。</p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PRODUCT_COPY_FILES += \</span><br><span class="line">    device/mtk/mtk/preinstall/preinstall.sh:/system/bin/preintall.sh</span><br></pre></td></tr></table></figure>
-<p>上面目的就是将脚本copy至系统的bin目录下。这样我们准备的东西都已经就绪了，下面就是如何让这些脚本运作起来。</p>
-<h3 id="如何执行shell脚本"><a href="#如何执行shell脚本" class="headerlink" title="如何执行shell脚本"></a>如何执行shell脚本</h3><p>前面提到利用Android启动时的初始化脚本也就是init.rc 进行处理，前面也有<a href="http://www.wxtlife.com/2015/11/24/Android-set-adb-status/">文章</a>是用到init.rc来开发一些功能的，这里还是在说下<br>首先定义一个service,并且执行这个服务的名字，以及服务执行的脚本，对于init.rc的语言大家可以参考网上的，对此不是很熟悉。</p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service preinstall /system/bin/preinstall.sh</span><br><span class="line">        class main</span><br><span class="line">        user root</span><br><span class="line">        group root</span><br><span class="line">        oneshot</span><br></pre></td></tr></table></figure>
-<p>大概解释下里面的内容，preinstall就为执行服务的名称，后面的preinstall.sh即为服务执行的脚本，下面class main 为类别，user和ground分别指定权限。oneshot指明只执行一次，当然这里定义的服务默认就是开机要执行的，若要不需开机执行则需要再加一个关键字disabled。所以开机会执行定义的服务，故执行定义的shell脚本，虽然每次开机都执行但是脚本中有标记位判断，所以不会重复执行。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过上面的步骤就可以实现系统预装可卸载的应用了。归纳下主要步骤，然后按照实现如下步骤即可实现，步骤如下：  </p>
+<h4 id="AutoLayout-本质"><a href="#AutoLayout-本质" class="headerlink" title="AutoLayout 本质"></a>AutoLayout 本质</h4><p>Auto Layout本质就是一个线性方程解析Engine。基于Auto Layout的布局，不在需要像frame时代一样，关注视图尺寸、位置的常数，转而关注视图之间关系，描述一个表示视图间布局关系的约束集合，由Engine解析出最终数值。</p>
+<p>一个约束对象NSLayoutConstraint，本质上是表示两个视图之间（当表示尺寸时只表示视图本身）布局关系的一个线性方程，该方程可以是线性等式、也可以是线性不等式。</p>
+<p>多个约束对象组成是一个约束集合，本质上是表示某个界面上多个视图之间布局关系的线性方程组。方程组中的多个线性方程，以数字标识的优先级进行排序（UILayoutPriority，本质上是浮点型float）。</p>
+<p>Auto Layout Engine根据按照线性方程的优先级从高到底对线性方程组进行解析，求得方程组的解。</p>
+<ul>
+<li>当设置的约束欠缺，即存在约束歧义，线性方程组有多个解，而不是唯一解。这便是约束错误的一种：约束不充分，可能导致视图丢失，视图错位。</li>
+<li>当设置的约束过多，存在多个优先级相同的描述同一个关系的线性方程，并且约束产生的效果不同（例如 View1.left = View2.right + 10 ; View1.left = View2.right + 20，优先级都为1000），线程方程组无解。这是约束错误的另一种：约束不可满足，产生约束约束冲突，控制台会Log错误日志，同样可能造成布局错误。</li>
+</ul>
+<h4 id="约束优先级"><a href="#约束优先级" class="headerlink" title="约束优先级"></a>约束优先级</h4><p>默认创建出来的约束优先级为UILayoutPriorityRequired（1000），称为必需约束；其他优先级小于1000的约束称为可选约束。Auto Layout Engine进行约束解析时，尝试着按优先级从高到低满足约束集合中的每一个约束，如果无法满足某个可选约束，则跳过；当优先级不同的两个约束描述的是同一个布局关系，Auto Layout会跳过优先级较低的约束。</p>
+<h4 id="Intrinsic-Content-Size"><a href="#Intrinsic-Content-Size" class="headerlink" title="Intrinsic Content Size"></a>Intrinsic Content Size</h4><p>对于文本/图片等一些视图控件，可以通过其内在content推算出控件的大小。不是所有的控件都有Intrinsic Content Size。按钮,文本label,文字输入TextField,TextView,ImageView都可以根据内在的content内容计算控件的大小。</p>
+<p>基于控件的内容content，有2个特定的约束:content hugging 收缩约束 和 content compression 扩张约束，这2个约束简称为CHCR。</p>
+<p><img src="http://macdev.io/ebook/media/14503524325175/AutoLayoutCHCR.png" alt=""></p>
+<p>IntrinsicHeight代表内部内容的高，IntrinsicWidth代表内部内容的宽</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//content compression的约束条件：</span><br><span class="line">View.height &gt;= IntrinsicHeight</span><br><span class="line">View.width &gt;= IntrinsicWidth</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//content hugging的约束条件：</span><br><span class="line">View.height &lt;= IntrinsicHeight</span><br><span class="line">View.width &lt;= IntrinsicWidth</span><br></pre></td></tr></table></figure>
+<p>从这几组约束来看，如果需要完整的显示内容就需要content compression的优先级尽量高，而如果需要尽量显示的紧凑一些占用空间小一些可以将content hugging优先级尽量设置高一些。</p>
+<p>更加简洁易懂点的描述如下：</p>
+<ul>
+<li>Content Hugging Priority: 该优先级表示一个控件抗被拉伸的优先级。优先级越高，越不容易被拉伸</li>
+<li>Content Compression Resistance Priority: 该优先级和上面那个优先级相对应，表示一个控件抗压缩的优先级。优先级越高，越不容易被压缩</li>
+</ul>
+<h3 id="Auto-Layout布局机制"><a href="#Auto-Layout布局机制" class="headerlink" title="Auto Layout布局机制"></a>Auto Layout布局机制</h3><p><img src="https://upload-images.jianshu.io/upload_images/696463-22995f9148fa634e.jpg" alt=""><br>创建视图树、描述视图之间的约束、设置优先级、设置视图内容，Layout Engine计算出视图位置、尺寸，绘制出对应的图层。</p>
+<p>Auto Layout布局过程涉及延迟机制，并非一有约束更新就马上进行布局重绘，当有约束更改时，系统的默认做法是延迟更新，目的是实现批量更改约束、绘制视图，避免频繁遍历视图层级，优化性能。当更新约束太慢影响到后序代码逻辑，也可强制马上更新。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/696463-13cb1bc293287cf9.jpg" alt=""></p>
+<ul>
+<li>App启动后开启RunLoop，循环检测图层树中是否存在约束变化；</li>
+<li>当发生Constrints Change（直接or间接设置、更新、移除约束）,RunLoop检测到约束变化；</li>
+<li>RunLoop发现约束变化后，就会进入Deferred Layout阶段，视图的位置、尺寸值会在这个过程计算，设置到对应视图上，并绘制出来；</li>
+<li>执行完一轮布局，RunLoop会继续检查视图树的约束更新情况，当再次发现约束更新，则执行新一轮布局……</li>
+</ul>
+<h4 id="VFL"><a href="#VFL" class="headerlink" title="VFL"></a>VFL</h4><p>略<br>官方文档<br><a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1" target="_blank" rel="noopener">https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1</a></p>
+<h3 id="约束库使用建议"><a href="#约束库使用建议" class="headerlink" title="约束库使用建议"></a>约束库使用建议</h3><p>使用 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="noopener">Masonry</a> 来进行代码控制布局约束。</p>
 <blockquote>
+<p>参考连接：<br><a href="http://macdev.io/ebook/autoLayout.html" target="_blank" rel="noopener">http://macdev.io/ebook/autoLayout.html</a><br><a href="https://juejin.im/post/5b1ea5046fb9a01e2b2cc4a7" target="_blank" rel="noopener">https://juejin.im/post/5b1ea5046fb9a01e2b2cc4a7</a>  </p>
 </blockquote>
-<ol>
-<li>复制预装应用至系统中</li>
-<li>将系统应用copy到data区的脚本</li>
-<li>在开机时能够执行脚本</li>
-</ol>
-<p>当然上面仅仅只是一种方案，如果有更好的实现方案请指教，请留言，谢谢。</p>
 
       
     </div>
@@ -525,7 +551,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/" title="Android系统预制可自由卸载apk">http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</a>
+      <a href="http://www.wxtlife.com/2018/11/06/osx-autolayout/" title="OSX AutoLayout原理介绍">http://www.wxtlife.com/2018/11/06/osx-autolayout/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -541,9 +567,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/swift/" rel="tag"># swift</a>
           
-            <a href="/tags/Android系统/" rel="tag"># Android系统</a>
+            <a href="/tags/Mac/" rel="tag"># Mac</a>
+          
+            <a href="/tags/OSX/" rel="tag"># OSX</a>
           
         </div>
       
@@ -556,8 +584,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/31/Android-develop-pit/" rel="next" title="Android开发中一些容易踩的坑">
-                <i class="fa fa-chevron-left"></i> Android开发中一些容易踩的坑
+              <a href="/2018/08/27/osx-dev-summary-5/" rel="next" title="OSX 开发知识点汇总（五）">
+                <i class="fa fa-chevron-left"></i> OSX 开发知识点汇总（五）
               </a>
             
           </div>
@@ -566,8 +594,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/17/Android-memory-map/" rel="prev" title="Android简单内存映射与访问">
-                Android简单内存映射与访问 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/01/my-blog-step-wxtlife-com/" rel="prev" title="文章首发公众号【技术特工队】">
+                文章首发公众号【技术特工队】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -796,7 +824,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统识别的app位置"><span class="nav-number"></span> <span class="nav-text">系统识别的app位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试将预装app放进升级包data区中"><span class="nav-number"></span> <span class="nav-text">尝试将预装app放进升级包data区中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在编译时预制到系统system目录中"><span class="nav-number"></span> <span class="nav-text">在编译时预制到系统system目录中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何在系统中加载preinstall-mk"><span class="nav-number"></span> <span class="nav-text">如何在系统中加载preinstall.mk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将系统中的app放到data区的app中"><span class="nav-number"></span> <span class="nav-text">将系统中的app放到data区的app中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell如何放入系统"><span class="nav-number"></span> <span class="nav-text">shell如何放入系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何执行shell脚本"><span class="nav-number"></span> <span class="nav-text">如何执行shell脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number"></span> <span class="nav-text">总结</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#想第一时间获取我的最新文章，请关注公众号-技术特工队"><span class="nav-number">1.</span> <span class="nav-text">想第一时间获取我的最新文章，请关注公众号: 技术特工队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AutoLayout介绍"><span class="nav-number">2.</span> <span class="nav-text">AutoLayout介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传统的布局"><span class="nav-number">3.</span> <span class="nav-text">传统的布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#frame-布局"><span class="nav-number">3.1.</span> <span class="nav-text">frame 布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动缩放（auto-resizing）"><span class="nav-number">3.2.</span> <span class="nav-text">自动缩放（auto resizing）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AutoLayout剖析"><span class="nav-number">4.</span> <span class="nav-text">AutoLayout剖析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#布局变化原因"><span class="nav-number">4.1.</span> <span class="nav-text">布局变化原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AutoLayout方程式"><span class="nav-number">4.2.</span> <span class="nav-text">AutoLayout方程式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AutoLayout-本质"><span class="nav-number">4.3.</span> <span class="nav-text">AutoLayout 本质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#约束优先级"><span class="nav-number">4.4.</span> <span class="nav-text">约束优先级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Intrinsic-Content-Size"><span class="nav-number">4.5.</span> <span class="nav-text">Intrinsic Content Size</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Layout布局机制"><span class="nav-number">5.</span> <span class="nav-text">Auto Layout布局机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VFL"><span class="nav-number">5.1.</span> <span class="nav-text">VFL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约束库使用建议"><span class="nav-number">6.</span> <span class="nav-text">约束库使用建议</span></a></li></ol></div>
             
 
           </div>
