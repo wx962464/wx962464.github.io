@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://www.wxtlife.com/2018/11/06/osx-autolayout/</loc>
-    <lastmod>2018-11-06T13:33:42.541Z</lastmod>
+    <lastmod>2019-10-20T15:52:08.848Z</lastmod>
     <data>
         <display>
         <title>OSX AutoLayout原理介绍</title>
@@ -283,6 +283,25 @@
     
     
   <url>
+    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
+    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
+    <data>
+        <display>
+        <title>使用系统key文件生成keystore</title>
+        <pubTime>2016-07-11T12:36:16.000Z</pubTime>
+        
+        <tag>Android系统</tag>
+         
+        <tag>keystore</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2016/03/27/%E8%AF%A6%E8%A7%A3https%E6%98%AF%E5%A6%82%E4%BD%95%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%9F/</loc>
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     <data>
@@ -299,25 +318,6 @@
         <tag>非对称加密</tag>
          
         <tag>SSL/TLS</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
-    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
-    <data>
-        <display>
-        <title>使用系统key文件生成keystore</title>
-        <pubTime>2016-07-11T12:36:16.000Z</pubTime>
-        
-        <tag>Android系统</tag>
-         
-        <tag>keystore</tag>
          
          
            
@@ -366,21 +366,21 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
         <display>
-        <title>Android sdk content loader 一直显示0% 解决办法</title>
-        <pubTime>2015-09-27T10:45:00.000Z</pubTime>
+        <title>Android系统预制可自由卸载apk</title>
+        <pubTime>2016-01-08T14:03:56.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Eclipse</tag>
+        <tag>Android系统</tag>
          
          
            
              
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
           
         </display>
     </data>
@@ -408,21 +408,21 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     <data>
         <display>
-        <title>Android系统预制可自由卸载apk</title>
-        <pubTime>2016-01-08T14:03:56.000Z</pubTime>
+        <title>Android sdk content loader 一直显示0% 解决办法</title>
+        <pubTime>2015-09-27T10:45:00.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>Android系统</tag>
+        <tag>Eclipse</tag>
          
          
            
              
-              <breadCrumb title="Android系统" url="http://www.wxtlife.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
           
         </display>
     </data>
@@ -443,6 +443,28 @@
          
          
            
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
+    <data>
+        <display>
+        <title>Mac 使用及开发技巧汇总（持续更新）</title>
+        <pubTime>2015-10-20T16:15:50.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>苹果</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://www.wxtlife.com/categories/Mac/"/>
+          
         </display>
     </data>
     </url>
@@ -486,56 +508,12 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    <data>
-        <display>
-        <title>Mac 使用及开发技巧汇总（持续更新）</title>
-        <pubTime>2015-10-20T16:15:50.000Z</pubTime>
-        
-        <tag>Mac</tag>
-         
-        <tag>苹果</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="http://www.wxtlife.com/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     <data>
         <display>
         <title>Kotlin开发基础（二）</title>
         <pubTime>2017-12-12T13:29:09.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>kotlin</tag>
-         
-         
-           
-             
-              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
-    <data>
-        <display>
-        <title>Kotlin开发基础（三）</title>
-        <pubTime>2017-12-17T12:17:45.000Z</pubTime>
         
         <tag>Android</tag>
          
@@ -565,6 +543,28 @@
            
              
               <breadCrumb title="Linux" url="http://www.wxtlife.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
+    <data>
+        <display>
+        <title>Kotlin开发基础（三）</title>
+        <pubTime>2017-12-17T12:17:45.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>kotlin</tag>
+         
+         
+           
+             
+              <breadCrumb title="Kotlin" url="http://www.wxtlife.com/categories/Kotlin/"/>
           
         </display>
     </data>
@@ -655,23 +655,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
-    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
-    <data>
-        <display>
-        <title>EditText使用小结</title>
-        <pubTime>2016-05-11T16:52:43.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/11/10/gitignore-auto-create/</loc>
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     <data>
@@ -699,6 +682,23 @@
         <tag>Android</tag>
          
         <tag>AndroidStudio</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
+    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
+    <data>
+        <display>
+        <title>EditText使用小结</title>
+        <pubTime>2016-05-11T16:52:43.000Z</pubTime>
+        
+        <tag>Android</tag>
          
          
            
@@ -795,30 +795,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
-    <data>
-        <display>
-        <title>Android Studio多工程引用同一个library项目配置方法</title>
-        <pubTime>2015-12-17T13:57:12.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Gradle</tag>
-         
-        <tag>Studio</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android Studio" url="http://www.wxtlife.com/categories/Android-Studio/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     <data>
@@ -863,22 +839,41 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     <data>
         <display>
-        <title>Android简单内存映射与访问</title>
-        <pubTime>2016-01-17T08:35:23.000Z</pubTime>
+        <title>Android Studio多工程引用同一个library项目配置方法</title>
+        <pubTime>2015-12-17T13:57:12.000Z</pubTime>
         
         <tag>Android</tag>
          
-        <tag>C++</tag>
+        <tag>Gradle</tag>
+         
+        <tag>Studio</tag>
          
          
            
              
-              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+              <breadCrumb title="Android Studio" url="http://www.wxtlife.com/categories/Android-Studio/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    <data>
+        <display>
+        <title>Android首次启动卡顿问题分析</title>
+        <pubTime>2017-11-14T12:56:09.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
         </display>
     </data>
     </url>
@@ -904,6 +899,28 @@
 
     
   <url>
+    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
+    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
+    <data>
+        <display>
+        <title>Android简单内存映射与访问</title>
+        <pubTime>2016-01-17T08:35:23.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     <data>
@@ -918,23 +935,6 @@
              
               <breadCrumb title="Android" url="http://www.wxtlife.com/categories/Android/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
-    <lastmod>2018-03-16T15:49:44.448Z</lastmod>
-    <data>
-        <display>
-        <title>Android首次启动卡顿问题分析</title>
-        <pubTime>2017-11-14T12:56:09.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -963,25 +963,6 @@
 
     
   <url>
-    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
-    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
-    <data>
-        <display>
-        <title>Android adb 开发常用命令</title>
-        <pubTime>2017-09-07T00:44:04.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>adb</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     <data>
@@ -992,6 +973,25 @@
         <tag>Android</tag>
          
         <tag>gradle</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
+    <lastmod>2018-03-16T15:49:44.447Z</lastmod>
+    <data>
+        <display>
+        <title>Android adb 开发常用命令</title>
+        <pubTime>2017-09-07T00:44:04.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>adb</tag>
          
          
            

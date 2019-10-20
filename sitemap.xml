@@ -4,7 +4,7 @@
   <url>
     <loc>http://www.wxtlife.com/2018/11/06/osx-autolayout/</loc>
     
-    <lastmod>2018-11-06T13:33:42.541Z</lastmod>
+    <lastmod>2019-10-20T15:52:08.848Z</lastmod>
     
   </url>
   
@@ -93,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/about/index.html</loc>
-    
-    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/categories/index.html</loc>
     
     <lastmod>2018-03-16T15:49:44.457Z</lastmod>
@@ -107,14 +100,21 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/03/27/%E8%AF%A6%E8%A7%A3https%E6%98%AF%E5%A6%82%E4%BD%95%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%9F/</loc>
+    <loc>http://www.wxtlife.com/about/index.html</loc>
+    
+    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
     
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
+    <loc>http://www.wxtlife.com/2016/03/27/%E8%AF%A6%E8%A7%A3https%E6%98%AF%E5%A6%82%E4%BD%95%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%9F/</loc>
     
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
+    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -149,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/08/preinstall-app-can-uninstall/</loc>
+    <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
     
@@ -157,6 +157,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2016/12/21/modify-android-media-default-voice/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
     
     <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/10/21/mac-use-problem/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
+    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
+    <loc>http://www.wxtlife.com/2017/12/17/kotlin-share-3/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
@@ -233,13 +233,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2017/11/10/gitignore-auto-create/</loc>
     
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
@@ -248,6 +241,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2017/03/12/gradle-error-collect/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.451Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2016/05/12/editext-use-summary/</loc>
     
     <lastmod>2018-03-16T15:49:44.451Z</lastmod>
     
@@ -289,13 +289,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
@@ -310,7 +303,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
+    <loc>http://www.wxtlife.com/2015/12/17/Android-studio-quote-same-lib/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.449Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     
@@ -324,14 +324,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
+    <loc>http://www.wxtlife.com/2016/01/17/Android-memory-map/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/14/Android-first-launcher-problem/</loc>
+    <loc>http://www.wxtlife.com/2015/12/31/Android-develop-pit/</loc>
     
     <lastmod>2018-03-16T15:49:44.448Z</lastmod>
     
@@ -345,14 +345,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
+    <loc>http://www.wxtlife.com/2017/09/07/Android-adb-commond/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     

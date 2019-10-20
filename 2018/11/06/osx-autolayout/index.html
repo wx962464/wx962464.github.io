@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://macdev.io/ebook/media/14503524325175/AutoLayoutCHCR.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/696463-22995f9148fa634e.jpg">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/696463-13cb1bc293287cf9.jpg">
-<meta property="og:updated_time" content="2018-11-06T13:33:42.541Z">
+<meta property="og:updated_time" content="2019-10-20T15:52:08.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSX AutoLayout原理介绍">
 <meta name="twitter:description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队AutoLayout介绍Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明">
@@ -439,10 +439,10 @@
       
 
       
-        <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="AutoLayout介绍"><a href="#AutoLayout介绍" class="headerlink" title="AutoLayout介绍"></a>AutoLayout介绍</h3><p>Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明，Auto Layout源于Cassary约束解析工具包。该算法由Alan Borning、Kim Marriott、Peter Stuckey、Yi Xiao于1997年发布，该算法的主要思想是：将基于约束系统的布局规则（本质上是表示视图布局关系的线性方程组）转化为表示规则的视图几何参数。</p>
-<h3 id="传统的布局"><a href="#传统的布局" class="headerlink" title="传统的布局"></a>传统的布局</h3><h4 id="frame-布局"><a href="#frame-布局" class="headerlink" title="frame 布局"></a>frame 布局</h4><p>传统的布局方式是基于Frame来做UI控件的界面布局的,即设置控件在父视图中的起始坐标点Origin(x,y)和控件的大小Size(width,height)，为了精确，我们必须计算每个视图的frame。但布局一旦发生变化，相关frame都需要重新计算。然后这些计算都需要不断的手动动态的去计算，导致一旦有变化，就会需要去维护和调试。</p>
+        <div id="vip-container"><h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="AutoLayout介绍"><a href="#AutoLayout介绍" class="headerlink" title="AutoLayout介绍"></a>AutoLayout介绍</h3><p>Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明，Auto Layout源于Cassary约束解析工具包。该算法由Alan Borning、Kim Marriott、Peter Stuckey、Yi Xiao于1997年发布，该算法的主要思想是：将基于约束系统的布局规则（本质上是表示视图布局关系的线性方程组）转化为表示规则的视图几何参数。</p>
+<h3 id="传统的布局"><a href="#传统的布局" class="headerlink" title="传统的布局"></a>传统的布局</h3><a id="more"></a>
+<h4 id="frame-布局"><a href="#frame-布局" class="headerlink" title="frame 布局"></a>frame 布局</h4><p>传统的布局方式是基于Frame来做UI控件的界面布局的,即设置控件在父视图中的起始坐标点Origin(x,y)和控件的大小Size(width,height)，为了精确，我们必须计算每个视图的frame。但布局一旦发生变化，相关frame都需要重新计算。然后这些计算都需要不断的手动动态的去计算，导致一旦有变化，就会需要去维护和调试。</p>
 <h4 id="自动缩放（auto-resizing）"><a href="#自动缩放（auto-resizing）" class="headerlink" title="自动缩放（auto resizing）"></a>自动缩放（auto resizing）</h4><p>自动缩放的出现在一定程度上减轻了我们的负担。自动缩放规定父视图的frame变化时，视图的frame如何应对。如此一来，简化了布局响应外部变化所需的工作。但是他仅能应对外部父布局的变化，自身大小的变化则无法进行处理。</p>
-<a id="more"></a>
 <h3 id="AutoLayout剖析"><a href="#AutoLayout剖析" class="headerlink" title="AutoLayout剖析"></a>AutoLayout剖析</h3><h4 id="布局变化原因"><a href="#布局变化原因" class="headerlink" title="布局变化原因"></a>布局变化原因</h4><p><strong>外在变化：</strong> 窗口缩放，设备旋转，屏幕尺寸不同，分屏模式等。<br><strong>内在变化：</strong> 内容展示变化，国际化，字体变化等。</p>
 <h4 id="AutoLayout方程式"><a href="#AutoLayout方程式" class="headerlink" title="AutoLayout方程式"></a>AutoLayout方程式</h4><p>先来看一张官方的图，表示一个约束的表达式。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/696463-66769da1d41fafac.png" alt="autoLayout"></p>
@@ -498,6 +498,31 @@
 <p>参考连接：<br><a href="http://macdev.io/ebook/autoLayout.html" target="_blank" rel="noopener">http://macdev.io/ebook/autoLayout.html</a><br><a href="https://juejin.im/post/5b1ea5046fb9a01e2b2cc4a7" target="_blank" rel="noopener">https://juejin.im/post/5b1ea5046fb9a01e2b2cc4a7</a>  </p>
 </blockquote>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -847,7 +872,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -422,7 +422,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
 <p>熟话说“工欲善其事，必先利其器”，那么今天整理了些目前开发常用的一些软件或者插件，分享给大家，主要都是提高效率，便于开发的工具，希望能够对你的工作，学习有所帮助。</p>
 <p>那么本篇文章将推荐5个插件类工具和5个软件类工具。分别介绍如下：</p>
@@ -439,6 +439,31 @@
 <h4 id="5-ohMyStar2-仅有mac端"><a href="#5-ohMyStar2-仅有mac端" class="headerlink" title="5. ohMyStar2  (仅有mac端)"></a>5. ohMyStar2  (仅有mac端)</h4><p>OhMyStar2 可以无缝同步你在Github star的所有repo，在本地浏览、搜索这些stared repo，还能根据语言自动分组（自动侦测你加星的repo所使用的语言，菜单栏-Tool-Group with languages），而且你能手动对所有repo进行group，可以按照日，周，月，发现流行的github仓库。所有数据都能通过iCloud进行备份/还原。<br><img src="/img/tools/ohmystart.jpeg" alt="onmystar2"></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>希望上面10款工具可以给你带来工作上的便捷和帮助，如果喜欢，就把他分享出去吧，让更多人知道有这么多好的工具可提高我们的效率。</p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -784,7 +809,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

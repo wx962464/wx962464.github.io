@@ -433,7 +433,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>在开发中需要将开发的多个应用在刚启动的时候使用同一张图作为启动的背景图，且可以动态变化，图片放置在本地的某一个目录下面。一般设置每个应用程序启动的背景可以在主题中使用<code>android:windowBackground</code>属性开设置一张图片，如果每个应用要去使用同一张图那么就要在每一个应用中取添加配置且添加同样的图片进去，显然这样可以解决办法，但是不是万全的方法，每增加一个应用就得添加重复的图片以及添加属性。那么有没有更加便捷的方法呢，那就去看看系统添加这个背景是如何实现的。  </p>
 <a id="more"></a> 
@@ -453,6 +453,31 @@
 </ol>
 <p>最后编译完系统后，升级系统，安装上我们更新后的应用查看是否有效果。<br>至此Android 添加自定义系统属性的方法就完成了，如有任何问题请留言交流，谢谢！</p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -800,7 +825,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

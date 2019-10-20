@@ -433,7 +433,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
 <p>在开发混合应用中，经常需要 js 与 webview 进行通信，那么官方也提供了一些方法进行消息处理，今天这里介绍一款开源库来更好的解决的 native 与 js 通信的问题，也就是 <a href="https://github.com/marcuswestin/WebViewJavascriptBridge" target="_blank" rel="noopener">WebViewJavascriptBridge</a></p>
 <h3 id="基本配置使用"><a href="#基本配置使用" class="headerlink" title="基本配置使用"></a>基本配置使用</h3><ol>
@@ -472,6 +472,31 @@
 <p>参数文章：<br><a href="https://www.jianshu.com/p/8bd6aeb719ff" target="_blank" rel="noopener">https://www.jianshu.com/p/8bd6aeb719ff</a><br><a href="https://www.jianshu.com/p/d45ce14278c7" target="_blank" rel="noopener">https://www.jianshu.com/p/d45ce14278c7</a></p>
 </blockquote>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -821,7 +846,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

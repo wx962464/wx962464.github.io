@@ -411,7 +411,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
 <h3 id="查看项目各个Library的依赖情况"><a href="#查看项目各个Library的依赖情况" class="headerlink" title="查看项目各个Library的依赖情况"></a>查看项目各个Library的依赖情况</h3><h4 id="通过引入第三方插件来实现"><a href="#通过引入第三方插件来实现" class="headerlink" title="通过引入第三方插件来实现"></a>通过引入第三方插件来实现</h4><ul>
 <li>首先在应用app的下的build.gradle 文件上加上<code>apply plugin: &#39;project-report&#39;</code></li>
@@ -420,6 +420,31 @@
 <p>此命令有助于查看依赖的版本，因为有的用的低版本，有的高版本，以及查看重复依赖的情况等等，里面还有其他很多的信息可以参考。</p>
 <h4 id="AS自带的脚本实现查看依赖关系"><a href="#AS自带的脚本实现查看依赖关系" class="headerlink" title="AS自带的脚本实现查看依赖关系"></a>AS自带的脚本实现查看依赖关系</h4><p>在AS的右上方有个gradle的Project,点击后可以看到所有的moudle工程,选中所选工程后，在Tasks下的android，里面有个<code>androidDependencies</code>,右键后选择第一个<code>run...</code> ，等待执行完毕后，在“run”和“Messages”控制台下面就会列出此moudle所依赖的相关信息。</p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -765,7 +790,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

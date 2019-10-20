@@ -440,7 +440,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3></blockquote>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前的一篇文章中<a href="http://www.wxtlife.com/2017/09/27/developers-need-tools/">《开发人员必备的开发利器》</a>有介绍过一款Chrome插件，名为 Octotree ，它可以以树形结构的样式将源代码源文件展示出来，方便我们查看跳转等。但是有时候在github上看源码时，可能需要进行方法的跳转，查看具体实现，更或者找到某个方法或者类的调用方，那么有没有既有 Octotree 功能又能实现上面的功能呢，那当然是有的，它就是今天要介绍的主角 <code>insight.io</code> </p>
 <h3 id="insight-io-使用"><a href="#insight-io-使用" class="headerlink" title="insight.io 使用"></a>insight.io 使用</h3><p>insight.io 也是一个Chrome 插件， 安装也就直接在Chrome插件中心搜索安装就行了，这里就不多描述。<br>安装好后，在首次安装上后需要使用github账号进行授权登录，之后会进行一些操作相关的提示。<br>整体的界面如下所示</p>
@@ -460,6 +460,31 @@
 <h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>在设置中还有很多的快捷键可以设置，协助我们快速的浏览源代码，如下：<br><img src="../img/insight/insight-setting.png" alt="setting"></p>
 <h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>此插件的功能很全，页面也很美观，很是喜欢，目前有了它在 github 上看源码方便很多，甚至就不用clone到本地再导入这些复杂的操作流程。</p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -805,7 +830,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

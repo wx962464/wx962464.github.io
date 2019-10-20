@@ -433,7 +433,7 @@
       
 
       
-        <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
+        <div id="vip-container"><h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="NSStackView"><a href="#NSStackView" class="headerlink" title="NSStackView"></a>NSStackView</h3><p>OSX 中 NSStackView  使用自动布局（系统的自动布局特性）来根据你的要求管理和对齐一组视图。可以设置为 水平方向，或者垂直方向。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.orientation = .horizontal //水平方向</span><br><span class="line">stackView.orientation = .vertical  //垂直方向</span><br></pre></td></tr></table></figure></p>
 <h4 id="添加子view"><a href="#添加子view" class="headerlink" title="添加子view"></a>添加子view</h4><p>为stackView 中添加 子view的方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackView.addArrangedSubview(view)</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意： 由于stackView 是继承自 NSView， 所有也会有 <code>addSubview(view)</code> 的方法，但是调用此方法，不会自动扩大 stackView 的宽高，而导致新加的view 显示不出来。</strong></p>
 <h4 id="移除子view"><a href="#移除子view" class="headerlink" title="移除子view"></a>移除子view</h4><p>移除子 View 采用如下方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stackView.removeArrangedSubview(view) </span><br><span class="line">view.removeFromSuperview()</span><br></pre></td></tr></table></figure></p>
@@ -502,6 +502,31 @@
 <p>参考资料：<br><a href="http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/" target="_blank" rel="noopener">http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/</a><br><a href="https://www.jianshu.com/p/7f7255d4e76d" target="_blank" rel="noopener">https://www.jianshu.com/p/7f7255d4e76d</a></p>
 </blockquote>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -851,7 +876,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

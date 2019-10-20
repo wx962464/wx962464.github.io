@@ -415,7 +415,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
 <h2 id="FrameBuffer-介绍"><a href="#FrameBuffer-介绍" class="headerlink" title="FrameBuffer 介绍"></a>FrameBuffer 介绍</h2><p>FrameBuffer中文译名为帧缓冲驱动，它是出现在2.2.xx内核中的一种驱动程序接口。主设备号为29，次设备号递增。<br>Linux抽象出FrameBuffer这个设备来供用户态进程实现直接写屏。<code>FrameBuffer机制模仿显卡的功能，将显卡硬件结构抽象掉，可以通过FrameBuffer的读写直接对显存进行操作。用户可以将FrameBuffer看成是显示内存的一个映像，将其映射到进程地址空间之后，就可以直接进行读写操作，而写操作可以立即反应在屏幕上。</code>这种操作是抽象的，统一的。用户不必关心物理显存的位置、换页机制等等具体细节，这些都是由FrameBuffer设备驱动来完成的。<br>FrameBuffer实际上就是嵌入式系统中专门为GPU所保留的一块连续的物理内存，LCD通过专门的总线从framebuffer读取数据，显示到屏幕上。<br>FrameBuffer本质上是一块显示缓存，往显示缓存中写入特定格式的数据就意味着向屏幕输出内容。所以说FrameBuffer就是一块白板。</p>
 <p><strong>屏幕位置从上到下，从左至右与内存地址是顺序的线性关系</strong><br><a id="more"></a></p>
@@ -482,6 +482,31 @@
 <p><strong>参考链接</strong> </p>
 <p><a href="http://www.cnblogs.com/armlinux/archive/2012/02/25/2396760.html" target="_blank" rel="noopener">http://www.cnblogs.com/armlinux/archive/2012/02/25/2396760.html</a><br><a href="http://blog.csdn.net/yangwen123/article/details/12096483" target="_blank" rel="noopener">http://blog.csdn.net/yangwen123/article/details/12096483</a><br><a href="http://blog.csdn.net/louiswangbing/article/details/6606837" target="_blank" rel="noopener">http://blog.csdn.net/louiswangbing/article/details/6606837</a><br><a href="http://lib.csdn.net/article/android/4928" target="_blank" rel="noopener">http://lib.csdn.net/article/android/4928</a><br><a href="http://www.cnblogs.com/mfryf/archive/2013/05/22/3093912.html" target="_blank" rel="noopener">http://www.cnblogs.com/mfryf/archive/2013/05/22/3093912.html</a><br><a href="http://www.cnblogs.com/hzl6255/p/5476012.html" target="_blank" rel="noopener">http://www.cnblogs.com/mfryf/archive/2013/05/22/3093912.html</a><br><a href="http://blog.csdn.net/molibaobei90/article/details/40826791" target="_blank" rel="noopener">http://blog.csdn.net/molibaobei90/article/details/40826791</a></p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -829,7 +854,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

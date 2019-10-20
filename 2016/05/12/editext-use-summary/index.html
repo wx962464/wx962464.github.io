@@ -411,7 +411,7 @@
       
 
       
-        <blockquote>
+        <div id="vip-container"><blockquote>
 <h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
 <p><strong>来自：</strong>   <a href="http://www.wxtlife.com/">Android梦想特工队</a><br><strong>作者：</strong>  <a href="http://www.wxtlife.com/about/">Aaron</a><br><strong>主页：</strong>  <a href="http://www.wxtlife.com/">http://www.wxtlife.com/</a><br><strong>原文连接：</strong> <a href="http://www.wxtlife.com/2016/05/12/editext-use-summary/">http://www.wxtlife.com/2016/05/12/editext-use-summary/</a></p>
 <h2 id="EditText点击首次获得焦点后默认光标在最后的实现"><a href="#EditText点击首次获得焦点后默认光标在最后的实现" class="headerlink" title="EditText点击首次获得焦点后默认光标在最后的实现"></a>EditText点击首次获得焦点后默认光标在最后的实现</h2><p>这个本身是一个比较简单的问题了，大家一想都知道，设置<code>OnFocusChangeListener</code>方法，在hasFocus为true时调用<code>setSelection(int)</code>方法将光标移动到最后的位置。然后将事件绑定到EditText上即可，但是但是… 不起作用，不起作用，代码如下：</p>
@@ -421,6 +421,31 @@
 <p>其实也没有怎么延迟了。。仅仅是把执行的代码放在了一个runnable里面，然后结果就是这么神奇，结果起作用了。。</p>
 <p>如果谁知道是什么原理请告知，不慎感激。</p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
+
+			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+			    var btw = new BTWPlugin();
+			    btw.init({
+			        "id": "vip-container",
+			        "blogId": "16175-1571201710743-904",
+			        "name": "技术特工队",
+			        "qrcode": "http://www.wxtlife.com/uploads/wechat-qcode.jpg",
+			        "keyword": "more"
+			    });
+			}
+			</script>
+		
       
     </div>
 
@@ -766,7 +791,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
