@@ -649,7 +649,8 @@
       
         
           <h3 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h3><h3 id="AutoLayout介绍"><a href="#AutoLayout介绍" class="headerlink" title="AutoLayout介绍"></a>AutoLayout介绍</h3><p>Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明，Auto Layout源于Cassary约束解析工具包。该算法由Alan Borning、Kim Marriott、Peter Stuckey、Yi Xiao于1997年发布，该算法的主要思想是：将基于约束系统的布局规则（本质上是表示视图布局关系的线性方程组）转化为表示规则的视图几何参数。</p>
-<h3 id="传统的布局"><a href="#传统的布局" class="headerlink" title="传统的布局"></a>传统的布局</h3>
+<h3 id="传统的布局"><a href="#传统的布局" class="headerlink" title="传统的布局"></a>传统的布局</h3><h4 id="frame-布局"><a href="#frame-布局" class="headerlink" title="frame 布局"></a>frame 布局</h4><p>传统的布局方式是基于Frame来做UI控件的界面布局的,即设置控件在父视图中的起始坐标点Origin(x,y)和控件的大小Size(width,height)，为了精确，我们必须计算每个视图的frame。但布局一旦发生变化，相关frame都需要重新计算。然后这些计算都需要不断的手动动态的去计算，导致一旦有变化，就会需要去维护和调试。</p>
+<h4 id="自动缩放（auto-resizing）"><a href="#自动缩放（auto-resizing）" class="headerlink" title="自动缩放（auto resizing）"></a>自动缩放（auto resizing）</h4><p>自动缩放的出现在一定程度上减轻了我们的负担。自动缩放规定父视图的frame变化时，视图的frame如何应对。如此一来，简化了布局响应外部变化所需的工作。但是他仅能应对外部父布局的变化，自身大小的变化则无法进行处理。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/06/osx-autolayout/#more" rel="contents">
@@ -2498,7 +2499,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
