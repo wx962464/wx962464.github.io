@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wxtlife.com/2020/01/04/react-state-async/</loc>
+    
+    <lastmod>2020-04-06T08:00:41.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2021/01/01/my-blog-step-wxtlife-com/</loc>
+    
+    <lastmod>2020-04-06T07:02:42.636Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2019/11/17/react-native-data-exchange/</loc>
     
     <lastmod>2020-04-06T07:02:12.144Z</lastmod>
@@ -65,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2020/01/01/my-blog-step-wxtlife-com/</loc>
-    
-    <lastmod>2018-05-20T14:36:10.773Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2018/05/20/bat-tool/</loc>
     
     <lastmod>2018-05-20T14:32:08.629Z</lastmod>
@@ -100,6 +107,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/categories/index.html</loc>
+    
+    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/about/index.html</loc>
     
     <lastmod>2018-03-16T15:49:44.457Z</lastmod>
@@ -107,9 +121,9 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/categories/index.html</loc>
+    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
     
-    <lastmod>2018-03-16T15:49:44.457Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
   </url>
   
@@ -122,13 +136,6 @@
   
   <url>
     <loc>http://www.wxtlife.com/2015/09/26/slove-studio-default-not-found/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.456Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2016/07/11/use-system-key-create-keystore/</loc>
     
     <lastmod>2018-03-16T15:49:44.456Z</lastmod>
     
@@ -149,6 +156,13 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2015/09/27/sdk-content-loader-always-show-0/</loc>
     
     <lastmod>2018-03-16T15:49:44.455Z</lastmod>
@@ -156,9 +170,9 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/03/24/slove%20hexo%20error/</loc>
+    <loc>http://www.wxtlife.com/2016/12/21/modify-android-media-default-voice/</loc>
     
-    <lastmod>2018-03-16T15:49:44.455Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
     
   </url>
   
@@ -184,20 +198,6 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2016/12/21/modify-android-media-default-voice/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.454Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wxtlife.com/2017/12/12/kotlin-share-2/</loc>
     
     <lastmod>2018-03-16T15:49:44.453Z</lastmod>
@@ -212,9 +212,9 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
+    <loc>http://www.wxtlife.com/2015/05/04/linux-mount-new-hard-disk/</loc>
     
-    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    <lastmod>2018-03-16T15:49:44.453Z</lastmod>
     
   </url>
   
@@ -226,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
+    <loc>http://www.wxtlife.com/2015/03/31/how-to-use-android-hide-methods-or-class/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -234,6 +234,13 @@
   
   <url>
     <loc>http://www.wxtlife.com/2015/07/31/how-to-find-system-error/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/08/kotlin-share-1/</loc>
     
     <lastmod>2018-03-16T15:49:44.452Z</lastmod>
     
@@ -261,6 +268,27 @@
   </url>
   
   <url>
+    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
+    
+    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wxtlife.com/2017/02/16/android-system-wifi-hide-ssid/</loc>
     
     <lastmod>2018-03-16T15:49:44.450Z</lastmod>
@@ -275,35 +303,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/04/16/check-gradle-dependency/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-support/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2017/09/18/License-different/</loc>
-    
-    <lastmod>2018-03-16T15:49:44.450Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
+    <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/06/21/Android-source-build-problem/</loc>
+    <loc>http://www.wxtlife.com/2015/11/24/Android-set-adb-status/</loc>
     
     <lastmod>2018-03-16T15:49:44.449Z</lastmod>
     
@@ -352,14 +359,14 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
+    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
+    <loc>http://www.wxtlife.com/2017/11/05/Android-compile/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     
@@ -373,7 +380,7 @@
   </url>
   
   <url>
-    <loc>http://www.wxtlife.com/2015/07/21/Andorid-add-customer-style-method/</loc>
+    <loc>http://www.wxtlife.com/2017/09/10/00-ceo-fun-things/</loc>
     
     <lastmod>2018-03-16T15:49:44.447Z</lastmod>
     

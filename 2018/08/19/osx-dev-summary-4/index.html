@@ -442,16 +442,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func windowShouldClose(_ sender: NSWindow) -&gt; Bool &#123;</span><br><span class="line">    return false // window 不关闭</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="4-NSWindow-单例"><a href="#4-NSWindow-单例" class="headerlink" title="4. NSWindow 单例"></a>4. NSWindow 单例</h4><p>在应用中经常会有很多的弹窗，但这些弹框是需要只弹一个的（未关闭多次点击不新建，显示原来的那个），这时候就需要设置Window的属性。具体如下：<br>选中 <code>目标window</code> 上的<code>Window Controller</code>然后在属性栏中选中<code>show the attributes inspector</code>即可看到<code>Presentation</code>,然后选则<code>single</code>即可，默认是<code>Multiple</code>。</p>
 <h3 id="自定义控件属性"><a href="#自定义控件属性" class="headerlink" title="自定义控件属性"></a>自定义控件属性</h3><p>在 Android 中自定义View，可以自定义很多的属性，对控件进行设置，在 iOS/OSX 中同样存在对自定义控件添加属性的方法，具体为<code>IBInspectable</code>和<code>IBDesignable</code>两个属性，定义了此属性后，在XCode中设置了View为此类型后，可以有可视化的设置项，很是方便，具体可以参考这篇文章:<a href="https://zhangbuhuai.com/ibinspectable-and-ibdesignable/" target="_blank" rel="noopener">https://zhangbuhuai.com/ibinspectable-and-ibdesignable/</a></p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script></div>
+</div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -468,6 +459,15 @@
 			}
 			</script>
 		
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
     </div>
 
@@ -661,7 +661,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

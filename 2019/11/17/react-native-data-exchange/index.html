@@ -458,16 +458,7 @@
 <p>在js中按照属性的方式进行设置方法，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">_eventMethode(event) &#123;</span><br><span class="line">    console.log(&apos;_eventMethode event = &apos;, event.nativeEvent)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;NativeCustomView</span><br><span class="line">      ref=&#123;this._createViewRef&#125;</span><br><span class="line">      style=&#123;styles.container&#125;</span><br><span class="line">      eventMethod1=&#123;this._eventMethode&#125;</span><br><span class="line">      eventSendMessage=&#123;this._eventMethode&#125;</span><br><span class="line">      /&gt;</span><br></pre></td></tr></table></figure></p>
 <p>在js层<code>eventMethod1</code>可以理解为属性，但在这里为 native 层中向下调用的方法名，native 调用过则会回调到此方法传递的方法，也就是<code>_eventMethode</code>方法，<br>这样在native中执行 addEventEmitters方法中 “EVENT_METHOD_1” ，即可实现调用 js 层的<code>_eventMethode</code>方法</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>要实现 js 与 native 的互相通信，则必不可少会有这些操作，所以在什么情况下使用什么方式进行数据传递或方法的调用需考虑清楚。以上几种方式基本上涵盖了大部分的消息数据通信的场景。</p>
-
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script></div>
+</div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -484,6 +475,15 @@
 			}
 			</script>
 		
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
     </div>
 
@@ -580,8 +580,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/01/my-blog-step-wxtlife-com/" rel="prev" title="文章首发公众号【技术特工队】">
-                文章首发公众号【技术特工队】 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/04/react-state-async/" rel="prev" title="React中State的那点事">
+                React中State的那点事 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -677,7 +677,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
