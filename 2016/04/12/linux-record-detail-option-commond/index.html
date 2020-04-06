@@ -428,7 +428,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HISTFILESIZE=20000</span><br><span class="line">HISTSIZE=20000</span><br><span class="line">HISTTIMEFORMAT=&quot;%Y%m%d-%H%M%S:&quot;</span><br><span class="line">export HISTTIMEFORMAT</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置history默认的格式<br>在系统中修改<code>/etc/profile</code>文件，在文件的最后加入下面语句：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>设置history格式</span><br><span class="line">export HISTTIMEFORMAT="[%F %T] [`who am i 2&gt;/dev/null| awk '&#123;print $NF&#125;'|sed -e 's/[()]//g'`] "</span><br><span class="line"><span class="meta">#</span>实时记录用户在shell中执行的每一条命令</span><br><span class="line">export PROMPT_COMMAND='\</span><br><span class="line">    if [ -z "$OLD_PWD" ];then</span><br><span class="line">        export OLD_PWD=$PWD;</span><br><span class="line">    fi;</span><br><span class="line">    if [ ! -z "$LAST_CMD" ] &amp;&amp; [ "$(history 1)" != "$LAST_CMD" ]; then</span><br><span class="line">        logger -t `whoami`_shell_cmd "[$OLD_PWD]$(history 1)";</span><br><span class="line">    fi ;</span><br><span class="line">    export LAST_CMD="$(history 1)";</span><br><span class="line">    export OLD_PWD=$PWD;'</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">设置<span class="built_in">history</span>格式</span></span><br><span class="line">export HISTTIMEFORMAT="[%F %T] [`who am i 2&gt;/dev/null| awk '&#123;print $NF&#125;'|sed -e 's/[()]//g'`] "</span><br><span class="line"><span class="meta">#</span><span class="bash">实时记录用户在shell中执行的每一条命令</span></span><br><span class="line">export PROMPT_COMMAND='\</span><br><span class="line">    if [ -z "$OLD_PWD" ];then</span><br><span class="line">        export OLD_PWD=$PWD;</span><br><span class="line">    fi;</span><br><span class="line">    if [ ! -z "$LAST_CMD" ] &amp;&amp; [ "$(history 1)" != "$LAST_CMD" ]; then</span><br><span class="line">        logger -t `whoami`_shell_cmd "[$OLD_PWD]$(history 1)";</span><br><span class="line">    fi ;</span><br><span class="line">    export LAST_CMD="$(history 1)";</span><br><span class="line">    export OLD_PWD=$PWD;'</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>上面这个脚本可以记录下在哪个目录执行了哪些操作以及时间等信息，这样就可以方便我们查看在服务器上谁什么时间在哪个目录执行了哪些操作。</p>
@@ -446,7 +446,7 @@
 <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk.github.io","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
 	    gitalkConfig.id = md5(location.pathname);
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render("gitalk-container");
@@ -656,7 +656,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -667,7 +667,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -678,7 +678,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

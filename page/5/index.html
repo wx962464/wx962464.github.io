@@ -298,6 +298,206 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2015/11/24/Android-set-adb-status/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangXin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/android.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术特工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/24/Android-set-adb-status/" itemprop="url">
+                  Android系统设置Android adb 开关的方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-24T17:38:26+08:00">
+                2015-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2015/11/24/Android-set-adb-status/" class="leancloud_visitors" data-flag-title="Android系统设置Android adb 开关的方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 : </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计 :</span>
+                
+                <span title="字数统计 :">
+                  791
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 :</span>
+                
+                <span title="阅读时长 :">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
+<p>在整机系统开发中，一般系统默认的adb开发是打开的，那么在对外发布的系统中，肯定是不希望默认打开adb的，但是在开发的过程中，肯定希望能够通过某种操作打开adb，便于调试，这就需要在系统的某个部位做一个开关了。那么这篇文章就是说说这边是如何做到在系统中增加一个adb开关。</p>
+<ul>
+<li><ol>
+<li>在系统中有一个usb deubg的开关，此开关是打开usb调试的对adb 但是通过默认设置的开发者模式都可以将其打开。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>adb 启动肯定会启动了一个<code>adbd</code>服务，那么手动将该服务kill掉就可以关闭adb服务了.当然这样是在adbd启动后可以这么做，但是还是直接默认就不启动服务吧，需要的时候在打开吧。</li>
+</ol>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/11/24/Android-set-adb-status/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2015/10/21/mac-use-problem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -650,7 +850,7 @@
 <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk.github.io","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
 	    gitalkConfig.id = md5(location.pathname);
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render("gitalk-container");
@@ -866,7 +1066,7 @@
 <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","repo":"HexoGitTalk.github.io","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
 	    gitalkConfig.id = md5(location.pathname);
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render("gitalk-container");
@@ -2069,207 +2269,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wxtlife.com/2015/03/24/slove hexo error/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WangXin">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/android.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术特工队">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/03/24/slove hexo error/" itemprop="url">
-                  Hexo 使用中遇到的问题总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-24T22:53:13+08:00">
-                2015-03-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/24/slove hexo error/" class="leancloud_visitors" data-flag-title="Hexo 使用中遇到的问题总结">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 : </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计 :</span>
-                
-                <span title="字数统计 :">
-                  698
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 :</span>
-                
-                <span title="阅读时长 :">
-                  3 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<h4 id="想第一时间获取我的最新文章，请关注公众号-技术特工队"><a href="#想第一时间获取我的最新文章，请关注公众号-技术特工队" class="headerlink" title="想第一时间获取我的最新文章，请关注公众号: 技术特工队"></a>想第一时间获取我的最新文章，请关注公众号: <a href="http://www.wxtlife.com/img/qrcode/qrcode.jpg">技术特工队</a></h4></blockquote>
-<ol>
-<li><p>安装NoteJs，出现问题，安装到最后提示<code>error 52**</code><br>过程：重新下载安装了几次都不行，不懂为什么，最后通过Hexo的文档提供下载地址进行下载，然后安装问题就没有出现了。</p>
-<p>可能原因：</p>
-<pre><code>a.  下载的安装包有问题的原因
-b.  我的C盘占用过多，盘符标红，然后卸载一些不常用软件解决，再安装再加上上面重新下载的安装包，之后安装成功。
-</code></pre></li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/24/slove hexo error/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2312,7 +2316,7 @@ b.  我的C盘占用过多，盘符标红，然后卸载一些不常用软件解
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2323,7 +2327,7 @@ b.  我的C盘占用过多，盘符标红，然后卸载一些不常用软件解
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2334,7 +2338,7 @@ b.  我的C盘占用过多，盘符标红，然后卸载一些不常用软件解
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
