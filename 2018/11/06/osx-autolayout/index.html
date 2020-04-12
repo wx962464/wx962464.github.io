@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Mac,OSX,swift,">
+  <meta name="keywords" content="swift,OSX,Mac,">
 
 
 
@@ -90,7 +90,7 @@
 
 
 <meta name="description" content="想第一时间获取我的最新文章，请关注公众号: 技术特工队AutoLayout介绍Auto Layout 是苹果公司在iOS6发布的界面布局技术，为了适配不同大小屏幕及屏幕变化而推出的一种技术方案，旨在实现一次编写布局界面UI，自动适应所有屏幕布局，并随着iOS SDK的迭代逐步完善了各种布局API、提供多种使用Auto Layout的布局方式。实际上Auto Layout算法本身并非有Apple发明">
-<meta name="keywords" content="Mac,OSX,swift">
+<meta name="keywords" content="swift,OSX,Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OSX AutoLayout原理介绍">
 <meta property="og:url" content="http://www.wxtlife.com/2018/11/06/osx-autolayout/index.html">
@@ -497,7 +497,16 @@
 <blockquote>
 <p>参考连接：<br><a href="http://macdev.io/ebook/autoLayout.html" target="_blank" rel="noopener">http://macdev.io/ebook/autoLayout.html</a><br><a href="https://juejin.im/post/5b1ea5046fb9a01e2b2cc4a7" target="_blank" rel="noopener">https://juejin.im/post/5b1ea5046fb9a01e2b2cc4a7</a>  </p>
 </blockquote>
-</div>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -514,15 +523,6 @@
 			}
 			</script>
 		
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
       
     </div>
 
@@ -592,11 +592,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mac/" rel="tag"># Mac</a>
+            <a href="/tags/swift/" rel="tag"># swift</a>
           
             <a href="/tags/OSX/" rel="tag"># OSX</a>
           
-            <a href="/tags/swift/" rel="tag"># swift</a>
+            <a href="/tags/Mac/" rel="tag"># Mac</a>
           
         </div>
       

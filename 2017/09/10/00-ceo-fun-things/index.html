@@ -446,7 +446,16 @@
 <p><img src="/img/ceo/pinglun4.png" alt="项目主页"></p>
 <p>这位程序员也是使出了独门武器来告诉作者，现在修改协议似乎很容易被发现，有一种伪造修改记录时间的方法，使用<code>git filter-branch</code>来进行神操作，具体使用方法如下：<a href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2#核弹级选项:-filter-branch" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2#核弹级选项:-filter-branch</a></p>
 <p>看到这里似乎有些懂了，没有完全了解开源协议而随便使用的问题应该是比较普遍的，所以对于各种开源协议，以及知识共享协议等，都需要弄清它们的权利要求以及限制等，这样才能用的安心，那么后面就会说说，开源协议中常用协议的权利要求及限制等等，敬请期待！</p>
-</div>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -463,15 +472,6 @@
 			}
 			</script>
 		
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
       
     </div>
 

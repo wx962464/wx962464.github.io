@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="swift,object-c,iOS,">
+  <meta name="keywords" content="object-c,swift,iOS,">
 
 
 
@@ -90,7 +90,7 @@
 
 
 <meta name="description" content="最近产品要做一个消息的通知，而且通知是覆盖在 StatusBar 上面的。如果是普通的 UIView 则肯定是不行的，因为 StatusBar 为系统全局性的视图，所以要想覆盖它，则必须为 Statusbar 类型的，那么也就是 UIWindow 了。 UIWindow 的基础介绍 UIWindow是一种特殊的UIView,通常在一个app中至少会有一个UIWindow。 iOS程序启动完毕后，创">
-<meta name="keywords" content="swift,object-c,iOS">
+<meta name="keywords" content="object-c,swift,iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS UIWindow 覆盖 StatusBar">
 <meta property="og:url" content="http://www.wxtlife.com/2018/08/05/iOS-UIWindow-overlay-StatusBar/index.html">
@@ -469,7 +469,16 @@
 <blockquote>
 <p>参考地址：<br><a href="https://www.cnblogs.com/CoderAlex/p/4762210.html" target="_blank" rel="noopener">https://www.cnblogs.com/CoderAlex/p/4762210.html</a></p>
 </blockquote>
-</div>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -486,15 +495,6 @@
 			}
 			</script>
 		
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
       
     </div>
 
@@ -564,9 +564,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/swift/" rel="tag"># swift</a>
-          
             <a href="/tags/object-c/" rel="tag"># object-c</a>
+          
+            <a href="/tags/swift/" rel="tag"># swift</a>
           
             <a href="/tags/iOS/" rel="tag"># iOS</a>
           

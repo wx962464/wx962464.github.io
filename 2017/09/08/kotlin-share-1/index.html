@@ -539,7 +539,16 @@
 <h5 id="函数具名参数"><a href="#函数具名参数" class="headerlink" title="函数具名参数"></a>函数具名参数</h5><p>具名参数是对上面的一种特殊情况的考虑，比如我们将上面的代码改为如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fun sum(a :Int = 3, b : Int) : Int &#123;</span><br><span class="line">    return a +b</span><br><span class="line">&#125;</span><br><span class="line">//调用 sum (2)   此时对于此调用，编译器认为2 是为a赋值，而b没有赋值，无法编译通过。那么要调用则采用具名参数来指明参数。</span><br><span class="line">// 改为 sum(b = 2) 这样既可指定将2赋值给b，则a使用默认的值。</span><br></pre></td></tr></table></figure></p>
 <h5 id="扩展函数"><a href="#扩展函数" class="headerlink" title="扩展函数"></a>扩展函数</h5><p>在Android可能很常见的是有一个Utils包，专门放置一些常用的公共方法，比如String，Toast，File 操作等等，然而现在kotlin可以直接对系统类，进行扩展。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) &#123;</span><br><span class="line">    Toast.makeText(this, message, duration).show()</span><br><span class="line">&#125;</span><br><span class="line">//在Activity，Context实例中就可以直接调用了。</span><br><span class="line">toast(&quot;我是Toast&quot;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上面讲述了kotlin 很基础的知识，讲解了些kotlin的特性，当然还有很多的特性，以及在Android上开发的便捷性等等，本篇就先说这么多，下一篇将会说到kotlin更多的特性，比如：自定义类的getter和setter 方法，inline 函数，高阶函数，数据类，单例类等。敬请期待！</p>
-</div>
+
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script></div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -556,15 +565,6 @@
 			}
 			</script>
 		
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-		<script>
-		var gitalkConfig = {"clientID":"0bc3516ae6bba18ef48b","clientSecret":"e3a7c4304959703a34746452cd8b418ba328ba7e","accessToken":"33f5ebc17380e72f317ff10786a167afcf8f38d6","repo":"HexoGitTalk","owner":"wx962464","admin":["wx962464"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
       
     </div>
 
